@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CommonDAO">
+
+  <insert id="insertAccessHistory" parameterType="accessHistoryVO">
+    <![CDATA[
+            INSERT INTO ADMIN_ACCESSHISTORY_T_NEW (ACS_URL, ACS_UID, ACS_UIP, ACS_PGE, ACS_CDE)
+            VALUES (#{acsUrl}, #{acsUid}, #{acsUip}, #{acsPge}, NOW())
+        ]]>
+  </insert>
+
+  <insert id="log" parameterType="logVO">
+    <![CDATA[
+            INSERT INTO ADMIN_LOG (MEM_ID, REQ_URI, LOG_MSG, LOG_REG)
+            VALUES (#{MEM_ID}, #{REQ_URI}, #{LOG_MSG}, NOW())
+        ]]>
+  </insert>
+</mapper>

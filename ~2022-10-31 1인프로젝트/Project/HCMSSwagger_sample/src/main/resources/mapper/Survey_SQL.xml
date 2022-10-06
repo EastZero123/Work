@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SurveyDAO">
+  <select id="selectGeneralSurveyList" parameterType="searchSurveyVO" resultType="surveyVO">
+    /** selectGeneralSurveyList **/
+    SELECT
+    PM.*,
+    DATE_FORMAT(PM.START_DATE, '%Y.%m.%d') startDate,
+    DATE_FORMAT(PM.END_DATE, '%Y.%m.%d') endDate,
+    (SELECT COUNT(*) FROM POLL_ANS_MASTER_T_NEW PAM WHERE PM.POLL_MASTER_SEQ = PAM.POLL_MASTER_SEQ AND
+    PAM.SUBMIT_YN = 'Y') ANS_CNT,
+    CASE
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') < DATE_FORMAT(PM.START_DATE, '%Y%m%d') THEN '진행예정']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') BETWEEN DATE_FORMAT(PM.START_DATE, '%Y%m%d') AND DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '진행중']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') > DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '종료']]>
+    ELSE ''
+    END POLL_STATE
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+<!--    AND PM.TARGET_GRADE_CODE = #{targetGradeCode}-->
+    <if test="searchTitle != null and searchTitle != ''">
+      AND PM.TITLE LIKE CONCAT('%',#{searchTitle},'%')
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate == null or searchEndDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchStartDate} AND PM.END_DATE >= #{searchStartDate}) ]]>
+    </if>
+    <if
+      test="(searchEndDate != null and searchEndDate != '') and (searchStartDate == null or searchStartDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchEndDate} AND PM.END_DATE >= #{searchEndDate})]]>
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate != null and searchEndDate != '')">
+      <![CDATA[ AND (PM.START_DATE BETWEEN #{searchStartDate} AND #{searchEndDate} AND PM.END_DATE BETWEEN #{searchStartDate} AND #{searchEndDate})]]>
+    </if>
+    ORDER BY
+    PM.REG_DATE DESC
+    LIMIT
+    #{startLimit} ,#{pageRow}
+  </select>
+
+  <select id="selectGeneralSurveyCount" parameterType="searchSurveyVO" resultType="int">
+    /** selectGeneralSurveyCount **/
+    SELECT
+    COUNT(*)
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+<!--    AND PM.TARGET_GRADE_CODE = #{targetGradeCode}-->
+    <if test="searchTitle != null and searchTitle != ''">
+      AND PM.TITLE LIKE CONCAT('%',#{searchTitle},'%')
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate == null or searchEndDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchStartDate} AND PM.END_DATE >= #{searchStartDate}) ]]>
+    </if>
+    <if
+      test="(searchEndDate != null and searchEndDate != '') and (searchStartDate == null or searchStartDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchEndDate} AND PM.END_DATE >= #{searchEndDate})]]>
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate != null and searchEndDate != '')">
+      <![CDATA[ AND (PM.START_DATE BETWEEN #{searchStartDate} AND #{searchEndDate} AND PM.END_DATE BETWEEN #{searchStartDate} AND #{searchEndDate})]]>
+    </if>
+  </select>
+
+  <select id="selectSurveyList" parameterType="searchSurveyVO" resultType="surveyVO">
+    SELECT
+    PM.*,
+    DATE_FORMAT(PM.START_DATE, '%Y.%m.%d') startDate,
+    DATE_FORMAT(PM.END_DATE, '%Y.%m.%d') endDate,
+    (SELECT COUNT(*) FROM POLL_ANS_MASTER_T_NEW PAM WHERE PM.POLL_MASTER_SEQ = PAM.POLL_MASTER_SEQ AND
+    PAM.SUBMIT_YN = 'Y') ANS_CNT,
+    CASE
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') < DATE_FORMAT(PM.START_DATE, '%Y%m%d') THEN '진행예정']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') BETWEEN DATE_FORMAT(PM.START_DATE, '%Y%m%d') AND DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '진행중']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') > DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '종료']]>
+    ELSE ''
+    END POLL_STATE
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+    AND PM.TARGET_GRADE_CODE = #{targetGradeCode}
+    <if test="searchTitle != null and searchTitle != ''">
+      AND PM.TITLE LIKE CONCAT('%',#{searchTitle},'%')
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate == null or searchEndDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchStartDate} AND PM.END_DATE >= #{searchStartDate}) ]]>
+    </if>
+    <if
+      test="(searchEndDate != null and searchEndDate != '') and (searchStartDate == null or searchStartDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchEndDate} AND PM.END_DATE >= #{searchEndDate})]]>
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate != null and searchEndDate != '')">
+      <![CDATA[ AND (PM.START_DATE BETWEEN #{searchStartDate} AND #{searchEndDate} AND PM.END_DATE BETWEEN #{searchStartDate} AND #{searchEndDate})]]>
+    </if>
+    ORDER BY
+    PM.REG_DATE DESC
+    LIMIT
+    #{startLimit} ,#{pageRow}
+  </select>
+
+  <select id="selectSurveyCount" parameterType="searchSurveyVO" resultType="int">
+    SELECT
+    COUNT(*)
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+<!--    AND PM.TARGET_GRADE_CODE = #{targetGradeCode}-->
+    <if test="searchTitle != null and searchTitle != ''">
+      AND PM.TITLE LIKE CONCAT('%',#{searchTitle},'%')
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate == null or searchEndDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchStartDate} AND PM.END_DATE >= #{searchStartDate}) ]]>
+    </if>
+    <if
+      test="(searchEndDate != null and searchEndDate != '') and (searchStartDate == null or searchStartDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchEndDate} AND PM.END_DATE >= #{searchEndDate})]]>
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate != null and searchEndDate != '')">
+      <![CDATA[ AND (PM.START_DATE BETWEEN #{searchStartDate} AND #{searchEndDate} AND PM.END_DATE BETWEEN #{searchStartDate} AND #{searchEndDate})]]>
+    </if>
+  </select>
+
+  <select id="checkDate" parameterType="surveyVO" resultType="java.util.Map">
+    SELECT
+    <![CDATA[
+				IFNULL(SUM(
+					CASE
+						WHEN (DATE_FORMAT(START_DATE, '%Y%m%d') <= #{startDate} and DATE_FORMAT(END_DATE, '%Y%m%d') >= #{startDate}) THEN 1
+						ELSE 0
+					END
+				), 0) startDateVal,
+				IFNULL(SUM(
+					CASE
+						WHEN (DATE_FORMAT(START_DATE, '%Y%m%d') <= #{endDate} and DATE_FORMAT(END_DATE, '%Y%m%d') >= #{endDate}) THEN 1
+						ELSE 0
+					END
+				),0) endDateVal
+				]]>
+    FROM
+    POLL_MASTER_T_NEW
+    WHERE
+    1=1
+    <if test="targetGradeCode != null and targetGradeCode != ''">
+      AND TARGET_GRADE_CODE = #{targetGradeCode}
+    </if>
+    <if test="targetCardinal != null and targetCardinal != ''">
+      AND TARGET_CARDINAL = #{targetCardinal}
+    </if>
+    <if test="pollMasterSeq != null and pollMasterSeq != ''">
+      AND POLL_MASTER_SEQ = #{pollMasterSeq}
+    </if>
+  </select>
+
+  <insert id="insertSurveySummar" parameterType="surveyVO">
+    INSERT INTO POLL_MASTER_T_NEW(
+    TITLE,
+    CONTENT,
+    START_DATE,
+    END_DATE,
+    POLL_IMG,
+    ORG_POLL_IMG,
+    POLL_IMG_DESC,
+    TARGET_GRADE_CODE,
+    TARGET_GRADE_NAME,
+    TARGET_CARDINAL,
+    DEL_YN,
+    REG_ID,
+    REG_DATE
+    ) VALUES (
+    #{title},
+    #{content},
+    #{startDate},
+    #{endDate},
+    #{pollImg},
+    #{orgPollImg},
+    #{pollImgDesc},
+    #{targetGradeCode},
+    #{targetGradeName},
+    #{targetCardinal},
+    'N',
+    #{regId},
+    NOW()
+    )
+    <selectKey resultType="long" keyProperty="pollMasterSeq" order="AFTER">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+
+  <insert id="insertSurveyGroup" parameterType="surveyVO">
+    INSERT INTO POLL_LIST_T_NEW (
+    POLL_MASTER_SEQ,
+    GROUP_ID,
+    OBJECT_ID,
+    OBJECT_TYPE,
+    MAIN_TEXT,
+    SUB_TEXT,
+    ADD_TEXT,
+    SEQUENCE,
+    REG_ID,
+    REG_DATE
+    ) VALUES (
+    #{pollMasterSeq},
+    #{groupId},
+    #{objectId},
+    #{objectType},
+    #{mainText},
+    #{subText},
+    #{addText},
+    #{sequence},
+    #{regId},
+    NOW()
+    )
+  </insert>
+
+  <insert id="insertSurveyQuest" parameterType="surveyVO">
+    INSERT INTO POLL_LIST_T_NEW (
+    POLL_MASTER_SEQ,
+    GROUP_ID,
+    OBJECT_ID,
+    OBJECT_TYPE,
+    QST_TYPE,
+    MAIN_TEXT,
+    SUB_TEXT,
+    MDT_YN,
+    SEQUENCE,
+    CNT_TYPE1,
+    CNT_TYPE2,
+    ETC_YN,
+    CNT_TYPE1_TEXT,
+    CNT_TYPE2_TEXT,
+    DISPLAY_ORDER,
+    REG_ID,
+    REG_DATE
+    ) VALUES (
+    #{pollMasterSeq},
+    #{groupId},
+    #{objectId},
+    #{objectType},
+    #{qstType},
+    #{questTitle},
+    #{questComment},
+    IFNULL(#{mdtYn}, ''),
+    #{sequence},
+    #{cntType1},
+    #{cntType2},
+    #{etcYn},
+    #{cntType1Text},
+    #{cntType2Text},
+    #{displayOrder},
+    #{regId},
+    NOW()
+    )
+  </insert>
+
+  <insert id="insertSurveyItem" parameterType="surveyVO">
+    INSERT INTO POLL_ITEM_LIST_T_NEW (
+    POLL_MASTER_SEQ,
+    GROUP_ID,
+    OBJECT_ID,
+    MAIN_TEXT,
+    ROW_NUM,
+    COL_NUM,
+    SEQUENCE,
+    REG_ID,
+    REG_DATE
+    ) VALUES (
+    #{pollMasterSeq},
+    #{groupId},
+    #{objectId},
+    #{mainText},
+    IFNULL(#{rowNum}, ''),
+    IFNULL(#{colNum}, ''),
+    #{sequence},
+    #{regId},
+    NOW()
+    )
+  </insert>
+
+  <select id="selectSurveyMasterDetail" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    PM.*,
+    DATE_FORMAT(PM.START_DATE, '%Y.%m.%d') startDate,
+    DATE_FORMAT(PM.END_DATE, '%Y.%m.%d') endDate,
+    IFNULL(PM.POLL_IMG, '') pollImg,
+    IFNULL(PM.ORG_POLL_IMG, '') orgPollImg,
+    IFNULL(PM.POLL_IMG_DESC, '') pollImgDesc,
+    (SELECT COUNT(*) FROM POLL_ANS_MASTER_T_NEW PAM WHERE PM.POLL_MASTER_SEQ = PAM.POLL_MASTER_SEQ AND
+    PAM.SUBMIT_YN = 'Y') ANS_CNT,
+    (SELECT MAX(GROUP_ID) FROM POLL_LIST_T_NEW PL WHERE PM.POLL_MASTER_SEQ = PL.POLL_MASTER_SEQ)
+    LAST_PAGE,
+    CASE
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') < DATE_FORMAT(PM.START_DATE, '%Y%m%d') THEN '진행예정']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') BETWEEN DATE_FORMAT(PM.START_DATE, '%Y%m%d') AND DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '진행중']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') > DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '종료']]>
+    ELSE ''
+    END POLL_STATE
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+    AND PM.POLL_MASTER_SEQ = #{pollMasterSeq}
+  </select>
+
+  <select id="selectPollListDetail" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    PL.*,
+    (SELECT COUNT(1) CNT FROM POLL_ITEM_LIST_T_NEW PIL WHERE PL.OBJECT_ID = PIL.OBJECT_ID AND
+    PL.POLL_MASTER_SEQ = PIL.POLL_MASTER_SEQ) ITEM_CNT
+    FROM
+    POLL_LIST_T_NEW PL
+    WHERE
+    PL.POLL_MASTER_SEQ = #{pollMasterSeq}
+    <if test="getType != null and getType != ''">
+      <if test="getType == 'GROUP'">
+        AND OBJECT_TYPE = 'GROUP'
+      </if>
+      <if test="getType != 'GROUP'">
+        AND OBJECT_TYPE != 'GROUP'
+      </if>
+    </if>
+    <if test="nextPage != null and nextPage != ''">
+      AND GROUP_ID = #{nextPage}
+    </if>
+    ORDER BY
+    PL.OBJECT_ID ASC, PL.SEQUENCE ASC
+  </select>
+
+  <select id="selectPollItemDetail" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    PIL.*,
+    IF(CAST(PIL.ROW_NUM AS CHAR) = CAST(CAST(PIL.ROW_NUM AS SIGNED) AS CHAR), 'Y', 'N') AS
+    rowNumIntegerCheck /* ROW_NUM이 숫자값인지 확인 */
+    FROM
+    POLL_ITEM_LIST_T_NEW PIL
+    WHERE
+    PIL.POLL_MASTER_SEQ = #{pollMasterSeq}
+    <if test="nextPage != null and nextPage != ''">
+      AND PIL.GROUP_ID = #{nextPage}
+    </if>
+    ORDER BY
+    PIL.GROUP_ID ASC,
+    PIL.OBJECT_ID ASC,
+    PIL.SEQUENCE + 0 ASC ,
+    PIL.ROW_NUM + 0 ASC,
+    PIL.COL_NUM + 0 ASC
+  </select>
+
+  <select id="slelectSurveyMasterData" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    PM.*,
+    DATE_FORMAT(START_DATE, '%Y-%m-%d') START_DATE,
+    DATE_FORMAT(END_DATE, '%Y-%m-%d') END_DATE,
+    (SELECT COUNT(*) FROM POLL_ANS_MASTER_T_NEW PAM WHERE PM.POLL_MASTER_SEQ = PAM.POLL_MASTER_SEQ
+    <if test="searchStartDate != null and searchStartDate != ''">
+      <![CDATA[ AND REG_DATE >= #{searchStartDate} ]]>
+    </if>
+    <if test="searchEndDate != null and searchEndDate != ''">
+      <![CDATA[ AND REG_DATE <= #{searchEndDate} ]]>
+    </if>
+    AND PAM.SUBMIT_YN = 'Y') ANS_CNT,
+    (SELECT COUNT(*) FROM POLL_ANS_MASTER_T_NEW PAM WHERE PM.POLL_MASTER_SEQ = PAM.POLL_MASTER_SEQ
+    <if test="searchStartDate != null and searchStartDate != ''">
+      <![CDATA[ AND REG_DATE >= #{searchStartDate} ]]>
+    </if>
+    <if test="searchEndDate != null and searchEndDate != ''">
+      <![CDATA[ AND REG_DATE <= #{searchEndDate} ]]>
+    </if>
+    AND PAM.SUBMIT_YN = 'Y' AND PAM.EXISTS_YN = 'Y') ANS_EXT_CNT,
+    CASE
+    <![CDATA[ WHEN DATE_FORMAT(NOW(), '%Y%m%d') < DATE_FORMAT(START_DATE, '%Y%m%d') THEN '진행예정' ]]>
+    <![CDATA[ WHEN DATE_FORMAT(NOW(), '%Y%m%d') BETWEEN DATE_FORMAT(START_DATE, '%Y%m%d') AND DATE_FORMAT(END_DATE, '%Y%m%d') THEN '진행중' ]]>
+    <![CDATA[ WHEN DATE_FORMAT(NOW(), '%Y%m%d') > DATE_FORMAT(END_DATE, '%Y%m%d') THEN '종료' ]]>
+    ELSE ''
+    END POLL_STATE
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.POLL_MASTER_SEQ = #{pollMasterSeq}
+  </select>
+
+  <select id="slelectSurveyMasterPersonCnt" parameterType="surveyVO" resultType="int">
+    SELECT
+    COUNT(1) CNT
+    FROM
+    POLL_ANS_MASTER_T_NEW PAM
+    WHERE
+    PAM.SUBMIT_YN = 'Y'
+    AND PAM.POLL_MASTER_SEQ = #{pollMasterSeq}
+  </select>
+
+  <select id="slelectSurveyMasterPersonList" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    PAM.*,
+    DATE_FORMAT(PAM.REG_DATE, '%Y.%m.%d / %H시%i분') regDate,
+    DATE_FORMAT(PAM.UPD_DATE, '%Y.%m.%d / %H시%i분') updDate
+    FROM
+    POLL_ANS_MASTER_T_NEW PAM
+    WHERE
+    PAM.SUBMIT_YN = 'Y'
+    AND PAM.POLL_MASTER_SEQ = #{pollMasterSeq}
+    ORDER BY
+    PAM.POLL_ANS_MASTER_SEQ DESC
+    LIMIT
+    #{startLimit} ,#{pageRow}
+  </select>
+
+  <update id="pollDateSave" parameterType="surveyVO">
+    UPDATE
+    POLL_MASTER_T_NEW
+    SET
+    START_DATE = #{startDate},
+    END_DATE = #{endDate},
+    UPD_ID = #{updId},
+    UPD_DATE = NOW()
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+  </update>
+
+  <delete id="initPollItem" parameterType="surveyVO">
+    DELETE FROM
+    POLL_ITEM_LIST_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <delete id="initPollSubList" parameterType="surveyVO">
+    DELETE FROM
+    POLL_LIST_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <delete id="pollDelete" parameterType="surveyVO">
+    DELETE FROM
+    POLL_MASTER_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <delete id="deletePollAnsDetail" parameterType="surveyVO">
+    UPDATE POLL_ANS_DETAIL_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{regId}
+    ,UPD_DATE = NOW()
+    WHERE POLL_ANS_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <delete id="deletePollAnsMaster" parameterType="surveyVO">
+    UPDATE POLL_ANS_MASTER_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{regId}
+    ,UPD_DATE = NOW()
+    WHERE POLL_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <delete id="deletePollItemList" parameterType="surveyVO">
+    UPDATE POLL_ITEM_LIST_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{regId}
+    ,UPD_DATE = NOW()
+    WHERE POLL_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <delete id="deletePollList" parameterType="surveyVO">
+    UPDATE POLL_LIST_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{regId}
+    ,UPD_DATE = NOW()
+    WHERE POLL_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <delete id="deletePollMaster" parameterType="surveyVO">
+    UPDATE POLL_MASTER_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{regId}
+    ,UPD_DATE = NOW()
+    WHERE POLL_MASTER_SEQ = #{pollMasterSeq}
+  </delete>
+
+  <update id="pollNoUse" parameterType="surveyVO">
+    UPDATE
+    POLL_ANS_MASTER_T_NEW
+    SET
+    EXISTS_YN = #{existsYn},
+    UPD_ID = #{updId},
+    UPD_DATE = NOW()
+    WHERE
+    USER_INFO_SEQ = #{userInfoSeq}
+    AND POLL_MASTER_SEQ = #{pollMasterSeq}
+  </update>
+
+  <select id="selectPollItemStat" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    G1.OBJECT_ID,
+    G1.OBJECT_TYPE,
+    G1.SEQUENCE,
+    G1.ANS1,
+    G1.ROW_CNT,
+    G2.CNT,
+    ROUND(G1.ROW_CNT/G2.CNT*100, 2) PER
+    FROM
+    (
+    SELECT
+    OBJECT_ID, OBJECT_TYPE, SEQUENCE, ANS1, COUNT(*) ROW_CNT
+    FROM
+    POLL_ANS_DETAIL_T_NEW
+    WHERE
+    OBJECT_TYPE NOT IN ('QTYPE3', 'QTYPE4')
+    AND POLL_ANS_MASTER_SEQ IN
+    (
+    SELECT
+    POLL_ANS_MASTER_SEQ
+    FROM
+    POLL_ANS_MASTER_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+    <if test="searchStartDate != null and searchStartDate != ''">
+      <![CDATA[ AND REG_DATE >= #{searchStartDate} ]]>
+    </if>
+    <if test="searchEndDate != null and searchEndDate != ''">
+      <![CDATA[ AND REG_DATE <= #{searchEndDate} ]]>
+    </if>
+    AND SUBMIT_YN = 'Y'
+    AND EXISTS_YN = 'N'
+    )
+    GROUP BY
+    OBJECT_ID, OBJECT_TYPE, SEQUENCE, ANS1
+    ) G1
+    LEFT OUTER JOIN
+    (
+    SELECT
+    RS.OBJECT_ID, RS.OBJECT_TYPE, RS.SEQUENCE, COUNT(*) CNT
+    FROM(
+    SELECT
+    POLL_ANS_MASTER_SEQ, OBJECT_ID, OBJECT_TYPE, SEQUENCE, COUNT(*)
+    FROM
+    POLL_ANS_DETAIL_T_NEW
+    WHERE
+    OBJECT_TYPE NOT IN ('QTYPE3', 'QTYPE4')
+    AND POLL_ANS_MASTER_SEQ IN
+    (
+    SELECT
+    POLL_ANS_MASTER_SEQ
+    FROM
+    POLL_ANS_MASTER_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+    <if test="searchStartDate != null and searchStartDate != ''">
+      <![CDATA[ AND REG_DATE >= #{searchStartDate} ]]>
+    </if>
+    <if test="searchEndDate != null and searchEndDate != ''">
+      <![CDATA[ AND REG_DATE <= #{searchEndDate} ]]>
+    </if>
+    AND SUBMIT_YN = 'Y'
+    AND EXISTS_YN = 'N'
+    )
+    GROUP BY
+    POLL_ANS_MASTER_SEQ, OBJECT_ID, OBJECT_TYPE, SEQUENCE
+    ) RS
+    GROUP BY
+    OBJECT_ID, OBJECT_TYPE, SEQUENCE
+    ) G2
+    ON
+    G1.OBJECT_ID = G2.OBJECT_ID
+    AND G1.SEQUENCE = G2.SEQUENCE
+  </select>
+
+  <select id="selectPollItemTextStat" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    OBJECT_ID,
+    OBJECT_TYPE,
+    SEQUENCE,
+    ANS2
+    FROM
+    POLL_ANS_DETAIL_T_NEW
+    WHERE
+    OBJECT_TYPE IN ('QTYPE3', 'QTYPE4')
+    AND POLL_ANS_MASTER_SEQ IN
+    (
+    SELECT
+    POLL_ANS_MASTER_SEQ
+    FROM
+    POLL_ANS_MASTER_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+    <if test="searchStartDate != null and searchStartDate != ''">
+      <![CDATA[ AND REG_DATE >= #{searchStartDate} ]]>
+    </if>
+    <if test="searchEndDate != null and searchEndDate != ''">
+      <![CDATA[ AND REG_DATE <= #{searchEndDate} ]]>
+    </if>
+    AND SUBMIT_YN = 'Y'
+    AND EXISTS_YN = 'N'
+    )
+    ORDER BY
+    POLL_ANS_DETAIL_SEQ DESC
+  </select>
+
+  <select id="selectSurveyData" parameterType="surveyVO" resultType="surveyVO">
+    SELECT
+    PAD.POLL_ANS_MASTER_SEQ,
+    PAD.OBJECT_ID,
+    PAD.OBJECT_TYPE,
+    PAD.SEQUENCE,
+    PAD.ANS1,
+    PAD.ANS2,
+    PAD.ANS_ETC
+    FROM
+    POLL_ANS_DETAIL_T_NEW PAD
+    WHERE
+    PAD.POLL_ANS_MASTER_SEQ IN (
+    SELECT
+    PAM.POLL_ANS_MASTER_SEQ
+    FROM
+    POLL_ANS_MASTER_T_NEW PAM
+    WHERE
+    PAM.POLL_MASTER_SEQ = #{pollMasterSeq}
+    AND PAM.USER_INFO_SEQ = #{userInfoSeq}
+    )
+  </select>
+
+  <select id="selectSurveyFile" parameterType="surveyVO" resultType="String">
+    SELECT
+    IFNULL(PM.POLL_IMG,'') POLL_IMG
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.POLL_MASTER_SEQ = #{pollMasterSeq}
+  </select>
+
+
+  <update id="updatePoll" parameterType="surveyVO">
+    UPDATE
+    POLL_MASTER_T_NEW
+    SET
+    TITLE = #{title},
+    CONTENT = #{content},
+    START_DATE = #{startDate},
+    END_DATE = #{endDate},
+    POLL_IMG = #{pollImg},
+    ORG_POLL_IMG = #{orgPollImg},
+    POLL_IMG_DESC = #{pollImgDesc},
+    TARGET_GRADE_CODE = #{targetGradeCode},
+    TARGET_GRADE_NAME = #{targetGradeName},
+    TARGET_CARDINAL = #{targetCardinal},
+    UPD_ID = #{regId},
+    UPD_DATE = NOW()
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+  </update>
+
+
+  <select id="selectNoneSurveyList" parameterType="searchSurveyVO" resultType="surveyVO">
+    SELECT
+    PM.*,
+    DATE_FORMAT(PM.START_DATE, '%Y.%m.%d') startDate,
+    DATE_FORMAT(PM.END_DATE, '%Y.%m.%d') endDate,
+    (SELECT COUNT(*) FROM POLL_ANS_MASTER_T_NEW PAM WHERE PM.POLL_MASTER_SEQ = PAM.POLL_MASTER_SEQ AND
+    PAM.SUBMIT_YN = 'Y') ANS_CNT,
+    CASE
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') < DATE_FORMAT(PM.START_DATE, '%Y%m%d') THEN '진행예정']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') BETWEEN DATE_FORMAT(PM.START_DATE, '%Y%m%d') AND DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '진행중']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') > DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '종료']]>
+    ELSE ''
+    END POLL_STATE
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+    AND PM.TARGET_GRADE_CODE = 'MBGC9999'
+    <if test="searchTitle != null and searchTitle != ''">
+      AND PM.TITLE LIKE CONCAT('%',#{searchTitle},'%')
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate == null or searchEndDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchStartDate} AND PM.END_DATE >= #{searchStartDate}) ]]>
+    </if>
+    <if
+      test="(searchEndDate != null and searchEndDate != '') and (searchStartDate == null or searchStartDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchEndDate} AND PM.END_DATE >= #{searchEndDate})]]>
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate != null and searchEndDate != '')">
+      <![CDATA[ AND (PM.START_DATE BETWEEN #{searchStartDate} AND #{searchEndDate} AND PM.END_DATE BETWEEN #{searchStartDate} AND #{searchEndDate})]]>
+    </if>
+    ORDER BY
+    PM.REG_DATE DESC
+    LIMIT
+    #{startLimit} ,#{pageRow}
+  </select>
+
+  <select id="selectNoneSurveyCount" parameterType="searchSurveyVO" resultType="int">
+    SELECT
+    COUNT(*)
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+    AND PM.TARGET_GRADE_CODE = 'MBGC9999'
+    <if test="searchTitle != null and searchTitle != ''">
+      AND PM.TITLE LIKE CONCAT('%',#{searchTitle},'%')
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate == null or searchEndDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchStartDate} AND PM.END_DATE >= #{searchStartDate}) ]]>
+    </if>
+    <if
+      test="(searchEndDate != null and searchEndDate != '') and (searchStartDate == null or searchStartDate == '')">
+      <![CDATA[ AND (PM.START_DATE <= #{searchEndDate} AND PM.END_DATE >= #{searchEndDate})]]>
+    </if>
+    <if
+      test="(searchStartDate != null and searchStartDate != '') and (searchEndDate != null and searchEndDate != '')">
+      <![CDATA[ AND (PM.START_DATE BETWEEN #{searchStartDate} AND #{searchEndDate} AND PM.END_DATE BETWEEN #{searchStartDate} AND #{searchEndDate})]]>
+    </if>
+  </select>
+
+
+  <insert id="pollCopyMaster" parameterType="surveyVO">
+    INSERT INTO POLL_MASTER_T_NEW(
+    TITLE,
+    CONTENT,
+    START_DATE,
+    END_DATE,
+    POLL_IMG,
+    ORG_POLL_IMG,
+    POLL_IMG_DESC,
+    TARGET_GRADE_CODE,
+    TARGET_GRADE_NAME,
+    TARGET_CARDINAL,
+    DEL_YN,
+    REG_ID,
+    REG_DATE
+    )
+    SELECT
+    CONCAT(TITLE, '_복사본'),
+    CONTENT,
+    START_DATE,
+    END_DATE,
+    POLL_IMG,
+    ORG_POLL_IMG,
+    POLL_IMG_DESC,
+    TARGET_GRADE_CODE,
+    TARGET_GRADE_NAME,
+    TARGET_CARDINAL,
+    'N',
+    #{regId},
+    NOW()
+    FROM
+    POLL_MASTER_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+    <selectKey resultType="long" keyProperty="newPollMasterSeq" order="AFTER">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+  <insert id="pollCopyList" parameterType="surveyVO">
+    INSERT INTO POLL_LIST_T_NEW (
+    POLL_MASTER_SEQ,
+    GROUP_ID,
+    OBJECT_ID,
+    OBJECT_TYPE,
+    QST_TYPE,
+    MAIN_TEXT,
+    SUB_TEXT,
+    ADD_TEXT,
+    MDT_YN,
+    SEQUENCE,
+    CNT_TYPE1,
+    CNT_TYPE2,
+    ETC_YN,
+    CNT_TYPE1_TEXT,
+    CNT_TYPE2_TEXT,
+    DISPLAY_ORDER,
+    REG_ID,
+    REG_DATE
+    )
+    SELECT
+    #{newPollMasterSeq},
+    GROUP_ID,
+    OBJECT_ID,
+    OBJECT_TYPE,
+    QST_TYPE,
+    MAIN_TEXT,
+    SUB_TEXT,
+    ADD_TEXT,
+    MDT_YN,
+    SEQUENCE,
+    CNT_TYPE1,
+    CNT_TYPE2,
+    ETC_YN,
+    CNT_TYPE1_TEXT,
+    CNT_TYPE2_TEXT,
+    DISPLAY_ORDER,
+    #{regId},
+    NOW()
+    FROM
+    POLL_LIST_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+  </insert>
+  <insert id="pollCopyItemList" parameterType="surveyVO">
+    INSERT INTO POLL_ITEM_LIST_T_NEW (
+    POLL_MASTER_SEQ,
+    GROUP_ID,
+    OBJECT_ID,
+    MAIN_TEXT,
+    ROW_NUM,
+    COL_NUM,
+    SEQUENCE,
+    REG_ID,
+    REG_DATE
+    )
+    SELECT
+    #{newPollMasterSeq},
+    GROUP_ID,
+    OBJECT_ID,
+    MAIN_TEXT,
+    ROW_NUM,
+    COL_NUM,
+    SEQUENCE,
+    #{regId},
+    NOW()
+    FROM
+    POLL_ITEM_LIST_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+  </insert>
+
+
+  <select id="selectPollMasterDetailExcel" parameterType="java.util.HashMap"
+    resultType="java.util.HashMap">
+    SELECT
+    PM.*,
+    DATE_FORMAT(PM.START_DATE, '%Y.%m.%d') startDate,
+    DATE_FORMAT(PM.END_DATE, '%Y.%m.%d') endDate,
+    IFNULL(PM.POLL_IMG, '') pollImg,
+    IFNULL(PM.ORG_POLL_IMG, '') orgPollImg,
+    IFNULL(PM.POLL_IMG_DESC, '') pollImgDesc,
+    (SELECT COUNT(*) FROM POLL_ANS_MASTER_T_NEW PAM WHERE PM.POLL_MASTER_SEQ = PAM.POLL_MASTER_SEQ AND
+    PAM.SUBMIT_YN = 'Y') ansCnt,
+    (SELECT MAX(GROUP_ID) FROM POLL_LIST_T_NEW PL WHERE PM.POLL_MASTER_SEQ = PL.POLL_MASTER_SEQ)
+    lastPage,
+    CASE
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') < DATE_FORMAT(PM.START_DATE, '%Y%m%d') THEN '진행예정']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') BETWEEN DATE_FORMAT(PM.START_DATE, '%Y%m%d') AND DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '진행중']]>
+    <![CDATA[WHEN DATE_FORMAT(NOW(), '%Y%m%d') > DATE_FORMAT(PM.END_DATE, '%Y%m%d') THEN '종료']]>
+    ELSE ''
+    END pollState
+    FROM
+    POLL_MASTER_T_NEW PM
+    WHERE
+    PM.DEL_YN = 'N'
+    AND PM.POLL_MASTER_SEQ = #{pollMasterSeq}
+  </select>
+
+  <select id="selectPollListDetailExcel" parameterType="java.util.HashMap"
+    resultType="java.util.HashMap">
+    SELECT
+    PL.*,
+    (SELECT COUNT(1) CNT FROM POLL_ITEM_LIST_T_NEW PIL WHERE PL.OBJECT_ID = PIL.OBJECT_ID AND
+    PL.POLL_MASTER_SEQ = PIL.POLL_MASTER_SEQ) itemCnt
+    FROM
+    POLL_LIST_T_NEW PL
+    WHERE
+    PL.POLL_MASTER_SEQ = #{pollMasterSeq}
+    <if test="getType != null and getType != ''">
+      <if test="getType == 'GROUP'">
+        AND OBJECT_TYPE = 'GROUP'
+      </if>
+      <if test="getType != 'GROUP'">
+        AND OBJECT_TYPE != 'GROUP'
+      </if>
+    </if>
+    <if test="nextPage != null and nextPage != ''">
+      AND GROUP_ID = #{nextPage}
+    </if>
+    ORDER BY
+    PL.OBJECT_ID ASC, PL.SEQUENCE ASC
+  </select>
+
+  <select id="selectPollItemDetailExcel" parameterType="java.util.HashMap"
+    resultType="java.util.HashMap">
+    SELECT
+    PIL.*,
+    IF(CAST(PIL.ROW_NUM AS CHAR) = CAST(CAST(PIL.ROW_NUM AS SIGNED) AS CHAR), 'Y', 'N') AS
+    rowNumIntegerCheck /* ROW_NUM이 숫자값인지 확인 */
+    FROM
+    POLL_ITEM_LIST_T_NEW PIL
+    WHERE
+    PIL.POLL_MASTER_SEQ = #{pollMasterSeq}
+    <if test="nextPage != null and nextPage != ''">
+      AND PIL.GROUP_ID = #{nextPage}
+    </if>
+    ORDER BY
+    PIL.GROUP_ID ASC,
+    PIL.OBJECT_ID ASC,
+    PIL.SEQUENCE + 0 ASC ,
+    PIL.ROW_NUM + 0 ASC,
+    PIL.COL_NUM + 0 ASC
+  </select>
+
+  <select id="selectPollItemStatExcel" parameterType="java.util.HashMap"
+    resultType="java.util.HashMap">
+    SELECT
+    G1.OBJECT_ID,
+    G1.OBJECT_TYPE,
+    G1.SEQUENCE,
+    G1.ANS1,
+    G1.ROW_CNT,
+    G2.CNT,
+    ROUND(G1.ROW_CNT/G2.CNT*100, 2) PER
+    FROM
+    (
+    SELECT
+    OBJECT_ID, OBJECT_TYPE, SEQUENCE, ANS1, COUNT(*) ROW_CNT
+    FROM
+    POLL_ANS_DETAIL_T_NEW
+    WHERE
+    OBJECT_TYPE NOT IN ('QTYPE3', 'QTYPE4')
+    AND POLL_ANS_MASTER_SEQ IN
+    (
+    SELECT
+    POLL_ANS_MASTER_SEQ
+    FROM
+    POLL_ANS_MASTER_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+    AND SUBMIT_YN = 'Y'
+    AND EXISTS_YN = 'N'
+    )
+    GROUP BY
+    OBJECT_ID, OBJECT_TYPE, SEQUENCE, ANS1
+    ) G1
+    LEFT OUTER JOIN
+    (
+    SELECT
+    RS.OBJECT_ID, RS.OBJECT_TYPE, RS.SEQUENCE, COUNT(*) CNT
+    FROM(
+    SELECT
+    POLL_ANS_MASTER_SEQ, OBJECT_ID, OBJECT_TYPE, SEQUENCE, COUNT(*)
+    FROM
+    POLL_ANS_DETAIL_T_NEW
+    WHERE
+    OBJECT_TYPE NOT IN ('QTYPE3', 'QTYPE4')
+    AND POLL_ANS_MASTER_SEQ IN
+    (
+    SELECT
+    POLL_ANS_MASTER_SEQ
+    FROM
+    POLL_ANS_MASTER_T_NEW
+    WHERE
+    POLL_MASTER_SEQ = #{pollMasterSeq}
+    AND SUBMIT_YN = 'Y'
+    AND EXISTS_YN = 'N'
+    )
+    GROUP BY
+    POLL_ANS_MASTER_SEQ, OBJECT_ID, OBJECT_TYPE, SEQUENCE
+    ) RS
+    GROUP BY
+    OBJECT_ID, OBJECT_TYPE, SEQUENCE
+    ) G2
+    ON
+    G1.OBJECT_ID = G2.OBJECT_ID
+    AND G1.SEQUENCE = G2.SEQUENCE
+  </select>
+
+  <select id="selectPollAnsListExcel" parameterType="java.util.HashMap"
+    resultType="java.util.HashMap">
+    SELECT
+    B.POLL_ANS_MASTER_SEQ,
+    B.OBJECT_ID,
+    B.OBJECT_TYPE,
+    B.SEQUENCE,
+    B.ANS1,
+    B.ANS2,
+    B.ANS_ETC
+    FROM
+    POLL_ANS_MASTER_T_NEW A,
+    POLL_ANS_DETAIL_T_NEW B
+    WHERE
+    A.POLL_ANS_MASTER_SEQ = B.POLL_ANS_MASTER_SEQ
+    AND A.POLL_MASTER_SEQ = #{pollMasterSeq}
+    AND A.SUBMIT_YN = 'Y'
+    AND A.EXISTS_YN = 'N'
+    ORDER BY
+    A.UPD_DATE DESC
+  </select>
+
+  <select id="selectPollAnsMAsterListExcel" parameterType="java.util.HashMap"
+    resultType="java.util.HashMap">
+    SELECT
+    PAM.POLL_ANS_MASTER_SEQ,
+    PAM.USER_INFO_SEQ,
+    PAM.POLL_MASTER_SEQ,
+    PAM.SUBMIT_YN,
+    PAM.EXISTS_YN,
+    DATE_FORMAT(PAM.UPD_DATE, '%Y-%m-%d %H:%i') AS updDate
+    FROM
+    POLL_ANS_MASTER_T_NEW PAM
+    WHERE
+    PAM.POLL_MASTER_SEQ = #{pollMasterSeq}
+    AND PAM.SUBMIT_YN = 'Y'
+    AND PAM.EXISTS_YN = 'N'
+    ORDER BY
+    PAM.UPD_DATE DESC
+  </select>
+
+  <select id="selectPollAnsList" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+    SELECT
+    B.POLL_ANS_MASTER_SEQ,
+    B.OBJECT_ID,
+    B.OBJECT_TYPE,
+    B.SEQUENCE,
+    B.ANS1,
+    B.ANS2,
+    B.ANS_ETC
+    FROM
+    POLL_ANS_MASTER_T_NEW A,
+    POLL_ANS_DETAIL_T_NEW B
+    WHERE
+    A.POLL_ANS_MASTER_SEQ = B.POLL_ANS_MASTER_SEQ
+    AND A.POLL_MASTER_SEQ = #{pollMasterSeq}
+    AND A.USER_INFO_SEQ = #{userInfoSeq}
+    AND A.SUBMIT_YN = 'Y'
+    AND A.EXISTS_YN = 'N'
+    ORDER BY
+    A.UPD_DATE DESC
+  </select>
+
+</mapper>
+
+

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BoardDAO">
+  <insert id="insertBoard" parameterType="boardVO">
+    /* insertBoard */
+    INSERT INTO BOARD_T_NEW(
+    BOARD_MANAGEMENT_SEQ
+    ,TITLE
+    ,HITS
+    ,CONTENT
+    ,THUM_IMG
+    ,ORG_THUM_IMG
+    ,THUM_IMG2
+    ,ORG_THUM_IMG2
+    ,THUM_IMG3
+    ,ORG_THUM_IMG3
+    ,THUM_ALT
+    ,REG_NAME
+    ,NOTI_YN
+    ,SK_YN
+    ,COLUMN1_VALUE
+    ,COLUMN2_VALUE
+    ,COLUMN3_VALUE
+    ,ORDER_NUM
+    ,CATEGORY
+    ,USE_DATE
+    ,USE_YN
+    ,DEL_YN
+    ,REG_ID
+    ,REG_DATE
+    ,ATT_FILE
+    ) VALUE(
+    #{boardManagementSeq}
+    ,#{title}
+    , 0
+    ,#{content}
+    ,#{thumImg}
+    ,#{orgThumImg}
+    ,#{thumImg2}
+    ,#{orgThumImg2}
+    ,#{thumImg3}
+    ,#{orgThumImg3}
+    ,#{thumAlt}
+    ,#{regName}
+    ,#{notiYn}
+    ,#{skYn}
+    ,#{column1Value}
+    ,#{column2Value}
+    ,#{column3Value}
+    ,999
+    ,#{category}
+    ,#{useDate}
+    ,'N'
+    ,'N'
+    ,#{regId}
+    ,NOW()
+    ,#{attFile}
+    )
+    <selectKey keyProperty="boardSeq" order="AFTER" resultType="int">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+
+  <insert id="insertBoardAttach" parameterType="boardAttachVO">
+    /* insertBoardAttach */
+    INSERT INTO BOARD_ATTACH_T_NEW(
+    BOARD_SEQ
+    ,FILE_NAME
+    ,ORG_FILE_NAME
+    ,FILE_EXT
+    ,FILE_SIZE
+    ,SPEC_ID
+    ,DEL_YN
+    ,REG_ID
+    ,REG_DATE
+    ) VALUE(
+    #{boardSeq}
+    ,#{fileName}
+    ,#{orgFileName}
+    ,#{fileExt}
+    ,#{fileSize}
+    ,#{specId}
+    ,'N'
+    ,#{regId}
+    ,NOW()
+    )
+  </insert>
+
+  <select id="selectBoardCount" parameterType="boardVO" resultType="int">
+    /* selectBoardCount */
+    SELECT
+    COUNT(BOARD_SEQ)
+    FROM BOARD_T_NEW
+    WHERE
+    BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+    <include refid="_searchBoardKeyword"/>
+    AND DEL_YN = 'N'
+  </select>
+
+  <select id="selectBoardUseCount" parameterType="boardVO" resultType="int">
+    /* selectBoardUseCount */
+    SELECT
+    COUNT(BOARD_SEQ)
+    FROM BOARD_T_NEW
+    WHERE
+    BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+    AND USE_YN = 'Y'
+    AND DEL_YN = 'N'
+  </select>
+
+  <select id="selectBoardList" parameterType="boardVO" resultType="boardVO">
+    /* selectBoardList */
+    SELECT
+    BOARD_SEQ
+    ,TITLE
+    ,CONTENT
+    ,REG_ID
+    ,REG_NAME
+    ,REG_DATE
+    ,ORG_THUM_IMG
+    ,THUM_IMG
+    ,USE_YN
+    ,USE_DATE
+    ,NOTI_YN
+    ,CATEGORY
+    ,COLUMN1_VALUE
+    ,COLUMN2_VALUE
+    ,COLUMN3_VALUE
+    ,ORDER_NUM
+    ,ATT_FILE
+    FROM BOARD_T_NEW
+    WHERE
+    BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+    <include refid="_searchBoardKeyword"/>
+    AND DEL_YN = 'N'
+    ORDER BY REG_DATE DESC
+    LIMIT #{startLimit} ,#{pageRow}
+  </select>
+
+  <select id="selectRestBoardList" parameterType="boardVO" resultType="boardVO">
+    /* selectBoardList */
+    SELECT
+    BOARD_SEQ
+    ,TITLE
+    ,CONTENT
+    ,REG_ID
+    ,REG_NAME
+    ,REG_DATE
+    ,ORG_THUM_IMG
+    ,THUM_IMG
+    ,USE_YN
+    ,USE_DATE
+    ,NOTI_YN
+    ,CATEGORY
+    ,COLUMN1_VALUE
+    ,COLUMN2_VALUE
+    ,COLUMN3_VALUE
+    ,ORDER_NUM
+    ,ATT_FILE
+    FROM BOARD_T_NEW
+    WHERE
+    BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+    <include refid="searchRest"/>
+    AND DEL_YN = 'N'
+    ORDER BY REG_DATE DESC
+    LIMIT #{startLimit} ,#{pageRow}
+  </select>
+
+  <select id="selectBoardMainList" parameterType="long" resultType="boardVO">
+    /* selectBoardMainList */
+    SELECT
+    BOARD_SEQ
+    ,TITLE
+    ,REG_ID
+    ,REG_NAME
+    ,REG_DATE
+    ,ORG_THUM_IMG
+    ,THUM_IMG
+    ,USE_YN
+    ,USE_DATE
+    ,NOTI_YN
+    ,CATEGORY
+    ,COLUMN1_VALUE
+    ,COLUMN2_VALUE
+    ,COLUMN3_VALUE
+    ,ORDER_NUM
+    FROM BOARD_T_NEW
+    WHERE
+    BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+    AND NOTI_YN = 'Y'
+    AND USE_YN = 'Y'
+    AND DEL_YN = 'N'
+    ORDER BY ORDER_NUM, REG_DATE DESC
+  </select>
+
+  <select id="selectBoard" parameterType="long" resultType="boardVO">
+    /* selectBoardView */
+    SELECT
+    BOARD_SEQ
+    ,BOARD_MANAGEMENT_SEQ
+    ,TITLE
+    ,CONTENT
+    ,THUM_ALT
+    ,THUM_IMG
+    ,ORG_THUM_IMG
+    ,THUM_IMG2
+    ,ORG_THUM_IMG2
+    ,THUM_IMG3
+    ,ORG_THUM_IMG3
+    ,REG_NAME
+    ,USE_YN
+    ,USE_DATE
+    ,NOTI_YN
+    ,SK_YN
+    ,COLUMN1_VALUE
+    ,COLUMN2_VALUE
+    ,COLUMN3_VALUE
+    ,ORDER_NUM
+    ,CATEGORY
+    ,REG_ID
+    ,REG_DATE
+    FROM BOARD_T_NEW
+    WHERE BOARD_SEQ = #{boardSeq}
+  </select>
+
+  <select id="selectRestPage" parameterType="restVO" resultType="restVO">
+    /* selectRestPage */
+    SELECT
+    TITLE
+    ,CONTENT
+    FROM BOARD_T_NEW
+    WHERE TITLE = #{title}
+    AND BOARD_MANAGEMENT_SEQ = 2
+  </select>
+
+  <select id="selectBoardAttachList" parameterType="long" resultType="boardAttachVO">
+    /* selectBoardAttachList */
+    SELECT
+    BOARD_ATTACH_SEQ
+    ,BOARD_SEQ
+    ,FILE_NAME
+    ,ORG_FILE_NAME
+    ,FILE_EXT
+    ,FILE_SIZE
+    ,SPEC_ID
+    FROM BOARD_ATTACH_T_NEW
+    WHERE BOARD_SEQ = #{boardSeq} AND DEL_YN = 'N'
+  </select>
+
+  <select id="selectDelBoardThumImg" parameterType="boardVO" resultType="boardVO">
+    /* selectDelBoardThumImg */
+    SELECT THUM_IMG, THUM_IMG2, THUM_IMG3 FROM BOARD_T_NEW
+    WHERE BOARD_SEQ = #{boardSeq}
+  </select>
+
+  <select id="selectDeleteBoardAttach" parameterType="boardVO" resultType="boardAttachVO">
+    /* selectDeleteBoardAttach */
+    SELECT
+    BOARD_ATTACH_SEQ
+    ,BOARD_SEQ
+    ,FILE_NAME AS tempName
+    ,SPEC_ID
+    FROM BOARD_ATTACH_T_NEW
+    WHERE BOARD_SEQ = #{boardSeq} AND DEL_YN = 'N'
+  </select>
+
+  <select id="selectHistoryCount" parameterType="accessHistoryVO" resultType="int">
+    /* selectHistoryCount */
+    SELECT
+    COUNT(*)
+    FROM ADMIN_ACCESSHISTORY_T_NEW
+  </select>
+
+  <select id="selectHistory" parameterType="accessHistoryVO" resultType="accessHistoryVO">
+    /* selectHistory */
+    SELECT
+    ACS_URL
+    ,ACS_UID
+    ,ACS_UIP
+    ,ACS_CDE
+    ,ACS_PGE
+    FROM
+    ADMIN_ACCESSHISTORY_T_NEW
+    ORDER BY
+    ACS_CDE DESC
+    LIMIT
+    #{startLimit} ,#{pageRow}
+  </select>
+
+  <sql id="searchRest">
+    <if test="search != null and search != ''">
+      AND (TITLE LIKE CONCAT('%',#{search},'%') OR CONTENT LIKE CONCAT('%',#{search},'%'))
+    </if>
+  </sql>
+
+  <sql id="_searchBoardKeyword">
+    <if test="search != null and search != '' and keyword == 'all'">
+      AND (TITLE LIKE CONCAT('%',#{search},'%') OR CONTENT LIKE CONCAT('%',#{search},'%'))
+    </if>
+    <if test="search != null and search != '' and keyword != 'all'">
+      AND ${keyword} LIKE CONCAT('%',#{search},'%')
+    </if>
+    <if test="search2 != null and search2 != '' and keyword2 != 'all'">
+      AND ${keyword2} LIKE CONCAT('%',#{search2},'%')
+    </if>
+    <if test="searchStartDate != null and searchStartDate != ''">
+      <![CDATA[ AND DATE_FORMAT(REG_DATE, '%Y-%m-%d') >= DATE_FORMAT(#{searchStartDate}, '%Y-%m-%d') ]]>
+    </if>
+    <if test="searchEndDate != null and searchEndDate != ''">
+      <![CDATA[ AND DATE_FORMAT(REG_DATE, '%Y-%m-%d') <= DATE_FORMAT(#{searchEndDate}, '%Y-%m-%d') ]]>
+    </if>
+    <if test="searchCategory != null and searchCategory != ''">
+      AND CATEGORY = #{searchCategory}
+    </if>
+  </sql>
+
+  <update id="deleteBoardAttach" parameterType="boardAttachVO">
+    /* deleteBoardAttach */
+    UPDATE BOARD_ATTACH_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE BOARD_SEQ = #{boardSeq} AND FILE_NAME = #{tempName}
+  </update>
+
+  <update id="updateBoard" parameterType="boardVO">
+    /* updateBoard */
+    UPDATE BOARD_T_NEW SET
+    TITLE = #{title}
+    ,CONTENT = #{content}
+    ,THUM_ALT = #{thumAlt}
+    ,THUM_IMG = #{thumImg}
+    ,ORG_THUM_IMG = #{orgThumImg}
+    ,THUM_IMG2 = #{thumImg2}
+    ,ORG_THUM_IMG2 = #{orgThumImg2}
+    ,THUM_IMG3 = #{thumImg3}
+    ,ORG_THUM_IMG3 = #{orgThumImg3}
+    ,NOTI_YN = #{notiYn}
+    ,SK_YN = #{skYn}
+    ,COLUMN1_VALUE = #{column1Value}
+    ,COLUMN2_VALUE = #{column2Value}
+    ,COLUMN3_VALUE = #{column3Value}
+    ,ORDER_NUM = #{orderNum}
+    ,CATEGORY = #{category}
+    ,USE_DATE = #{useDate}
+    ,USE_YN = #{useYn}
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    ,ATT_FILE = #{attFile}
+    WHERE BOARD_SEQ = #{boardSeq}
+  </update>
+
+  <update id="deleteBoard" parameterType="boardVO">
+    /* deleteBoard */
+    UPDATE BOARD_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE BOARD_SEQ = #{boardSeq}
+  </update>
+
+  <update id="updateBoardUseAjax" parameterType="boardVO">
+    /* updateBoardUseAjax */
+    UPDATE BOARD_T_NEW SET
+    USE_YN = #{useYn}
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE BOARD_SEQ = #{boardSeq}
+  </update>
+
+  <update id="updateOrderAjax" parameterType="boardVO">
+    /* updateOrderAjax */
+    UPDATE BOARD_T_NEW SET
+    ORDER_NUM = #{orderNum}
+    WHERE BOARD_SEQ = #{boardSeq}
+  </update>
+
+  <update id="updateMainBasic" parameterType="boardVO">
+    /* updateMainBasic */
+    UPDATE BOARD_T_NEW SET
+    NOTI_YN = 'N'
+    WHERE BOARD_MANAGEMENT_SEQ = (SELECT * FROM (SELECT BOARD_MANAGEMENT_SEQ FROM BOARD_T_NEW WHERE
+    BOARD_SEQ = #{boardSeq}) AS seq)
+  </update>
+
+  <update id="updateMainOrderAjax" parameterType="boardVO">
+    /* updateOrderAjax */
+    UPDATE BOARD_T_NEW SET
+    ORDER_NUM = #{orderNum}, NOTI_YN = 'Y'
+    WHERE BOARD_SEQ = #{boardSeq}
+  </update>
+</mapper>

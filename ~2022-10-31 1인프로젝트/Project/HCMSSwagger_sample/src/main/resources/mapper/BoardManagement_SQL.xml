@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BoardManagementDAO">
+  <insert id="insertBoardManagement" parameterType="boardManagementVO">
+    /* insertBoardManagement */
+    INSERT INTO BOARD_MANAGEMENT_T_NEW(
+    BOARD_CODE,
+    BOARD_NAME,
+    BOARD_SKIN,
+    PAGE_ROW,
+    PAGE_BLOCK,
+    EDIT_YN,
+    EDIT_CHECK,
+    EDIT_EXT,
+    EDIT_SIZE,
+    THUMBIMG_YN,
+    THUMBIMG_CHECK,
+    THUMBIMG_ALT,
+    THUMBIMG_EXT,
+    THUMBIMG_SIZE,
+    ATT_YN,
+    ATT_CHECK,
+    ATT_COUNT,
+    ATT_EXT,
+    ATT_SIZE,
+    NOTICE_YN,
+    CATEGORY_YN,
+    COLUMN1,
+    COLUMN1_CHECK,
+    COLUMN1_EXPTEXT,
+    COLUMN2,
+    COLUMN2_CHECK,
+    COLUMN2_EXPTEXT,
+    COLUMN3,
+    COLUMN3_CHECK,
+    COLUMN3_EXPTEXT,
+    TITLE_MSG,
+    TITLE_MAX,
+    USE_DATE_YN,
+    DEL_YN,
+    REG_ID,
+    REG_DATE
+    ) VALUE(
+    #{boardCode}
+    ,#{boardName}
+    ,#{boardSkin}
+    ,#{pageRow}
+    ,#{pageBlock}
+    ,#{editYn}
+    ,#{editCheck}
+    ,#{editExt}
+    ,#{editSize}
+    ,#{thumbimgYn}
+    ,#{thumbimgCheck}
+    ,#{thumbimgAlt}
+    ,#{thumbimgExt}
+    ,#{thumbimgSize}
+    ,#{attYn}
+    ,#{attCheck}
+    ,#{attCount}
+    ,#{attExt}
+    ,#{attSize}
+    ,#{noticeYn}
+    ,#{categoryYn}
+    ,#{column1}
+    ,#{column1Check}
+    ,#{column1Exptext}
+    ,#{column2}
+    ,#{column2Check}
+    ,#{column2Exptext}
+    ,#{column3}
+    ,#{column3Check}
+    ,#{column3Exptext}
+    ,#{titleMsg}
+    ,#{titleMax}
+    ,#{useDateYn}
+    ,'N'
+    ,#{regId}
+    ,NOW()
+    )
+  </insert>
+
+  <select id="selectBoardManagementList" parameterType="boardManagementVO"
+    resultType="boardManagementVO">
+    /* selectBoardManagementList */
+    SELECT
+    BOARD_MANAGEMENT_SEQ
+    ,BOARD_CODE
+    ,BOARD_NAME
+    ,BOARD_SKIN
+    ,PAGE_ROW
+    ,PAGE_BLOCK
+    ,NOTICE_YN
+    ,EDIT_YN
+    ,THUMBIMG_YN
+    ,ATT_YN
+    ,REG_DATE
+    FROM BOARD_MANAGEMENT_T_NEW
+    WHERE
+    DEL_YN = 'N'
+    <if test='boardSkin != ""'>
+      AND BOARD_SKIN = #{boardSkin}
+    </if>
+    ORDER BY BOARD_MANAGEMENT_SEQ
+  </select>
+
+  <select id="selectBoardManagement" parameterType="String" resultType="boardManagementVO">
+    /* selectBoardManagement */
+    SELECT
+    *
+    FROM BOARD_MANAGEMENT_T_NEW
+    WHERE BOARD_CODE = #{boardCode}
+    AND DEL_YN = 'N'
+  </select>
+
+  <select id="selectBoardManagementSeq" parameterType="long" resultType="boardManagementVO">
+    /* selectBoardManagementSeq */
+    SELECT
+    *
+    FROM BOARD_MANAGEMENT_T_NEW
+    WHERE BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+    AND DEL_YN = 'N'
+  </select>
+
+  <select id="selectBoardManagementCount" parameterType="boardManagementVO" resultType="int">
+    /* selectBoardManagementCount */
+    SELECT
+    COUNT(BOARD_MANAGEMENT_SEQ)
+    FROM BOARD_MANAGEMENT_T_NEW
+    WHERE
+    DEL_YN = 'N'
+  </select>
+
+  <update id="updateBoardManagement" parameterType="boardManagementVO">
+    /* updateBoardManagement */
+    UPDATE BOARD_MANAGEMENT_T_NEW SET
+    BOARD_CODE = #{boardCode}
+    ,BOARD_NAME = #{boardName}
+    ,PAGE_ROW = #{pageRow}
+    ,PAGE_BLOCK = #{pageBlock}
+    ,NOTICE_YN = #{noticeYn}
+    ,CATEGORY_YN = #{categoryYn}
+    ,EDIT_YN = #{editYn}
+    ,EDIT_CHECK = #{editCheck}
+    ,EDIT_EXT = #{editExt}
+    ,EDIT_SIZE = #{editSize}
+    ,THUMBIMG_YN = #{thumbimgYn}
+    ,THUMBIMG_CHECK = #{thumbimgCheck}
+    ,THUMBIMG_ALT = #{thumbimgAlt}
+    ,THUMBIMG_EXT = #{thumbimgExt}
+    ,THUMBIMG_SIZE = #{thumbimgSize}
+    ,ATT_YN = #{attYn}
+    ,ATT_CHECK = #{attCheck}
+    ,ATT_COUNT = #{attCount}
+    ,ATT_EXT = #{attExt}
+    ,ATT_SIZE = #{attSize}
+    ,COLUMN1 = #{column1}
+    ,COLUMN1_CHECK = #{column1Check}
+    ,COLUMN1_EXPTEXT = #{column1Exptext}
+    ,COLUMN2 = #{column2}
+    ,COLUMN2_CHECK = #{column2Check}
+    ,COLUMN2_EXPTEXT = #{column2Exptext}
+    ,COLUMN3 = #{column3}
+    ,COLUMN3_CHECK = #{column3Check}
+    ,COLUMN3_EXPTEXT = #{column3Exptext}
+    ,TITLE_MSG = #{titleMsg}
+    ,TITLE_MAX = #{titleMax}
+    ,USE_DATE_YN = #{useDateYn}
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+  </update>
+
+  <update id="deleteBoardManagement" parameterType="boardManagementVO">
+    /* deleteBoardManagement */
+    UPDATE BOARD_MANAGEMENT_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE BOARD_MANAGEMENT_SEQ IN (${boardManagementSeqGroup})
+  </update>
+</mapper>

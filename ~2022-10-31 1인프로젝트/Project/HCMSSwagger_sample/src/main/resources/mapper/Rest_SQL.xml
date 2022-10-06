@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="RestDAO">
+ 
+
+  <select id="selectBoardRest" parameterType="boardRestVO" resultType="boardRestVO">
+    /* selectBoardRest */
+	SELECT
+		b.BOARD_MANAGEMENT_SEQ ,
+		a.BOARD_SEQ , 
+		b.BOARD_CODE ,
+		b.BOARD_NAME,
+		a.TITLE,
+		a.CONTENT,
+		DATE_FORMAT(a.REG_DATE, '%Y년%m월%d일 %H시%i분%S초') AS REG_DATE,
+		DATE_FORMAT(a.UPD_DATE, '%Y년%m월%d일 %H시%i분%S초') AS UPD_DATE
+	FROM
+		BOARD_T_NEW a
+	INNER JOIN
+		BOARD_MANAGEMENT_T_NEW b
+	ON
+		a.BOARD_MANAGEMENT_SEQ = b.BOARD_MANAGEMENT_SEQ
+	WHERE
+		a.BOARD_MANAGEMENT_SEQ = #{boardManagementSeq}
+  </select>
+  
+    <select id="selectBoard" parameterType="long" resultType="boardRestVO">
+    /* selectBoardView */
+	SELECT
+	   	a.BOARD_SEQ
+    	,a.BOARD_MANAGEMENT_SEQ
+    	,b.BOARD_CODE
+		,b.BOARD_NAME
+    	,a.TITLE
+    	,a.CONTENT
+    	,a.THUM_ALT
+    	,a.THUM_IMG
+    	,a.ORG_THUM_IMG
+    	,a.THUM_IMG2
+    	,a.ORG_THUM_IMG2
+    	,a.THUM_IMG3
+    	,a.ORG_THUM_IMG3
+    	,a.REG_NAME
+    	,a.USE_YN
+    	,a.USE_DATE
+    	,a.NOTI_YN
+    	,a.SK_YN
+    	,a.COLUMN1_VALUE
+    	,a.COLUMN2_VALUE
+    	,a.COLUMN3_VALUE
+    	,a.ORDER_NUM
+    	,a.CATEGORY
+    	,a.REG_ID
+    	,a.REG_DATE
+	FROM
+		BOARD_T_NEW a
+	INNER JOIN
+		BOARD_MANAGEMENT_T_NEW b
+	ON
+		a.BOARD_MANAGEMENT_SEQ = b.BOARD_MANAGEMENT_SEQ
+    WHERE 
+    	BOARD_SEQ = #{boardSeq}
+  </select>
+  
+  <select id="selectBoardManagementList" parameterType="boardManagementRestVO" resultType="boardManagementRestVO">
+    /* selectBoardManagementList */
+    SELECT
+    	BOARD_MANAGEMENT_SEQ
+    	,BOARD_CODE
+    	,BOARD_NAME
+    	,BOARD_SKIN
+    	,PAGE_ROW
+    	,PAGE_BLOCK
+    	,NOTICE_YN
+    	,EDIT_YN
+    	,THUMBIMG_YN
+    	,ATT_YN
+    	,REG_DATE
+    FROM 
+    	BOARD_MANAGEMENT_T_NEW
+    WHERE
+    	DEL_YN = 'N'
+    ORDER BY 
+    	BOARD_MANAGEMENT_SEQ
+  </select>
+    
+
+ 
+</mapper>

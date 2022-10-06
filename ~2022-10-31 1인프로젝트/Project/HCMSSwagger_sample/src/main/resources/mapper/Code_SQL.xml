@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CodeDAO">
+  <insert id="insertCode" parameterType="codeVO">
+    /* insertCode */
+    INSERT INTO CODE_T_NEW(
+    MASTER_CODE
+    ,DETAIL_CODE
+    ,DETAIL_NAME
+    ,DETAIL_TITLE
+    ,DETAIL_DESC
+    ,USE_YN
+    ,REG_NAME
+    ,REG_ID
+    ,REG_DATE
+    ) VALUE(
+    #{masterCode}
+    ,#{detailCode}
+    ,#{detailName}
+    ,#{detailTitle}
+    ,#{detailDesc}
+    ,#{useYn}
+    ,#{regName}
+    ,#{regId}
+    ,NOW()
+    )
+  </insert>
+
+  <select id="selectCodeMasterList" parameterType="String" resultType="codeVO">
+    /* selectCodeMasterList */
+    SELECT
+    CODE_SEQ
+    ,MASTER_CODE
+    ,DETAIL_CODE
+    ,DETAIL_NAME
+    ,DETAIL_TITLE
+    FROM
+    CODE_T_NEW
+    WHERE
+    MASTER_CODE = #{masterCode}
+    AND DEL_YN = 'N'
+    ORDER BY
+    DETAIL_CODE
+  </select>
+
+  <select id="selectCodeList" parameterType="codeVO" resultType="codeVO">
+    /* selectCodeList */
+    SELECT
+    CODE_SEQ
+    ,MASTER_CODE
+    ,DETAIL_CODE
+    ,DETAIL_NAME
+    ,DETAIL_TITLE
+    ,USE_YN
+    ,REG_NAME
+    ,REG_DATE
+    FROM
+    CODE_T_NEW
+    WHERE
+    MASTER_CODE = #{masterCode}
+    <include refid="_searchCodeKeyword"/>
+    AND DEL_YN = 'N'
+    ORDER BY
+    REG_DATE DESC
+    LIMIT #{startLimit} ,#{pageRow}
+  </select>
+
+  <select id="selectCodeCount" parameterType="codeVO" resultType="int">
+    /* selectCodeCount */
+    SELECT
+    COUNT(*)
+    FROM
+    CODE_T_NEW
+    WHERE
+    MASTER_CODE = #{masterCode}
+    <include refid="_searchCodeKeyword"/>
+    AND DEL_YN = 'N'
+  </select>
+
+  <select id="selectCode" parameterType="long" resultType="codeVO">
+    /* selectCode */
+    SELECT
+    CODE_SEQ
+    ,MASTER_CODE
+    ,DETAIL_CODE
+    ,DETAIL_NAME
+    ,DETAIL_TITLE
+    ,DETAIL_DESC
+    ,USE_YN
+    ,REG_NAME
+    ,REG_DATE
+    FROM
+    CODE_T_NEW
+    WHERE CODE_SEQ = #{codeSeq}
+  </select>
+
+  <select id="selectUseCode" parameterType="codeVO" resultType="codeVO">
+    /* selectUseCode */
+    SELECT
+    CODE_SEQ
+    ,MASTER_CODE
+    ,DETAIL_CODE
+    ,DETAIL_NAME
+    ,DETAIL_TITLE
+    ,USE_YN
+    ,REG_NAME
+    ,REG_DATE
+    FROM
+    CODE_T_NEW
+    WHERE
+    MASTER_CODE = #{masterCode}
+    <if test="search != null and search != ''">
+      AND DETAIL_CODE LIKE CONCAT('%',#{search},'%')
+    </if>
+    AND USE_YN = 'Y'
+    AND DEL_YN = 'N'
+    ORDER BY
+    REG_DATE DESC
+  </select>
+
+  <sql id="_searchCodeKeyword">
+    <if test="searchStartDate != null and searchStartDate != ''">
+      <![CDATA[ AND DATE_FORMAT(REG_DATE, '%Y-%m-%d') >= DATE_FORMAT(#{searchStartDate}, '%Y-%m-%d') ]]>
+    </if>
+    <if test="searchEndDate != null and searchEndDate != ''">
+      <![CDATA[ AND DATE_FORMAT(REG_DATE, '%Y-%m-%d') <= DATE_FORMAT(#{searchEndDate}, '%Y-%m-%d') ]]>
+    </if>
+    <if test="searchUseYn != null and searchUseYn != ''">
+      AND USE_YN = #{searchUseYn}
+    </if>
+    <if test="search != null and search != ''">
+      AND ${keyword} LIKE CONCAT('%',#{search},'%')
+    </if>
+  </sql>
+
+  <update id="updateCode" parameterType="codeVO">
+    /* updateCode */
+    UPDATE CODE_T_NEW SET
+    DETAIL_CODE = #{detailCode}
+    ,DETAIL_NAME = #{detailName}
+    ,DETAIL_TITLE = #{detailTitle}
+    ,DETAIL_DESC = #{detailDesc}
+    ,USE_YN = #{useYn}
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE CODE_SEQ = #{codeSeq}
+  </update>
+
+  <update id="updateCodeUseAjax" parameterType="codeVO">
+    /* updateCodeUseAjax */
+    UPDATE CODE_T_NEW SET
+    USE_YN = #{useYn}
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE CODE_SEQ = #{codeSeq}
+  </update>
+
+  <update id="deleteCode" parameterType="codeVO">
+    /* updateCode */
+    UPDATE CODE_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE CODE_SEQ = #{codeSeq}
+  </update>
+</mapper>

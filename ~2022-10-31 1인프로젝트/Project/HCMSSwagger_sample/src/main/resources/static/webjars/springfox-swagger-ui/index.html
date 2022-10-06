@@ -1,0 +1,113 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HCMS API Sample</title>
+
+<link rel="stylesheet" type="text/css" href="./springfox.css?v=3.0.0">
+<link rel="stylesheet" type="text/css" href="./swagger-ui.css?v=3.0.0">
+<link rel="icon" href="./favicon.ico?v=3.0.0"/>
+
+<style>
+.wrapper {
+	width: 100%;
+	max-width: 1460px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: border-box;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	background: #fafafa;
+}
+
+.top-nav-bar {
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	overflow: hidden;
+	background: #111;
+	padding: 15px;
+}
+
+.nav-bar-icon {
+	margin-top: 1px;
+	float: left;
+	display: block;
+	text-decoration: none;
+}
+
+.nav-bar-title {
+	float: left;
+	display: block;
+	text-decoration: none;
+	margin-top: 7px;
+	margin-left: 10px;
+	font-size: 18px;
+	color: #ffffff;
+	font-family: sans-serif;
+}
+
+.nav-bar-select {
+	width: 30%;
+	float: right;
+	font-family: sans-serif;
+	display: inline-block;
+	cursor: pointer;
+	padding: 10px 15px;
+	outline: 0;
+	border-radius: 2px;
+	border: none;
+	background: #fafafa;
+	color: #3b4151;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+select.classic {
+	background-image: linear-gradient(45deg, transparent 50%, #111 50%),
+		linear-gradient(135deg, #111 50%, transparent 50%);
+	background-position: calc(100% - 20px) calc(1em + 2px),
+		calc(100% - 15px) calc(1em + 2px), 100% 0;
+	background-size: 5px 5px, 5px 5px, 3.5em 3.5em;
+	background-repeat: no-repeat;
+}
+</style>
+
+
+</head>
+
+<body>
+	<div class="top-nav-bar">
+		<div class="wrapper">
+	      <a class="nav-bar-icon"><img src="./favicon.ico" style="height: 40px; width: 40px;"></a>
+	      <a class="nav-bar-title"><b>HCMS API</b></a>
+	      <select class="classic nav-bar-select" id="service-selector" onchange="changeSwaggerUI()">
+	        <option value="http://10.10.10.245:8080/v2/api-docs?group=CMS API">CMS API</option>
+	      </select>
+		</div>
+    </div>
+
+	<div id="swagger-ui"></div>
+
+	<script src="./swagger-ui-bundle.js?v=3.0.0"></script>
+	<script src="./swagger-ui-standalone-preset.js?v=3.0.0"></script>
+	<script src="./springfox.js?v=3.0.0"></script>
+	
+</body>
+
+</html>

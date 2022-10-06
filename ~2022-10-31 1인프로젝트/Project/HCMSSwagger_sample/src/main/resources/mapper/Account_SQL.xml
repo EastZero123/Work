@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AccountDAO">
+  <insert id="insertAccount" parameterType="accountVO">
+    /* insertAccount */
+    INSERT INTO ACCOUNT_T_NEW(
+    ACCOUNT_ID
+    ,ACCOUNT_PASSWORD
+    ,ACCOUNT_NAME
+    ,ACCOUNT_AUTHS
+    ,USE_YN
+    ,DEL_YN
+    ,REG_ID
+    ,REG_DATE
+    ) VALUE(
+    #{accountId}
+    ,#{accountPassword}
+    ,#{accountName}
+    ,#{accountAuths}
+    ,'N'
+    ,'N'
+    ,#{regId}
+    ,NOW()
+    )
+    <selectKey keyProperty="accountSeq" order="AFTER" resultType="int">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+
+  <insert id="insertAccountAuth" parameterType="accountAuthVO">
+    /* insertAccountAuth */
+    INSERT INTO ACCOUNT_AUTH_T_NEW(
+    ACCOUNT_SEQ
+    ,AUTH_CODE
+    ,AUTH_YN
+    ,DEL_YN
+    ,REG_ID
+    ,REG_DATE
+    ) VALUE(
+    #{accountSeq}
+    ,#{authCode}
+    ,#{authYn}
+    ,'N'
+    ,#{regId}
+    ,NOW()
+    )
+    ON DUPLICATE KEY UPDATE
+    AUTH_YN = #{authYn}, UPD_ID = #{regId}, UPD_DATE = NOW()
+  </insert>
+
+  <insert id="insertLoginSession" parameterType="loginControlVO">
+    <![CDATA[
+	         INSERT INTO ADMIN_LOGIN_INFO_T_NEW (
+					  ACCOUNT_ID
+					, LOGIN_TIME
+					, LOG_SESSION_ID
+					, LOG_STATUS
+					, LOG_IP
+				) VALUES (
+					  #{accountId}
+					, NOW()
+					, #{logSessionId}
+					, 'Y'
+					, #{logIp}
+				)
+        ]]>
+  </insert>
+
+  <select id="selectAccountCount" parameterType="accountVO" resultType="int">
+    /* selectAccountCount */
+    SELECT
+    COUNT(ACCOUNT_SEQ)
+    FROM
+    ACCOUNT_T_NEW
+    WHERE
+    DEL_YN = 'N'
+  </select>
+
+  <select id="selectAccountList" parameterType="accountVO" resultType="accountVO">
+    /* selectAccountList */
+    SELECT
+    ACCOUNT_SEQ
+    ,ACCOUNT_ID
+    ,ACCOUNT_NAME
+    ,ACCOUNT_AUTHS
+    ,USE_YN
+    FROM
+    ACCOUNT_T_NEW
+    WHERE
+    DEL_YN = 'N'
+    ORDER BY
+    ACCOUNT_SEQ DESC
+    LIMIT
+    #{startLimit} ,#{pageRow}
+  </select>
+
+  <select id="selectAccount" parameterType="long" resultType="accountVO">
+    /* selectAccount */
+    SELECT
+    ACCOUNT_SEQ
+    ,ACCOUNT_ID
+    ,ACCOUNT_PASSWORD
+    ,ACCOUNT_NAME
+    ,USE_YN
+    ,REG_ID
+    ,REG_DATE
+    FROM
+    ACCOUNT_T_NEW
+    WHERE
+    ACCOUNT_SEQ = #{accountSeq}
+  </select>
+
+  <select id="checkAccountId" parameterType="String" resultType="int">
+    /* checkAccountId */
+    SELECT
+    COUNT(ACCOUNT_SEQ)
+    FROM
+    ACCOUNT_T_NEW
+    WHERE
+    ACCOUNT_ID = #{accountId}
+  </select>
+
+  <select id="selectAccountAuthList" parameterType="long" resultType="accountAuthVO">
+    /* selectAccountAuthList */
+    SELECT
+    AA.ACCOUNT_SEQ
+    ,AA.AUTH_CODE
+    ,AA.AUTH_YN
+    ,C.DETAIL_NAME
+    ,C.DETAIL_TITLE
+    ,AA.DEL_YN
+    FROM
+    ACCOUNT_AUTH_T_NEW AS AA
+    LEFT JOIN CODE_T_NEW AS C
+    ON AA.AUTH_CODE = C.DETAIL_CODE
+    AND C.DEL_YN = 'N'
+    WHERE
+    AA.ACCOUNT_SEQ = #{accountSeq} AND AA.DEL_YN = 'N'
+    ORDER BY AA.AUTH_CODE
+  </select>
+
+  <select id="selectLoginInfo" parameterType="accountVO" resultType="accountVO">
+    /* selectLoginInfo */
+    SELECT
+    ACCOUNT_SEQ
+    ,ACCOUNT_ID
+    ,ACCOUNT_PASSWORD
+    ,ACCOUNT_NAME
+    ,ACCOUNT_AUTHS
+    ,USE_YN
+    FROM
+    ACCOUNT_T_NEW
+    WHERE
+    ACCOUNT_ID = #{accountId}
+    AND DEL_YN = 'N'
+    AND USE_YN = 'Y'
+    LIMIT 1
+  </select>
+
+  <select id="selectLoginSession" parameterType="accountVO" resultType="loginControlVO">
+    <![CDATA[
+	        SELECT  LOG_IDX
+					, ACCOUNT_ID
+					, LOGIN_TIME
+					, LOGOUT_TIME
+					, LOG_SESSION_ID
+					, LOG_STATUS
+					, LOG_IP
+					, TIMESTAMPDIFF(DAY, LOGIN_TIME, NOW()) AS LOGIN_START_DATE
+					, TIMESTAMPDIFF(MINUTE, LOGIN_TIME, NOW()) AS LOGIN_START_MINUTE
+            FROM    ADMIN_LOGIN_INFO_T_NEW
+            WHERE   ACCOUNT_ID = #{accountId}
+        ]]>
+  </select>
+
+  <select id="selectId" parameterType="String" resultType="accountVO">
+    <![CDATA[
+            SELECT  ACCOUNT_ID
+					, ACCOUNT_NAME
+					, MEM_EMA
+					, MEM_TEL
+					, MEM_IP
+					, MEM_PAS_FAI_COU
+					, AUT_COD_IDX
+					, MEM_COD_IDX
+					, MEM_DEP
+            FROM    ACCOUNT_T_NEW
+            WHERE   ACCOUNT_ID = #{accountId}
+        ]]>
+  </select>
+
+  <update id="updateAccount" parameterType="accountVO">
+    /* updateAccount */
+    UPDATE ACCOUNT_T_NEW SET
+
+    ACCOUNT_NAME = #{accountName}
+    <if test='!accountPassword.equals("")'>
+      ,ACCOUNT_PASSWORD = #{accountPassword}
+    </if>
+    ,ACCOUNT_AUTHS = #{accountAuths}
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE
+    ACCOUNT_SEQ = #{accountSeq}
+  </update>
+
+  <update id="updateAccountUseAjax" parameterType="accountVO">
+    /* updateAccountUseAjax */
+    UPDATE ACCOUNT_T_NEW SET
+    USE_YN = #{useYn}
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE
+    ACCOUNT_SEQ = #{accountSeq}
+  </update>
+
+  <update id="deleteAccount" parameterType="accountVO">
+    /* deleteAccount */
+    UPDATE ACCOUNT_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE
+    ACCOUNT_SEQ = #{accountSeq}
+  </update>
+
+  <update id="deleteAccountAuth" parameterType="accountVO">
+    /* deleteAccountAuth */
+    UPDATE ACCOUNT_AUTH_T_NEW SET
+    DEL_YN = 'Y'
+    ,UPD_ID = #{updId}
+    ,UPD_DATE = NOW()
+    WHERE
+    ACCOUNT_SEQ = #{accountSeq}
+  </update>
+
+  <update id="updateLoginSession" parameterType="loginControlVO">
+    <![CDATA[
+            UPDATE ADMIN_LOGIN_INFO_T_NEW
+                SET LOG_SESSION_ID = #{logSessionId}
+                    , LOG_STATUS = #{logStatus}
+                    , LOGIN_TIME = NOW()
+            WHERE ACCOUNT_ID = #{accountId}
+        ]]>
+  </update>
+</mapper>
