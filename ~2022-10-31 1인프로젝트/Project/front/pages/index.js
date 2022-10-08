@@ -1,23 +1,28 @@
-import Head from "next/head"
-import Image from "next/image"
-import { useEffect } from "react"
-import styles from "../styles/Home.module.css"
+import Head from "next/head";
+import Image from "next/image";
+import { useEffect } from "react";
+import Layout from "../component/UI/Layout";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const fetchdata = async () => {
     try {
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/posts?_limit=6"
-      ).then((response) => response.json())
-      console.log(response)
+      ).then((response) => response.json());
+      console.log(response);
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message);
     }
-  }
+  };
 
   useEffect(() => {
-    fetchdata()
-  }, [])
+    fetchdata();
+  }, []);
 
-  return <div className={styles.container}></div>
+  return (
+    <Layout>
+      <h1>Hello world</h1>
+    </Layout>
+  );
 }
