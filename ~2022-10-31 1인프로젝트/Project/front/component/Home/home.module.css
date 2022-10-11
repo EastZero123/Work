@@ -1,0 +1,21 @@
+.carousel {
+  justify-content: center;
+  align-items: center;
+}
+
+.Mainboard {
+  text-align: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Mainboard table {
+  width: 60%;
+  margin: auto;
+  table-layout: fixed;
+}
+
+.Mainboard th,
+.Mainboard td {
+  border: 1px solid black;
+}

@@ -1,0 +1,15 @@
+.SupportMain {
+  width: 70%;
+  float: right;
+  margin: 5% 5%;
+  text-align: center;
+  background: rgb(242, 217, 229);
+}
+
+.SupportContent {
+  border: 2mm groove rgb(166, 166, 166);
+  white-space: pre-wrap;
+  line-height: 9px;
+  z-index: 1;
+  text-align: left;
+}

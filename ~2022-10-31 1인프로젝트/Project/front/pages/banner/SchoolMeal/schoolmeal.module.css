@@ -1,0 +1,30 @@
+.calendar {
+  float: right;
+  margin-right: 30px;
+  width: 25%;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.board {
+  float: left;
+  width: 60%;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.board table {
+  width: 100%;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+.board th,
+.board td {
+  border-bottom: 1px solid #444444;
+  border-left: 1px solid #444444;
+  padding: 10px;
+}
+.board th:first-child,
+.board td:first-child {
+  border-left: none;
+}
