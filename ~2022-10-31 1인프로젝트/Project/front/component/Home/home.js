@@ -6,7 +6,7 @@ import classes from "./home.module.css"
 
 const HomeContent = () => {
   return (
-    <Fragment>
+    <div style={{ zIndex: "0" }}>
       <Carousel />
       <div className={classes.Mainboard}>
         <table border="1px solid black">
@@ -23,7 +23,7 @@ const HomeContent = () => {
           </tbody>
         </table>
       </div>
-    </Fragment>
+    </div>
   )
 }
 

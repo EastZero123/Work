@@ -1,18 +1,20 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import classes from "../../styles/header.module.css";
+import Image from "next/image"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { useState } from "react"
+import classes from "../../styles/header.module.css"
 
 const Header = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false)
+  const router = useRouter()
 
   const MouseEnter = () => {
-    setVisible(true);
-  };
+    setVisible(true)
+  }
 
   const MouseLeave = () => {
-    setVisible(false);
-  };
+    setVisible(false)
+  }
 
   return (
     <header className={classes.header}>
@@ -31,22 +33,58 @@ const Header = () => {
       <nav className={classes.header__LNB}>
         <ul className={classes.header__LNBItem}>
           <li onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>
-            <Link href="/banner/SiteMap/intro">SiteMap</Link>
+            <Link href="/banner/SiteMap/intro">
+              <a
+                className={
+                  router.asPath === `/banner/SiteMap/intro` ||
+                  router.asPath === `/banner/SiteMap/history` ||
+                  router.asPath === `/banner/SiteMap/support`
+                    ? classes.active
+                    : ""
+                }
+              >
+                SiteMap
+              </a>
+            </Link>
             {visible && (
               <ul className={classes.header__LNB__UL}>
                 <li>
                   <Link href="/banner/SiteMap/intro">
-                    <a>Intro</a>
+                    <a
+                      className={
+                        router.asPath === `/banner/SiteMap/intro`
+                          ? classes.active
+                          : ""
+                      }
+                    >
+                      Intro
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/banner/SiteMap/history">
-                    <a>History</a>
+                    <a
+                      className={
+                        router.asPath === `/banner/SiteMap/history`
+                          ? classes.active
+                          : ""
+                      }
+                    >
+                      History
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/banner/SiteMap/support">
-                    <a>Support</a>
+                    <a
+                      className={
+                        router.asPath === `/banner/SiteMap/support`
+                          ? classes.active
+                          : ""
+                      }
+                    >
+                      Support
+                    </a>
                   </Link>
                 </li>
               </ul>
@@ -54,18 +92,38 @@ const Header = () => {
           </li>
           <li>
             <Link href="/banner/Notice">
-              <a>Notice</a>
+              <a
+                className={
+                  router.pathname === "/banner/Notice" ||
+                  router.asPath ===
+                    `/banner/Notice/${router.query.noticeDetail}`
+                    ? classes.active
+                    : ""
+                }
+              >
+                Notice
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/banner/SchoolMeal">
-              <a>SchoolMeal</a>
+              <a
+                className={
+                  router.pathname === "/banner/SchoolMeal" ||
+                  router.asPath ===
+                    `/banner/SchoolMeal/${router.query.schoolMealDetail}`
+                    ? classes.active
+                    : ""
+                }
+              >
+                SchoolMeal
+              </a>
             </Link>
           </li>
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

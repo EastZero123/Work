@@ -1,5 +1,6 @@
 .calendar {
   float: right;
+  margin-top: 10%;
   margin-right: 30px;
   width: 25%;
   font-size: 12px;
@@ -9,7 +10,8 @@
 .board {
   float: left;
   width: 60%;
-  margin-left: 20px;
+  margin-top: 10%;
+  margin-left: 5%;
   text-align: center;
 }
 

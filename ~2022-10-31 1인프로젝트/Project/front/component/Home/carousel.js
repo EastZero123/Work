@@ -9,7 +9,7 @@ const CarouselHome = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/image/carousel1.png"
+                src="/images/carousel1.png"
                 alt="carousel1"
                 height={400}
               />
@@ -17,7 +17,7 @@ const CarouselHome = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/image/carousel2.png"
+                src="/images/carousel2.png"
                 alt="carousel2"
                 height={400}
               />
@@ -25,7 +25,7 @@ const CarouselHome = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/image/carousel3.png"
+                src="/images/carousel3.png"
                 alt="carousel3"
                 height={400}
               />
@@ -33,7 +33,7 @@ const CarouselHome = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/image/carousel4.png"
+                src="/images/carousel4.png"
                 alt="carousel4"
                 height={400}
               />
@@ -41,7 +41,7 @@ const CarouselHome = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/image/carousel5.png"
+                src="/images/carousel5.png"
                 alt="carousel5"
                 height={400}
               />

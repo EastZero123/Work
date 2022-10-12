@@ -3,13 +3,14 @@
   float: right;
   margin: 5% 5%;
   text-align: center;
-  background: rgb(242, 217, 229);
+  background: rgb(248, 237, 242);
 }
 
 .SupportContent {
-  border: 2mm groove rgb(166, 166, 166);
+  border: 2mm groove black;
   white-space: pre-wrap;
   line-height: 9px;
   z-index: 1;
+  padding-left: 20px;
   text-align: left;
 }
