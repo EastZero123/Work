@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import { useState } from "react"
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
-import classes from "./intro.module.css"
+import classes from "../../../styles/intro.module.css"
 
 const Intro = (props) => {
   const router = useRouter()

@@ -1,0 +1,11 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-top: 15%;
+  width: 50%;
+  height: 60%;
+  padding: 20px;
+}

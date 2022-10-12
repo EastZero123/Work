@@ -1,0 +1,43 @@
+.SideNav {
+  position: fixed;
+  list-style: none;
+  left: 30;
+  width: 12%;
+  margin: 15% 30px;
+}
+
+.SideNav ul {
+  display: table;
+  table-layout: fixed;
+}
+
+.SideNav td {
+  padding-left: 8px;
+  width: 12%;
+  margin: 30px 0;
+  font-size: 30px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.SideNav a {
+  text-decoration-line: none;
+  color: black;
+}
+
+.SideNav a:hover {
+  color: orange;
+}
+
+.SideMain {
+  font-size: 40px;
+  text-align: center;
+  background: darkblue;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  color: white;
+}
+
+a.active {
+  color: rgb(255, 51, 51);
+}

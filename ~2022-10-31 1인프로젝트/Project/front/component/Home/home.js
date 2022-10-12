@@ -1,25 +1,65 @@
+import axios from "axios"
 import Image from "next/image"
-import { Fragment } from "react"
+import { Fragment, useReducer } from "react"
 import Carousel from "./carousel"
 // import Carousel from "react-bootstrap/Carousel"
-import classes from "./home.module.css"
+import classes from "../../styles/home.module.css"
+import HomeBanner from "./homeContent"
 
-const HomeContent = () => {
+const homebanner = (states, action) => {
+  switch (action.type) {
+    case "notice":
+      return (states = 1)
+    case "schoolmeal":
+      return (states = 2)
+    default:
+      return (states = 1)
+  }
+}
+
+const HomeContent = ({ notice, schoolmeal }) => {
+  const [state, dispatch] = useReducer(homebanner, 1)
+
+  const noticeAction = () => {
+    dispatch({
+      type: "notice",
+    })
+  }
+
+  const schoolmealAction = () => {
+    dispatch({
+      type: "schoolmeal",
+    })
+  }
+
   return (
     <div style={{ zIndex: "0" }}>
       <Carousel />
-      <div className={classes.Mainboard}>
-        <table border="1px solid black">
+      <div className={classes.Mainboard} style={{ borderRadius: "20%" }}>
+        <table border="0.1px solid black">
           <thead>
             <tr>
-              <th>공지사항</th>
-              <th>급식 게시글</th>
+              <th
+                onClick={noticeAction}
+                className={state === 1 ? classes.active : ""}
+              >
+                공지사항
+              </th>
+              <th
+                onClick={schoolmealAction}
+                className={state === 2 ? classes.active : ""}
+              >
+                급식 게시글
+              </th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td colSpan={2}>Something content</td>
-            </tr>
+            <HomeBanner
+              states={state}
+              {...(state === 1
+                ? (notice = { notice })
+                : (schoolmeal = { schoolmeal }))}
+            />
           </tbody>
         </table>
       </div>

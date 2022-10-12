@@ -1,5 +1,5 @@
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
-import classes from "./support.module.css"
+import classes from "../../../styles/support.module.css"
 
 const Support = (props) => {
   return (

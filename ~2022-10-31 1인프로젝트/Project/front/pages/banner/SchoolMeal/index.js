@@ -1,7 +1,7 @@
 import "react-calendar/dist/Calendar.css"
 import Calendar from "react-calendar"
 import { useState } from "react"
-import classes from "./schoolmeal.module.css"
+import classes from "../../../styles/schoolmeal.module.css"
 import SchoolMealItem from "../../../component/SchoolMeal/schoolMealItem"
 
 const SchoolMeal = (props) => {

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
-import classes from "./sitempNav.module.css"
+import classes from "../../styles/sitempNav.module.css"
 
 const SiteMapNav = () => {
   const router = useRouter()

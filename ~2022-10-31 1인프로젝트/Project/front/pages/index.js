@@ -1,12 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import { useEffect } from "react";
-import HomeContent from "../component/Home/home";
-import Layout from "../component/UI/Layout";
-import styles from "../styles/Home.module.css";
-import "bootstrap/dist/css/bootstrap.css";
+import Head from "next/head"
+import Image from "next/image"
+import { useEffect } from "react"
+import HomeContent from "../component/Home/home"
+import Layout from "../component/UI/Layout"
+import "bootstrap/dist/css/bootstrap.css"
+import axios from "axios"
 
-export default function Home() {
+const Home = (props) => {
   // const fetchdata = async () => {
   //   try {
   //     const response = await fetch(
@@ -24,7 +24,26 @@ export default function Home() {
 
   return (
     <div>
-      <HomeContent />
+      <HomeContent notice={props.notice} schoolmeal={props.schoolmeal} />
     </div>
-  );
+  )
 }
+
+export async function getStaticProps() {
+  const notice = await axios.get("http://localhost:8080/api2/boardlist/5")
+
+  const noticeData = notice.data
+
+  const schoolmeal = await axios.get("http://localhost:8080/api2/boardlist/4")
+
+  const schoolmealData = schoolmeal.data
+
+  return {
+    props: {
+      notice: noticeData,
+      schoolmeal: schoolmealData,
+    },
+  }
+}
+
+export default Home

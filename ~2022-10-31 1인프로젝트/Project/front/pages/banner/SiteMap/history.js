@@ -1,5 +1,5 @@
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
-import classes from "./history.module.css"
+import classes from "../../../styles/history.module.css"
 
 const History = (props) => {
   return (

@@ -1,6 +1,6 @@
 import axios from "axios"
 import NoticeItem from "../../../component/Notice/noticeItem"
-import classes from "./notice.module.css"
+import classes from "../../../styles/notice.module.css"
 
 const Notice = (props) => {
   //   console.log(props.datas)

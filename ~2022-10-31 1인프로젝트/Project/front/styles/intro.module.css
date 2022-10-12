@@ -1,0 +1,17 @@
+.IntroMain {
+  width: 70%;
+  float: right;
+  margin: 5% 5%;
+  text-align: center;
+  background: rgb(248, 237, 242);
+}
+
+.IntroContent {
+  text-align: left;
+  height: 20%;
+  border: 2mm groove black;
+  white-space: pre-wrap;
+  line-height: 9px;
+  padding-left: 20px;
+  z-index: 1;
+}
