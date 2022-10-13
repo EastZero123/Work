@@ -1,27 +1,9 @@
+import Image from "next/image"
 import Link from "next/link"
-import { format } from "path"
 
 const NoticeItem = (props) => {
-  //   console.log(JSON.stringify(Object.values(props.datas)))
-  //   console.log(Object.values(props.datas[0]))
-
   const ObjData = Object.values(props.datas)
 
-  console.log(ObjData)
-
-  //   const arr = () => {
-  //     for (var i = 0; i < props.datas.length; i++) {
-  //       return (
-  //         <tr>
-  //           <td>1</td>
-  //           <td>2</td>
-  //           <td>3</td>
-  //           <td>4</td>
-  //           <td>5</td>
-  //         </tr>
-  //       )
-  //     }
-  //   }
   return (
     <tbody>
       {ObjData.slice(0)
@@ -37,7 +19,19 @@ const NoticeItem = (props) => {
               </td>
               <td>{data.regName ? data.regName : "None"}</td>
               <td>{data.regDate}</td>
-              <td>{data.fileYn ? "Y" : "N"}</td>
+              <td>
+                {data.fileYn ? (
+                  <Image
+                    alt="file"
+                    src="/images/file.png"
+                    layout="fixed"
+                    width={15}
+                    height={15}
+                  />
+                ) : (
+                  "N"
+                )}
+              </td>
             </tr>
           )
         })}

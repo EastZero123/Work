@@ -3,11 +3,6 @@ import NoticeItem from "../../../component/Notice/noticeItem"
 import classes from "../../../styles/notice.module.css"
 
 const Notice = (props) => {
-  //   console.log(props.datas)
-
-  //   const arrData = JSON.stringify(props.datas)
-  //   const arrData2 = JSON.parse(arrData)
-  //   console.log(typeof arrData2)
   return (
     <div className={classes.notice}>
       <div className={classes.board}>
@@ -33,8 +28,6 @@ export async function getStaticProps() {
   const res = await axios.get("http://localhost:8080/api2/boardlist/5")
 
   const data = res.data
-
-  //   var Strdata = JSON.parse(data)
 
   return {
     props: {

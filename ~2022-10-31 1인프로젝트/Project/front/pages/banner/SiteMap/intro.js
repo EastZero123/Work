@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import { useState } from "react"
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
 import classes from "../../../styles/intro.module.css"
 

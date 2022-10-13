@@ -1,8 +1,6 @@
-import axios from "axios"
-import Image from "next/image"
-import { Fragment, useReducer } from "react"
+import { useReducer } from "react"
 import Carousel from "./carousel"
-// import Carousel from "react-bootstrap/Carousel"
+
 import classes from "../../styles/home.module.css"
 import HomeBanner from "./homeContent"
 

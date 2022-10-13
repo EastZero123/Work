@@ -1,7 +1,7 @@
+import Image from "next/image"
 import Link from "next/link"
 
 const SchoolMealItem = (props) => {
-  // console.log(typeof props.datas)
   return (
     <tbody>
       {!props.visible
@@ -41,7 +41,19 @@ const SchoolMealItem = (props) => {
                   </td>
                   <td>{data.regName ? data.regName : "관리자"}</td>
                   <td>{data.regDate.split(" ")[0]}</td>
-                  <td>{data.fileYn ? "Y" : ""}</td>
+                  <td>
+                    {data.fileYn ? (
+                      <Image
+                        alt="file"
+                        src="/images/file.png"
+                        layout="fixed"
+                        width={15}
+                        height={15}
+                      />
+                    ) : (
+                      ""
+                    )}
+                  </td>
                 </tr>
               )
             })}

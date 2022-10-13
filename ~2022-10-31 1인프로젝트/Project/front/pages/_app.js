@@ -1,4 +1,3 @@
-import { Fragment } from "react"
 import Layout from "../component/UI/Layout"
 import "../styles/globals.css"
 function MyApp({ Component, pageProps }) {

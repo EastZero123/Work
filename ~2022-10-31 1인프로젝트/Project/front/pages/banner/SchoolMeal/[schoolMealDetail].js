@@ -12,9 +12,9 @@ const SchoolMealDetaul = () => {
 
   const fetchdata = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/api2/board/${query}`).then(
-        (response) => response.json()
-      )
+      const res = await fetch(
+        `http://localhost:8080/api/cafeteria/${query}`
+      ).then((response) => response.json())
       setData(res)
     } catch {}
   }

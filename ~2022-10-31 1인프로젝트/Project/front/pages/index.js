@@ -1,12 +1,11 @@
-import Head from "next/head"
-import Image from "next/image"
-import { useEffect } from "react"
 import HomeContent from "../component/Home/home"
-import Layout from "../component/UI/Layout"
+
+// 부트스트랩 적용을 위해선 다음 css를 넣어야함
 import "bootstrap/dist/css/bootstrap.css"
 import axios from "axios"
 
 const Home = (props) => {
+  // 패치 함수 예시
   // const fetchdata = async () => {
   //   try {
   //     const response = await fetch(

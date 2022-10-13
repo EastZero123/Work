@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Fragment, useEffect, useReducer } from "react"
+import { Fragment } from "react"
 
 const HomeBanner = (props) => {
   var arrContent = []
@@ -17,9 +17,6 @@ const HomeBanner = (props) => {
   }
   newContent()
 
-  console.log(arrContent)
-  //   const ObjSchoolMeal = Object.values(props.SchoolMeal)
-  //   const ObjNotice = Object.values(props.Notice)
   return (
     <Fragment>
       {arrContent

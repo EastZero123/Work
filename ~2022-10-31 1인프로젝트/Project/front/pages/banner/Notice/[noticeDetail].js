@@ -10,7 +10,7 @@ const NoticeDetail = () => {
 
   const fetchdata = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/api2/board/${query}`).then(
+      const res = await fetch(`http://localhost:8080/api/notice/${query}`).then(
         (response) => response.json()
       )
       setData(res)
