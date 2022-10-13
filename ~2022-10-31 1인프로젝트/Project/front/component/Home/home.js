@@ -33,7 +33,7 @@ const HomeContent = ({ notice, schoolmeal }) => {
   }
 
   return (
-    <div style={{ zIndex: "0" }}>
+    <div style={{ zIndex: "0", marginTop: "10%" }}>
       <Carousel />
       <div className={classes.Mainboard} style={{ borderRadius: "20%" }}>
         <table border="0.1px solid black">

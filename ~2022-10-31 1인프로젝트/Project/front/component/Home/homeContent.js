@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Fragment, useEffect, useReducer } from "react"
 
 const HomeBanner = (props) => {
@@ -37,7 +38,16 @@ const HomeBanner = (props) => {
                   cursor: "pointer",
                 }}
               >
-                {data.title}
+                {props.states === 1 ? (
+                  <Link href={`/banner/Notice/${data.boardSeq}`}>
+                    <a>{data.title}</a>
+                  </Link>
+                ) : (
+                  <Link href={`/banner/SchoolMeal/${data.boardSeq}`}>
+                    <a>{data.title}</a>
+                  </Link>
+                )}
+                {/* { data.title } */}
               </td>
               <td
                 style={{

@@ -4,7 +4,7 @@ const CarouselHome = () => {
   return (
     <Container>
       <Row>
-        <Col md={{ span: 8, offset: 2 }}>
+        <Col md={{ span: 12, offset: 0 }}>
           <Carousel>
             <Carousel.Item>
               <img

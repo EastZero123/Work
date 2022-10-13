@@ -9,3 +9,11 @@
   height: 60%;
   padding: 20px;
 }
+
+.title {
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+}

@@ -43,7 +43,7 @@ const Header = () => {
                     : ""
                 }
               >
-                About
+                SiteMap
               </a>
             </Link>
             {visible && (

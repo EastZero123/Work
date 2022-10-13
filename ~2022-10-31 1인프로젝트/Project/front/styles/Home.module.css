@@ -1,12 +1,17 @@
-.carousel {
-  justify-content: center;
-  align-items: center;
-}
-
 .Mainboard {
   text-align: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 10%;
+}
+
+.Mainboard a {
+  text-decoration-line: none;
+  color: black;
+}
+
+.Mainboard a:hover {
+  font-weight: 500;
+  color: black;
 }
 
 .Mainboard table {

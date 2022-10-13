@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { format } from "path"
 
 const NoticeItem = (props) => {
@@ -29,7 +30,11 @@ const NoticeItem = (props) => {
           return (
             <tr key={i}>
               <td>{data.boardSeq}</td>
-              <td>{data.title}</td>
+              <td>
+                <Link href={`/banner/Notice/${data.boardSeq}`}>
+                  <a>{data.title}</a>
+                </Link>
+              </td>
               <td>{data.regName ? data.regName : "None"}</td>
               <td>{data.regDate}</td>
               <td>{data.fileYn ? "Y" : "N"}</td>

@@ -1,17 +1,33 @@
 import "react-calendar/dist/Calendar.css"
 import Calendar from "react-calendar"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import classes from "../../../styles/schoolmeal.module.css"
 import SchoolMealItem from "../../../component/SchoolMeal/schoolMealItem"
+import moment from "moment"
 
 const SchoolMeal = (props) => {
-  console.log(Object.values(props.datas))
   const ObjData = Object.values(props.datas)
+  console.log(ObjData)
   const [value, setValue] = useState(new Date())
+  const [visible, setIsvisible] = useState(true)
+
+  var dateArr = []
+  dateArr = ObjData.filter((data) => {
+    return data.regDate.split(" ")[0] === moment(value).format("YYYY년MM월DD일")
+  })
+
+  // const Alldate = () => {
+  //   dateArr
+  // }
+
+  const dateChange = () => {
+    setIsvisible(false)
+  }
 
   return (
     <div>
       <div className={classes.board}>
+        {/* <button onClick={Alldate}>전체보기</button> */}
         <table>
           <thead>
             <tr>
@@ -22,11 +38,12 @@ const SchoolMeal = (props) => {
               <th>첨부파일</th>
             </tr>
           </thead>
-          <SchoolMealItem datas={ObjData} />
+          <SchoolMealItem datas={ObjData} dateArr={dateArr} visible={visible} />
         </table>
       </div>
       <div className={classes.calendar}>
-        <Calendar onChange={setValue} value={value} />
+        <Calendar onChange={setValue} value={value} onClickDay={dateChange} />
+        {/* <div>{moment(value).format("YYYY년MM월DD일")}</div> */}
       </div>
     </div>
   )

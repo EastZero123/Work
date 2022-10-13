@@ -4,6 +4,15 @@
   margin: auto;
 }
 
+.board a {
+  text-decoration-line: none;
+  color: black;
+}
+
+.board a:hover {
+  font-weight: 800;
+}
+
 .board table {
   width: 100%;
   border-top: 1px solid #444444;
