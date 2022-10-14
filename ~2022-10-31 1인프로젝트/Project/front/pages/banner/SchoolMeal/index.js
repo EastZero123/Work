@@ -44,10 +44,15 @@ const SchoolMeal = (props) => {
     setIsvisible(false)
   }
 
+  // 데이터 불러오는 동안 빈 화면으로 대체하기
+  // 이 작업을 안하면 데이터를 받기도 전에 화면에 뿌릴려고 해서 에러가 난다
+  if (!props.datas) {
+    return <div></div>
+  }
+
   return (
     <div>
       <div className={classes.board}>
-        {/* <button onClick={Alldate}>전체보기</button> */}
         <table>
           <thead>
             <tr>
@@ -65,7 +70,6 @@ const SchoolMeal = (props) => {
       <div className={classes.calendar}>
         {/* 달력 컴포넌트 */}
         <Calendar onChange={setValue} value={value} onClickDay={dateChange} />
-        {/* <div>{moment(value).format("YYYY년MM월DD일")}</div> */}
       </div>
     </div>
   )

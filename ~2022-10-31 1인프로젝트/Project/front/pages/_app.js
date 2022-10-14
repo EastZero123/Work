@@ -1,4 +1,4 @@
-//헤더 푸터 css
+//헤더,푸터 css
 import Layout from "../component/UI/Layout"
 
 // 공통 css

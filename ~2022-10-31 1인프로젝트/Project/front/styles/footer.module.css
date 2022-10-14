@@ -1,5 +1,13 @@
 .body_wrapper {
   min-height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(190, 235, 233, 1) 10%,
+    rgba(190, 235, 233, 0.75) 25%,
+    rgba(190, 235, 233, 0.5) 50%,
+    rgba(190, 235, 233, 0.25) 75%,
+    rgba(190, 235, 233, 0) 100%
+  );
 }
 
 .body_content {

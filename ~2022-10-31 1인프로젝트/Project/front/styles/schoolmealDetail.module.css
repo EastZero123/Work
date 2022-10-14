@@ -1,4 +1,4 @@
-.board {
+/* .board {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -12,8 +12,28 @@
 
 .title {
   text-align: center;
-}
+} */
 
 .content {
   text-align: center;
+}
+
+.detail {
+  margin: 5% auto;
+  border: 1px solid black;
+  width: 70%;
+  height: 100%;
+  border-radius: 15%;
+}
+
+.button button {
+  border: 1px solid #61f2f5;
+  background-color: #61f2f5;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.button button:hover {
+  color: white;
 }

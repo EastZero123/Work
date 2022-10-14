@@ -32,6 +32,36 @@ const Header = () => {
       </div>
       <nav className={classes.header__LNB}>
         <ul className={classes.header__LNBItem}>
+          <li>
+            <Link href="/banner/SchoolMeal">
+              <a
+                className={
+                  router.pathname === "/banner/SchoolMeal" ||
+                  router.asPath ===
+                    `/banner/SchoolMeal/${router.query.schoolMealDetail}`
+                    ? classes.active
+                    : ""
+                }
+              >
+                SchoolMeal
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/banner/Notice">
+              <a
+                className={
+                  router.pathname === "/banner/Notice" ||
+                  router.asPath ===
+                    `/banner/Notice/${router.query.noticeDetail}`
+                    ? classes.active
+                    : ""
+                }
+              >
+                Notice
+              </a>
+            </Link>
+          </li>
           <li onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>
             <Link href="/banner/SiteMap/intro">
               <a
@@ -89,36 +119,6 @@ const Header = () => {
                 </li>
               </ul>
             )}
-          </li>
-          <li>
-            <Link href="/banner/Notice">
-              <a
-                className={
-                  router.pathname === "/banner/Notice" ||
-                  router.asPath ===
-                    `/banner/Notice/${router.query.noticeDetail}`
-                    ? classes.active
-                    : ""
-                }
-              >
-                Notice
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/banner/SchoolMeal">
-              <a
-                className={
-                  router.pathname === "/banner/SchoolMeal" ||
-                  router.asPath ===
-                    `/banner/SchoolMeal/${router.query.schoolMealDetail}`
-                    ? classes.active
-                    : ""
-                }
-              >
-                SchoolMeal
-              </a>
-            </Link>
           </li>
         </ul>
       </nav>

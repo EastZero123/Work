@@ -11,17 +11,33 @@ const SchoolMealItem = (props) => {
             .map((data, i) => {
               return (
                 <tr key={i}>
-                  <td>{data.boardSeq}</td>
                   <td>
-                    <Link href={`/banner/SchoolMeal/${data.boardSeq}`}>
-                      <a style={{ textDecoration: "none", color: "black" }}>
-                        {data.title}
-                      </a>
-                    </Link>
+                    <div style={{ minHeight: "30px" }}>{data.boardSeq}</div>
                   </td>
-                  <td>{data.regName ? data.regName : "관리자"}</td>
-                  <td>{data.regDate.split(" ")[0]}</td>
-                  <td>{data.fileYn ? "Y" : ""}</td>
+                  <td>
+                    <div style={{ minHeight: "30px" }}>
+                      <Link href={`/banner/SchoolMeal/${data.boardSeq}`}>
+                        <a style={{ textDecoration: "none", color: "black" }}>
+                          {data.title}
+                        </a>
+                      </Link>
+                    </div>
+                  </td>
+                  <td>
+                    <div style={{ minHeight: "30px" }}>
+                      {data.regName ? data.regName : "관리자"}
+                    </div>
+                  </td>
+                  <td>
+                    <div style={{ minHeight: "30px" }}>
+                      {data.regDate.split(" ")[0]}
+                    </div>
+                  </td>
+                  <td>
+                    <div style={{ minHeight: "30px" }}>
+                      {data.fileYn ? "Y" : ""}
+                    </div>
+                  </td>
                 </tr>
               )
             })
@@ -31,28 +47,42 @@ const SchoolMealItem = (props) => {
             .map((data, i) => {
               return (
                 <tr key={i}>
-                  <td>{data.boardSeq}</td>
                   <td>
-                    <Link href={`/banner/SchoolMeal/${data.boardSeq}`}>
-                      <a style={{ textDecoration: "none", color: "black" }}>
-                        {data.title}
-                      </a>
-                    </Link>
+                    <div style={{ minHeight: "30px" }}>{data.boardSeq}</div>
                   </td>
-                  <td>{data.regName ? data.regName : "관리자"}</td>
-                  <td>{data.regDate.split(" ")[0]}</td>
                   <td>
-                    {data.fileYn ? (
-                      <Image
-                        alt="file"
-                        src="/images/file.png"
-                        layout="fixed"
-                        width={15}
-                        height={15}
-                      />
-                    ) : (
-                      ""
-                    )}
+                    <div style={{ minHeight: "30px" }}>
+                      <Link href={`/banner/SchoolMeal/${data.boardSeq}`}>
+                        <a style={{ textDecoration: "none", color: "black" }}>
+                          {data.title}
+                        </a>
+                      </Link>
+                    </div>
+                  </td>
+                  <td>
+                    <div style={{ minHeight: "30px" }}>
+                      {data.regName ? data.regName : "관리자"}
+                    </div>
+                  </td>
+                  <td>
+                    <div style={{ minHeight: "30px" }}>
+                      {data.regDate.split(" ")[0]}
+                    </div>
+                  </td>
+                  <td>
+                    <div style={{ minHeight: "30px" }}>
+                      {data.fileYn ? (
+                        <Image
+                          alt="file"
+                          src="/images/file.png"
+                          layout="fixed"
+                          width={15}
+                          height={15}
+                        />
+                      ) : (
+                        ""
+                      )}
+                    </div>
                   </td>
                 </tr>
               )

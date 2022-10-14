@@ -24,34 +24,53 @@ const Notice = (props) => {
   //최근순 정렬을 위한 역순 배치
   const ReunitData = props.datas.slice(0).reverse()
 
-  return (
-    <div className={classes.notice}>
-      <div className={classes.board}>
-        <div className={classes.filter}>
-          {/* 필터 컴포넌트 */}
-          <Filter onFilter={onFilter} />
-        </div>
-        {/* 페이징 컴포넌트 */}
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={props.datas.length}
-          paginate={setCurrentPage}
-          page={currentPage}
-        ></Pagination>
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "10%" }}>번호</th>
-              <th style={{ width: "45%" }}>제목</th>
-              <th style={{ width: "10%" }}>작성자</th>
-              <th style={{ width: "25%" }}>날짜</th>
-              <th style={{ width: "10%" }}>첨부파일</th>
-            </tr>
-          </thead>
+  // 데이터 불러오는 동안 빈 화면으로 대체하기
+  // 이 작업을 안하면 데이터를 받기도 전에 화면에 뿌릴려고 해서 에러가 난다
+  if (!props.datas) {
+    return <div></div>
+  }
 
-          {/* 공지사항 데이터 배치 */}
-          <NoticeItem datas={currentPosts(ReunitData)} />
-        </table>
+  return (
+    <div>
+      <div className={classes.notice}>
+        <div className={classes.board}>
+          <div className={classes.filter}>
+            {/* 필터 컴포넌트 */}
+            <Filter onFilter={onFilter} />
+          </div>
+          {/* 페이징 컴포넌트 */}
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={props.datas.length}
+            paginate={setCurrentPage}
+            page={currentPage}
+          ></Pagination>
+          {/* 테이블 화면 */}
+          <table>
+            <thead>
+              <tr>
+                <th style={{ width: "10%" }}>
+                  <div style={{ minHeight: "30px" }}>번호</div>
+                </th>
+                <th style={{ width: "45%" }}>
+                  <div style={{ minHeight: "30px" }}>제목</div>
+                </th>
+                <th style={{ width: "10%" }}>
+                  <div style={{ minHeight: "30px" }}>작성자</div>
+                </th>
+                <th style={{ width: "25%" }}>
+                  <div style={{ minHeight: "30px" }}>날짜</div>
+                </th>
+                <th style={{ width: "10%" }}>
+                  <div style={{ minHeight: "30px" }}>첨부파일</div>
+                </th>
+              </tr>
+            </thead>
+
+            {/* 공지사항 데이터 배치 */}
+            <NoticeItem datas={currentPosts(ReunitData)} />
+          </table>
+        </div>
       </div>
     </div>
   )

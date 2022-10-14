@@ -29,9 +29,8 @@ const HomeBanner = (props) => {
                 style={{
                   borderRight: "none",
                   textAlign: "left",
-                  paddingLeft: "5%",
+                  paddingLeft: "3%",
                   fontWeight: "bold",
-                  cursor: "pointer",
                 }}
               >
                 {props.states === 1 ? (

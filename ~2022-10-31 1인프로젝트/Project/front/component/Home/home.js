@@ -34,20 +34,20 @@ const HomeContent = ({ notice, schoolmeal }) => {
     <div style={{ zIndex: "0", marginTop: "10%" }}>
       <Carousel />
       <div className={classes.Mainboard} style={{ borderRadius: "20%" }}>
-        <table border="0.1px solid black">
+        <table border="0.1px solid black" style={{ minHeight: "700px" }}>
           <thead>
             <tr>
               <th
                 onClick={noticeAction}
                 className={state === 1 ? classes.active : ""}
               >
-                공지사항
+                <div style={{ minHeight: "20px" }}>공지사항</div>
               </th>
               <th
                 onClick={schoolmealAction}
                 className={state === 2 ? classes.active : ""}
               >
-                급식 게시글
+                <div style={{ minHeight: "20px" }}>급식 게시글</div>
               </th>
             </tr>
           </thead>
