@@ -16,6 +16,7 @@ const Support = (props) => {
 }
 
 export async function getStaticProps() {
+  //support 내용 데이터 불러오기
   const res = await fetch("http://localhost:8080/api2/board/5")
 
   const data = await res.json()

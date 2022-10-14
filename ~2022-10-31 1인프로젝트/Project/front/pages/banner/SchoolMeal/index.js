@@ -6,12 +6,15 @@ import SchoolMealItem from "../../../component/SchoolMeal/schoolMealItem"
 import moment from "moment"
 
 const SchoolMeal = (props) => {
+  // 급식게시글 데이터
   const ObjData = Object.values(props.datas)
-  console.log(ObjData)
+
+  // 달력 필터링에 필요한 선언
+  var dateArr = []
   const [value, setValue] = useState(new Date())
   const [visible, setIsvisible] = useState(true)
 
-  var dateArr = []
+  //달력 필터링 함수
   dateArr = ObjData.filter((data) => {
     return data.regDate.split(" ")[0] === moment(value).format("YYYY년MM월DD일")
   })
@@ -36,6 +39,7 @@ const SchoolMeal = (props) => {
   //   },
   // ]
 
+  // 달력 내용을 누르면 전체 데이터 출력 비활성화
   const dateChange = () => {
     setIsvisible(false)
   }
@@ -54,10 +58,12 @@ const SchoolMeal = (props) => {
               <th style={{ width: "10%" }}>첨부파일</th>
             </tr>
           </thead>
+          {/* 급식 게시글 데이터 배치 */}
           <SchoolMealItem datas={ObjData} dateArr={dateArr} visible={visible} />
         </table>
       </div>
       <div className={classes.calendar}>
+        {/* 달력 컴포넌트 */}
         <Calendar onChange={setValue} value={value} onClickDay={dateChange} />
         {/* <div>{moment(value).format("YYYY년MM월DD일")}</div> */}
       </div>
@@ -66,6 +72,7 @@ const SchoolMeal = (props) => {
 }
 
 export async function getStaticProps() {
+  //급식 게시글 데이터 불러오기
   const res = await fetch("http://localhost:8080/api2/boardlist/4")
 
   const data = await res.json()

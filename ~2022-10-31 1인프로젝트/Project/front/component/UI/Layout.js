@@ -5,11 +5,11 @@ import classes from "../../styles/footer.module.css"
 
 const Layout = (props) => {
   return (
-    <Fragment className={classes.body_wrapper}>
+    <div className={classes.body_wrapper}>
       <Header />
       <div className={classes.body_content}>{props.children}</div>
       <Footer />
-    </Fragment>
+    </div>
   )
 }
 

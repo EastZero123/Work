@@ -1,10 +1,7 @@
-import { useRouter } from "next/router"
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
 import classes from "../../../styles/intro.module.css"
 
 const Intro = (props) => {
-  const router = useRouter()
-  console.log(router)
   return (
     <div>
       <SiteMapNav />
@@ -19,6 +16,7 @@ const Intro = (props) => {
 }
 
 export async function getStaticProps() {
+  // intro 내용 데이터 불러오기
   const res = await fetch("http://localhost:8080/api2/board/1")
 
   const data = await res.json()

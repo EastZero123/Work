@@ -1,7 +1,5 @@
 import HomeContent from "../component/Home/home"
 
-// 부트스트랩 적용을 위해선 다음 css를 넣어야함
-import "bootstrap/dist/css/bootstrap.css"
 import axios from "axios"
 
 const Home = (props) => {
@@ -29,10 +27,12 @@ const Home = (props) => {
 }
 
 export async function getStaticProps() {
+  //공지사항 데이터 불러오기
   const notice = await axios.get("http://localhost:8080/api2/boardlist/5")
 
   const noticeData = notice.data
 
+  // 급식 게시글 데이터 불러오기
   const schoolmeal = await axios.get("http://localhost:8080/api2/boardlist/4")
 
   const schoolmealData = schoolmeal.data

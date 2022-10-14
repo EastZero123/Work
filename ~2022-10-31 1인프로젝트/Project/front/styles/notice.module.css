@@ -1,3 +1,13 @@
+.notice {
+  margin-top: 5%;
+}
+
+.filter {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  float: right;
+}
+
 .board {
   width: 80%;
   text-align: center;
@@ -18,13 +28,34 @@
   border-top: 1px solid #444444;
   border-collapse: collapse;
 }
+
 .board th,
 .board td {
   border-bottom: 1px solid #444444;
   border-left: 1px solid #444444;
   padding: 10px;
 }
+
 .board th:first-child,
 .board td:first-child {
   border-left: none;
+}
+
+.paginations {
+  float: left;
+  margin-top: 5%;
+}
+
+.pagecontent {
+  color: #1746a2;
+  font-weight: 700;
+}
+
+.pagecontent:hover {
+  background: #ff731d;
+  cursor: pointer;
+}
+
+.pagecontent.active {
+  background: #ff731d;
 }

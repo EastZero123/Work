@@ -16,6 +16,7 @@ const History = (props) => {
 }
 
 export async function getStaticProps() {
+  // history 내용 데이터 불러오기
   const res = await fetch("http://localhost:8080/api2/board/2")
 
   const data = await res.json()

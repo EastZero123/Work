@@ -25,7 +25,6 @@ const HomeBanner = (props) => {
         .map((data, i) => {
           return (
             <tr key={i}>
-              {" "}
               <td
                 style={{
                   borderRight: "none",
