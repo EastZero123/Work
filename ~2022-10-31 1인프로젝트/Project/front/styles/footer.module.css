@@ -77,43 +77,23 @@
 }
 
 @media (max-width: 900px) {
-  /* .footer {
-    height: 200px;
-  } */
-
   .text {
     width: 40%;
-    position: absolute;
     margin-top: 25%;
-    margin-left: 5%;
-    /* bottom: 5%; */
-    font-family: NanumGothic;
     font-size: 4px;
     font-weight: 200;
     line-height: 24px;
-    letter-spacing: 0px;
-    text-align: left;
   }
 
   .map {
-    /* position: absolute; */
-    display: flex;
     float: right;
-    flex-direction: column;
-    justify-content: space-between;
     margin-top: 10%;
-    margin-right: 20%;
+    margin-right: 10%;
   }
 
   .map div {
-    margin: 25% 0;
-    color: rgb(255, 255, 255);
-    font-family: DM Sans;
+    width: 100%;
     font-size: 12px;
-    font-weight: 500;
-    line-height: 23px;
-    letter-spacing: 0px;
-    text-align: left;
   }
 }
 

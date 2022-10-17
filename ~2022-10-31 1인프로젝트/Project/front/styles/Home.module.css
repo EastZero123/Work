@@ -46,7 +46,7 @@ th.active {
 }
 
 @media (max-width: 900px) {
-  .Mainboard td {
-    font-size: 12px;
+  .Mainboard table {
+    width: 100%;
   }
 }

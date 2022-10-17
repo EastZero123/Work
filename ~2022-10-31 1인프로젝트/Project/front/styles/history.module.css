@@ -23,11 +23,8 @@
 
   .HistoryContent {
     text-align: left;
-    border: 2mm groove black;
-    white-space: pre-wrap;
     line-height: 15px;
     padding-left: 10px;
-    z-index: 1;
     font-size: 1px;
   }
 

@@ -65,10 +65,10 @@
 @media (max-width: 860px) {
   .board {
     font-size: 12px;
+    width: 100%;
   }
 
   .paginations {
-    /* width: 40%; */
     padding-bottom: 20px;
   }
 

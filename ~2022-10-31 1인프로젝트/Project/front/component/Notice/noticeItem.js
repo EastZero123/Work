@@ -42,7 +42,7 @@ const NoticeItem = (props) => {
                     height={15}
                   />
                 ) : (
-                  "N"
+                  ""
                 )}
               </div>
             </td>

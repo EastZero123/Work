@@ -94,22 +94,11 @@ a.active {
     font-size: 12px;
   }
 
-  .header__LNB {
-    display: inline-block;
-    /* justify-content: right; */
-    /* vertical-align: middle; */
-    width: 80%;
-    margin-top: 3%;
-    /* margin-right: 5%; */
-    text-decoration-line: none;
-    height: 100%;
+  .header > div {
+    margin-bottom: 20%;
   }
 
-  .header > div {
-    display: inline-block;
-    padding-bottom: 15px;
-    margin-left: 2%;
-    vertical-align: middle;
-    margin-bottom: 20%;
+  .header__LNB {
+    margin-top: 3%;
   }
 }
