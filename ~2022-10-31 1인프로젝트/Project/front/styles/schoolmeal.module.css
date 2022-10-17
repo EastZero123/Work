@@ -3,7 +3,7 @@
   margin-top: 10%;
   margin-right: 30px;
   width: 20%;
-  font-size: 12px;
+  font-size: 8px;
   vertical-align: middle;
 }
 
@@ -19,7 +19,7 @@
   font-weight: 800;
 }
 
-.board button {
+/* .board button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -49,7 +49,7 @@
 
 .board button:hover {
   background: #025ce2;
-}
+} */
 
 .board table {
   width: 100%;
@@ -66,4 +66,27 @@
 .board th:first-child,
 .board td:first-child {
   border-left: none;
+}
+
+@media (max-width: 970px) {
+  .schoolmeal {
+    height: 900px;
+    clear: both;
+  }
+
+  .board {
+    padding-top: 10px;
+    margin: auto;
+    width: 80%;
+    height: 40vh;
+    float: none;
+    font-size: 8px;
+  }
+
+  .calendar {
+    margin: auto;
+    width: 70%;
+    font-size: 8px;
+    float: none;
+  }
 }

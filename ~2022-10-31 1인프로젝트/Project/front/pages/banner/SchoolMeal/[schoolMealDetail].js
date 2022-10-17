@@ -3,6 +3,7 @@ import classes from "../../../styles/schoolmealDetail.module.css"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import Head from "next/head"
 
 const SchoolMealDetaul = () => {
   const router = useRouter()
@@ -33,24 +34,17 @@ const SchoolMealDetaul = () => {
 
   return (
     <div>
+      <Head>
+        <title>{data.title}</title>
+      </Head>
       <div className={classes.detail}>
         <table style={{ width: "80%", margin: "auto" }}>
           <thead></thead>
           <tbody>
             {/* 제목, 날짜 */}
             <tr style={{ paddingTop: "5%" }}>
-              <td
-                style={{
-                  paddingTop: "5%",
-                  fontSize: "48px",
-                  fontWeight: "bold",
-                }}
-              >
-                {data.title}
-              </td>
-              <td style={{ float: "right", paddingTop: "50%" }}>
-                {data.regDate.split(" ")[0]}
-              </td>
+              <td className={classes.title}>{data.title}</td>
+              <td className={classes.date}>{data.regDate.split(" ")[0]}</td>
               {/* 파일 */}
             </tr>
             {data.fileYn === "Y" ? (
@@ -70,15 +64,7 @@ const SchoolMealDetaul = () => {
             )}
             {/* 작성자 */}
             <tr>
-              <td
-                style={{
-                  paddingTop: "10%",
-                  fontSize: "32px",
-                  paddingBottom: "5%",
-                }}
-              >
-                {data.regName}
-              </td>
+              <td className={classes.writer}>{data.regName}</td>
             </tr>
             {/* 내용 */}
             <tr>
@@ -86,7 +72,7 @@ const SchoolMealDetaul = () => {
                 style={{
                   paddingTop: "2%",
                   paddingLeft: "2%",
-                  fontSize: "24px",
+                  // fontSize: "24px",
                   paddingBottom: "20%",
                   border: "1px solid black",
                 }}

@@ -44,3 +44,9 @@
 th.active {
   background: rgb(255, 153, 0);
 }
+
+@media (max-width: 900px) {
+  .Mainboard td {
+    font-size: 12px;
+  }
+}

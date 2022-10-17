@@ -1,9 +1,13 @@
+import Head from "next/head"
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
 import classes from "../../../styles/history.module.css"
 
 const History = (props) => {
   return (
-    <div>
+    <div className={classes.history}>
+      <Head>
+        <title>History</title>
+      </Head>
       <SiteMapNav />
       <div className={classes.HistoryMain}>
         <div

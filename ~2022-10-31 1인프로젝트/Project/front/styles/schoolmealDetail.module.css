@@ -26,6 +26,23 @@
   border-radius: 15%;
 }
 
+.title {
+  padding-top: 5%;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.date {
+  float: right;
+  padding-top: 50%;
+}
+
+.writer {
+  padding-top: 10%;
+  font-size: 32px;
+  padding-bottom: 5%;
+}
+
 .button button {
   border: 1px solid #61f2f5;
   background-color: #61f2f5;
@@ -36,4 +53,22 @@
 
 .button button:hover {
   color: white;
+}
+
+@media (max-width: 1220px) {
+  .detail {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .date {
+    font-size: 4px;
+  }
+
+  .writer {
+    font-size: 16px;
+  }
 }

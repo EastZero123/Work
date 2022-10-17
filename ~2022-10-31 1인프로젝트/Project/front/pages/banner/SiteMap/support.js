@@ -1,9 +1,13 @@
+import Head from "next/head"
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
 import classes from "../../../styles/support.module.css"
 
 const Support = (props) => {
   return (
-    <div>
+    <div className={classes.support}>
+      <Head>
+        <title>Support</title>
+      </Head>
       <SiteMapNav />
       <div className={classes.SupportMain}>
         <div

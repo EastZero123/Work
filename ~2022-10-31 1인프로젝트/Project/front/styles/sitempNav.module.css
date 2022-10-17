@@ -3,7 +3,7 @@
   list-style: none;
   left: 30;
   width: 12%;
-  margin: 15% 30px;
+  margin: 15% 2%;
 }
 
 .SideNav ul {
@@ -40,4 +40,14 @@
 
 a.active {
   color: rgb(255, 51, 51);
+}
+
+@media (max-width: 750px) {
+  .SideNav td {
+    font-size: 18px;
+  }
+
+  .SideMain {
+    font-size: 24px;
+  }
 }

@@ -1,4 +1,5 @@
 import axios from "axios"
+import Head from "next/head"
 import { useState } from "react"
 import Filter from "../../../component/Notice/filter"
 import NoticeItem from "../../../component/Notice/noticeItem"
@@ -19,9 +20,10 @@ const Notice = (props) => {
 
   const onFilter = (filter) => {
     setPostsPerPage(filter.target.value)
+    setCurrentPage(1)
   }
 
-  //최근순 정렬을 위한 역순 배치
+  //최근 날짜순 정렬을 위한 역순 배치
   const ReunitData = props.datas.slice(0).reverse()
 
   // 데이터 불러오는 동안 빈 화면으로 대체하기
@@ -32,6 +34,9 @@ const Notice = (props) => {
 
   return (
     <div>
+      <Head>
+        <title>공지사항</title>
+      </Head>
       <div className={classes.notice}>
         <div className={classes.board}>
           <div className={classes.filter}>

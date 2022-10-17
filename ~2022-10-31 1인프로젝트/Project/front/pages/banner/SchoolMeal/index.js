@@ -4,6 +4,7 @@ import { useState } from "react"
 import classes from "../../../styles/schoolmeal.module.css"
 import SchoolMealItem from "../../../component/SchoolMeal/schoolMealItem"
 import moment from "moment"
+import Head from "next/head"
 
 const SchoolMeal = (props) => {
   // 급식게시글 데이터
@@ -51,7 +52,14 @@ const SchoolMeal = (props) => {
   }
 
   return (
-    <div>
+    <div className={classes.schoolmeal}>
+      <Head>
+        <title>급식 게시글</title>
+      </Head>
+      <div className={classes.calendar}>
+        {/* 달력 컴포넌트 */}
+        <Calendar onChange={setValue} value={value} onClickDay={dateChange} />
+      </div>
       <div className={classes.board}>
         <table>
           <thead>
@@ -66,10 +74,6 @@ const SchoolMeal = (props) => {
           {/* 급식 게시글 데이터 배치 */}
           <SchoolMealItem datas={ObjData} dateArr={dateArr} visible={visible} />
         </table>
-      </div>
-      <div className={classes.calendar}>
-        {/* 달력 컴포넌트 */}
-        <Calendar onChange={setValue} value={value} onClickDay={dateChange} />
       </div>
     </div>
   )

@@ -61,3 +61,18 @@
 .pagecontent.active {
   background: #ff731d;
 }
+
+@media (max-width: 860px) {
+  .board {
+    font-size: 12px;
+  }
+
+  .paginations {
+    /* width: 40%; */
+    padding-bottom: 20px;
+  }
+
+  .pagination {
+    width: 20%;
+  }
+}

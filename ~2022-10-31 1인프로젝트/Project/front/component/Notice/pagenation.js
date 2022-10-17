@@ -9,7 +9,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, page }) => {
   return (
     <div className={classes.paginations}>
       <nav>
-        <div className="pagination">
+        <div className={`pagination ${classes.pagination}`}>
           {pageNumbers.map((number) => (
             <div key={number}>
               <div className={`page-item `}>

@@ -1,9 +1,13 @@
+import Head from "next/head"
 import SiteMapNav from "../../../component/SiteMap/sitemapNav"
 import classes from "../../../styles/intro.module.css"
 
 const Intro = (props) => {
   return (
-    <div>
+    <div className={classes.intro}>
+      <Head>
+        <title>Intro</title>
+      </Head>
       <SiteMapNav />
       <div className={classes.IntroMain}>
         <div
