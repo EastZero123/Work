@@ -53,16 +53,4 @@ const NoticeItem = (props) => {
   )
 }
 
-// export async function getStaticProps() {
-//   const res = await axios.get("http://localhost:8080/api2/boardlist/5")
-
-//   const data = res.data
-
-//   return {
-//     props: {
-//       datas: data,
-//     },
-//   }
-// }
-
 export default NoticeItem

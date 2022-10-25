@@ -43,27 +43,21 @@ const Notice = (props) => {
             {/* 필터 컴포넌트 */}
             <Filter onFilter={onFilter} />
           </div>
-          {/* 페이징 컴포넌트 */}
-          <Pagination
-            postsPerPage={postsPerPage}
-            totalPosts={props.datas.length}
-            paginate={setCurrentPage}
-            page={currentPage}
-          ></Pagination>
+
           {/* 테이블 화면 */}
           <table>
             <thead>
               <tr>
-                <th style={{ width: "10%" }}>
+                <th style={{ width: "15%" }}>
                   <div style={{ minHeight: "30px" }}>번호</div>
                 </th>
-                <th style={{ width: "45%" }}>
+                <th style={{ width: "30%" }}>
                   <div style={{ minHeight: "30px" }}>제목</div>
                 </th>
-                <th style={{ width: "10%" }}>
+                <th style={{ width: "15%" }}>
                   <div style={{ minHeight: "30px" }}>작성자</div>
                 </th>
-                <th style={{ width: "25%" }}>
+                <th style={{ width: "20%" }}>
                   <div style={{ minHeight: "30px" }}>날짜</div>
                 </th>
                 <th style={{ width: "10%" }}>
@@ -75,6 +69,13 @@ const Notice = (props) => {
             {/* 공지사항 데이터 배치 */}
             <NoticeItem datas={currentPosts(ReunitData)} />
           </table>
+          {/* 페이징 컴포넌트 */}
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={props.datas.length}
+            paginate={setCurrentPage}
+            page={currentPage}
+          ></Pagination>
         </div>
       </div>
     </div>

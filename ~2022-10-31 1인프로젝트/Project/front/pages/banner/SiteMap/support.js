@@ -3,6 +3,10 @@ import SiteMapNav from "../../../component/SiteMap/sitemapNav"
 import classes from "../../../styles/support.module.css"
 
 const Support = (props) => {
+  const goPrint = () => {
+    console.log("goPrint")
+  }
+
   return (
     <div className={classes.support}>
       <Head>

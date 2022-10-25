@@ -51,7 +51,7 @@
   background: #025ce2;
 } */
 
-.board table {
+/* .board table {
   width: 100%;
   border-top: 1px solid #444444;
   border-collapse: collapse;
@@ -66,6 +66,37 @@
 .board th:first-child,
 .board td:first-child {
   border-left: none;
+} */
+
+.board table {
+  width: 100%;
+}
+
+.board {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.board thead th {
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  color: #369;
+  border-bottom: 3px solid #036;
+}
+
+.board tbody th {
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  background: #f3f6f7;
+}
+
+.board td {
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
 }
 
 @media (max-width: 970px) {

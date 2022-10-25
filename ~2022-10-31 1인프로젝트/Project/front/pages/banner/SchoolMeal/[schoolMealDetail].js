@@ -1,41 +1,24 @@
 import classes from "../../../styles/schoolmealDetail.module.css"
 
-import { useRouter } from "next/router"
+import { useRouter, withRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Head from "next/head"
+import axios from "axios"
 
-const SchoolMealDetaul = () => {
+const SchoolMealDetaul = (props) => {
   const router = useRouter()
-  const [data, setData] = useState()
-
-  // 동적 페이지 [schoolMealDetail] 값 얻어오기
-  const query = router.query.schoolMealDetail
-
-  // 필요한 데이터 가져오기
-  const fetchdata = async () => {
-    try {
-      const res = await fetch(
-        `http://localhost:8080/api/cafeteria/${query}`
-      ).then((response) => response.json())
-      setData(res)
-    } catch {}
-  }
-
-  useEffect(() => {
-    fetchdata()
-  }, [])
 
   // 데이터 불러오는 동안 빈 화면으로 대체하기
   // 이 작업을 안하면 데이터를 받기도 전에 화면에 뿌릴려고 해서 에러가 난다
-  if (!data) {
+  if (!props) {
     return <div></div>
   }
 
   return (
     <div>
       <Head>
-        <title>{data.title}</title>
+        <title>{props.data.title}</title>
       </Head>
       <div className={classes.detail}>
         <table style={{ width: "80%", margin: "auto" }}>
@@ -43,11 +26,13 @@ const SchoolMealDetaul = () => {
           <tbody>
             {/* 제목, 날짜 */}
             <tr style={{ paddingTop: "5%" }}>
-              <td className={classes.title}>{data.title}</td>
-              <td className={classes.date}>{data.regDate.split(" ")[0]}</td>
+              <td className={classes.title}>{props.data.title}</td>
+              <td className={classes.date}>
+                {props.data.regDate.split(" ")[0]}
+              </td>
               {/* 파일 */}
             </tr>
-            {data.fileYn === "Y" ? (
+            {props.data.fileYn === "Y" ? (
               <tr>
                 <td>
                   <Image
@@ -64,7 +49,7 @@ const SchoolMealDetaul = () => {
             )}
             {/* 작성자 */}
             <tr>
-              <td className={classes.writer}>{data.regName}</td>
+              <td className={classes.writer}>{props.data.regName}</td>
             </tr>
             {/* 내용 */}
             <tr>
@@ -72,11 +57,10 @@ const SchoolMealDetaul = () => {
                 style={{
                   paddingTop: "2%",
                   paddingLeft: "2%",
-                  // fontSize: "24px",
                   paddingBottom: "20%",
                   border: "1px solid black",
                 }}
-                dangerouslySetInnerHTML={{ __html: data.content }}
+                dangerouslySetInnerHTML={{ __html: props.data.content }}
               ></td>
             </tr>
             {/* 버튼 */}
@@ -86,9 +70,7 @@ const SchoolMealDetaul = () => {
                   className={classes.button}
                   style={{ paddingBottom: "10%", paddingTop: "5%" }}
                 >
-                  <button onClick={() => router.push("/banner/SchoolMeal")}>
-                    이전으로
-                  </button>
+                  <button onClick={() => router.push(`/`)}>초기 화면</button>
                 </div>
               </td>
             </tr>
@@ -99,4 +81,34 @@ const SchoolMealDetaul = () => {
   )
 }
 
-export default SchoolMealDetaul
+export async function getStaticPaths({ params }) {
+  const res = await axios.get("http://localhost:8080/api2/boardlist/4")
+  const lists = res.data
+
+  // 가져온 데이터에서 boardSeq만을 꺼내서 동적페이지를 미리 구성한다
+  const paths = lists.map((list) => ({
+    params: {
+      schoolMealDetail: String(list.boardSeq),
+    },
+  }))
+
+  //fallback을 false로 설정해서 위에서 꺼낸 boardSeq가 아니면 에러페이지로 연결시킨다
+  return { paths, fallback: false }
+}
+
+export async function getStaticProps({ params }) {
+  // 급식게시글 상세 데이터 불러오기
+  const fetchdata = await axios.get(
+    `http://localhost:8080/api/cafeteria/${params.schoolMealDetail}`
+  )
+  const schoolmealData = fetchdata.data
+
+  // props로 상세 데이터를 상속시킨다
+  return {
+    props: {
+      data: schoolmealData,
+    },
+  }
+}
+
+export default withRouter(SchoolMealDetaul)

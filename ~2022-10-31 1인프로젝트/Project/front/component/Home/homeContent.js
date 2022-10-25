@@ -1,21 +1,20 @@
 import Link from "next/link"
 import { Fragment } from "react"
+import classes from "../../styles/home.module.css"
 
 const HomeBanner = (props) => {
+  //선택적으로 출력하기 위한 함수
   var arrContent = []
 
-  const newContent = () => {
-    if (props.states === 1) {
-      for (var i = 0; i < 10; i++) {
-        arrContent.push(props.notice[i])
-      }
-    } else {
-      for (var i = 0; i < 10; i++) {
-        arrContent.push(props.schoolmeal[i])
-      }
+  if (props.states === 1) {
+    for (var i = 0; i < 10; i++) {
+      arrContent.push(props.notice[i])
+    }
+  } else {
+    for (var i = 0; i < 10; i++) {
+      arrContent.push(props.schoolmeal[i])
     }
   }
-  newContent()
 
   return (
     <Fragment>
@@ -49,10 +48,14 @@ const HomeBanner = (props) => {
                   borderLeft: "none",
                   textAlign: "right",
                   paddingRight: "5%",
-                  fontSize: "12px",
+                  fontSize: "10px",
+                  "@media (maxWidth: 900px)": {
+                    fontSize: "8px",
+                  },
                 }}
+                className={classes.date}
               >
-                {data.regDate}
+                {data.regDate.split(" ")[0]}
               </td>
             </tr>
           )

@@ -13,7 +13,9 @@ const Intro = (props) => {
         <div
           className={classes.IntroContent}
           dangerouslySetInnerHTML={{ __html: props.data.content }}
-        ></div>
+        >
+          {/* {props.data.content} */}
+        </div>
       </div>
     </div>
   )

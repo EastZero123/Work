@@ -8,6 +8,7 @@ import Head from "next/head"
 
 const SchoolMeal = (props) => {
   // 급식게시글 데이터
+  console.log(props.datas)
   const ObjData = Object.values(props.datas)
 
   // 달력 필터링에 필요한 선언
@@ -64,9 +65,9 @@ const SchoolMeal = (props) => {
         <table>
           <thead>
             <tr>
-              <th style={{ width: "10%" }}>번호</th>
-              <th style={{ width: "40%" }}>제목</th>
-              <th style={{ width: "10%" }}>작성자</th>
+              <th style={{ width: "15%" }}>번호</th>
+              <th style={{ width: "33%" }}>제목</th>
+              <th style={{ width: "13%" }}>작성자</th>
               <th style={{ width: "20%" }}>날짜</th>
               <th style={{ width: "10%" }}>첨부파일</th>
             </tr>
@@ -78,7 +79,6 @@ const SchoolMeal = (props) => {
     </div>
   )
 }
-
 export async function getStaticProps() {
   //급식 게시글 데이터 불러오기
   const res = await fetch("http://localhost:8080/api2/boardlist/4")
