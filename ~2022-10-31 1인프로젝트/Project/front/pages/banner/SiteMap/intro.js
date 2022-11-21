@@ -23,7 +23,7 @@ const Intro = (props) => {
 
 export async function getStaticProps() {
   // intro 내용 데이터 불러오기
-  const res = await fetch("http://localhost:8080/api2/board/1")
+  const res = await fetch("http://10.10.10.201:8617/api2/board/1")
 
   const data = await res.json()
 

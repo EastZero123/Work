@@ -8,21 +8,26 @@ const Home = (props) => {
   if (!props) {
     return <div></div>
   }
+
+  const ReunitNotice = props.notice.slice(0).reverse()
+  const ReunitSchoolMeal = props.schoolmeal.slice(0).reverse()
   return (
     <div>
-      <HomeContent notice={props.notice} schoolmeal={props.schoolmeal} />
+      <HomeContent notice={ReunitNotice} schoolmeal={ReunitSchoolMeal} />
     </div>
   )
 }
 
 export async function getStaticProps() {
   //공지사항 데이터 불러오기
-  const notice = await axios.get("http://localhost:8080/api2/boardlist/5")
+  const notice = await axios.get("http://10.10.10.201:8617/api2/boardlist/5")
 
   const noticeData = notice.data
 
   // 급식 게시글 데이터 불러오기
-  const schoolmeal = await axios.get("http://localhost:8080/api2/boardlist/4")
+  const schoolmeal = await axios.get(
+    "http://10.10.10.201:8617/api2/boardlist/4"
+  )
 
   const schoolmealData = schoolmeal.data
 

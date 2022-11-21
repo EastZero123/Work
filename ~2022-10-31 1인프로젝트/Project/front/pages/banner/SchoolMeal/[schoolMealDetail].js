@@ -82,7 +82,7 @@ const SchoolMealDetaul = (props) => {
 }
 
 export async function getStaticPaths({ params }) {
-  const res = await axios.get("http://localhost:8080/api2/boardlist/4")
+  const res = await axios.get("http://10.10.10.201:8617/api2/boardlist/4")
   const lists = res.data
 
   // 가져온 데이터에서 boardSeq만을 꺼내서 동적페이지를 미리 구성한다
@@ -99,7 +99,7 @@ export async function getStaticPaths({ params }) {
 export async function getStaticProps({ params }) {
   // 급식게시글 상세 데이터 불러오기
   const fetchdata = await axios.get(
-    `http://localhost:8080/api/cafeteria/${params.schoolMealDetail}`
+    `http://10.10.10.201:8617/api/cafeteria/${params.schoolMealDetail}`
   )
   const schoolmealData = fetchdata.data
 

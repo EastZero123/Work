@@ -33,6 +33,20 @@ const Header = () => {
       <nav className={classes.header__LNB}>
         <ul className={classes.header__LNBItem}>
           <li>
+            <Link href="/banner/OneonOne">
+              <a
+                className={
+                  router.pathname === "/banner/OneonOne" ||
+                  router.asPath === `/banner/Notice/${router.query.OneonOne}`
+                    ? classes.active
+                    : ""
+                }
+              >
+                1:1문의
+              </a>
+            </Link>
+          </li>
+          <li>
             <Link href="/banner/SchoolMeal">
               <a
                 className={

@@ -7,6 +7,7 @@ import Layout from "../component/UI/Layout"
 import Head from "next/head"
 
 // 공통 css
+//test
 import "../styles/globals.css"
 
 // 부트스트랩 적용을 위해선 다음 css를 넣어야함

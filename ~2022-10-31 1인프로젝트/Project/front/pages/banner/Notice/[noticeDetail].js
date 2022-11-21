@@ -91,7 +91,7 @@ const NoticeDetail = (props) => {
 
 export async function getStaticPaths({ params }) {
   //동적 페이지를 구성시키는 과정
-  const res = await axios.get("http://localhost:8080/api2/boardlist/5")
+  const res = await axios.get("http://10.10.10.201:8617/api2/boardlist/5")
   const lists = res.data
 
   //boradSeq를 따로 꺼내서 동적페이지 주소를 미리 만들어둔다
@@ -108,7 +108,7 @@ export async function getStaticPaths({ params }) {
 export async function getStaticProps({ params }) {
   //공지사항 상세 데이터 불러오기
   const fetchdata = await axios.get(
-    `http://localhost:8080/api/cafeteria/${params.noticeDetail}`
+    `http://10.10.10.201:8617/api/cafeteria/${params.noticeDetail}`
   )
   const noticeData = fetchdata.data
 

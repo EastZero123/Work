@@ -7,8 +7,7 @@ import moment from "moment"
 import Head from "next/head"
 
 const SchoolMeal = (props) => {
-  // 급식게시글 데이터
-  console.log(props.datas)
+  // 급식게시글 데이터를 배열 형태로 재배치
   const ObjData = Object.values(props.datas)
 
   // 달력 필터링에 필요한 선언
@@ -20,6 +19,11 @@ const SchoolMeal = (props) => {
   dateArr = ObjData.filter((data) => {
     return data.regDate.split(" ")[0] === moment(value).format("YYYY년MM월DD일")
   })
+
+  // 달력 내용을 누르면 전체 데이터 출력 비활성화
+  const dateChange = () => {
+    setIsvisible(false)
+  }
 
   // 파일 유무 테스트용 더미 데이터
 
@@ -40,11 +44,6 @@ const SchoolMeal = (props) => {
   //     fileYn: "Y",
   //   },
   // ]
-
-  // 달력 내용을 누르면 전체 데이터 출력 비활성화
-  const dateChange = () => {
-    setIsvisible(false)
-  }
 
   // 데이터 불러오는 동안 빈 화면으로 대체하기
   // 이 작업을 안하면 데이터를 받기도 전에 화면에 뿌릴려고 해서 에러가 난다
@@ -81,7 +80,7 @@ const SchoolMeal = (props) => {
 }
 export async function getStaticProps() {
   //급식 게시글 데이터 불러오기
-  const res = await fetch("http://localhost:8080/api2/boardlist/4")
+  const res = await fetch("http://10.10.10.201:8617/api2/boardlist/4")
 
   const data = await res.json()
 

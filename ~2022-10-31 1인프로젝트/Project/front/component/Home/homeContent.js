@@ -18,48 +18,78 @@ const HomeBanner = (props) => {
 
   return (
     <Fragment>
-      {arrContent
-        .slice(0)
-        .reverse()
-        .map((data, i) => {
-          return (
-            <tr key={i}>
-              <td
-                style={{
-                  borderRight: "none",
-                  textAlign: "left",
-                  paddingLeft: "3%",
-                  fontWeight: "bold",
-                }}
-              >
-                {props.states === 1 ? (
-                  <Link href={`/banner/Notice/${data.boardSeq}`}>
-                    <a>{data.title}</a>
-                  </Link>
-                ) : (
+      {props.states === 1
+        ? arrContent
+            .slice(0)
+            .reverse()
+            .map((data, i) => {
+              return (
+                <tr key={i}>
+                  <td
+                    style={{
+                      borderRight: "none",
+                      textAlign: "left",
+                      paddingLeft: "3%",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    (
+                    <Link href={`/banner/Notice/${data.boardSeq}`}>
+                      <a>{data.title}</a>
+                    </Link>
+                    )
+                  </td>
+                  <td
+                    style={{
+                      borderLeft: "none",
+                      textAlign: "right",
+                      paddingRight: "5%",
+                      fontSize: "10px",
+                      "@media (maxWidth: 900px)": {
+                        fontSize: "8px",
+                      },
+                    }}
+                    className={classes.date}
+                  >
+                    {data.regDate.split(" ")[0]}
+                  </td>
+                </tr>
+              )
+            })
+        : arrContent.map((data, i) => {
+            return (
+              <tr key={i}>
+                <td
+                  style={{
+                    borderRight: "none",
+                    textAlign: "left",
+                    paddingLeft: "3%",
+                    fontWeight: "bold",
+                  }}
+                >
+                  (
                   <Link href={`/banner/SchoolMeal/${data.boardSeq}`}>
                     <a>{data.title}</a>
                   </Link>
-                )}
-                {/* { data.title } */}
-              </td>
-              <td
-                style={{
-                  borderLeft: "none",
-                  textAlign: "right",
-                  paddingRight: "5%",
-                  fontSize: "10px",
-                  "@media (maxWidth: 900px)": {
-                    fontSize: "8px",
-                  },
-                }}
-                className={classes.date}
-              >
-                {data.regDate.split(" ")[0]}
-              </td>
-            </tr>
-          )
-        })}
+                  ){/* { data.title } */}
+                </td>
+                <td
+                  style={{
+                    borderLeft: "none",
+                    textAlign: "right",
+                    paddingRight: "5%",
+                    fontSize: "10px",
+                    "@media (maxWidth: 900px)": {
+                      fontSize: "8px",
+                    },
+                  }}
+                  className={classes.date}
+                >
+                  {data.regDate.split(" ")[0]}
+                </td>
+              </tr>
+            )
+          })}
     </Fragment>
   )
 }

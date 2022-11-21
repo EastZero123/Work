@@ -4,9 +4,11 @@ import { useState } from "react"
 import Filter from "../../../component/Notice/filter"
 import NoticeItem from "../../../component/Notice/noticeItem"
 import Pagination from "../../../component/Notice/pagenation"
-import classes from "../../../styles/notice.module.css"
+import OneonOneItem from "../../../component/OneonOne/oneononeItem"
+import classes from "../../../styles/oneonone.module.css"
 
-const Notice = (props) => {
+const OneoneOne = (props) => {
+  //   console.log(props.datas)
   //페이징 처리에 필요한 선언
   const [currentPage, setCurrentPage] = useState(1)
   const [postsPerPage, setPostsPerPage] = useState(10)
@@ -60,14 +62,11 @@ const Notice = (props) => {
                 <th style={{ width: "20%" }}>
                   <div style={{ minHeight: "30px" }}>날짜</div>
                 </th>
-                <th style={{ width: "10%" }}>
-                  <div style={{ minHeight: "30px" }}>첨부파일</div>
-                </th>
               </tr>
             </thead>
 
             {/* 공지사항 데이터 배치 */}
-            <NoticeItem datas={currentPosts(ReunitData)} />
+            <OneonOneItem datas={currentPosts(ReunitData)} />
           </table>
           {/* 페이징 컴포넌트 */}
           <Pagination
@@ -83,8 +82,8 @@ const Notice = (props) => {
 }
 
 export async function getStaticProps() {
-  //공지사항 데이터 불러오기
-  const res = await axios.get("http://10.10.10.201:8617/api2/boardlist/5")
+  //문의 게시판 데이터 불러오기
+  const res = await axios.get("http://localhost:8080/oneonone/board/list")
 
   const data = res.data
 
@@ -95,4 +94,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Notice
+export default OneoneOne

@@ -1,0 +1,109 @@
+.notice {
+  width: 100%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.filter {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  float: right;
+}
+
+.board {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.board a {
+  text-decoration-line: none;
+  color: black;
+}
+
+.board a:hover {
+  font-weight: 800;
+}
+
+/* .board table {
+  width: 100%;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+
+.board th,
+.board td {
+  border-bottom: 1px solid #444444;
+  border-left: 1px solid #444444;
+  padding: 10px;
+}
+
+.board th:first-child,
+.board td:first-child {
+  border-left: none;
+} */
+
+.board table {
+  width: 100%;
+}
+
+.board {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.board thead th {
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  color: #369;
+  border-bottom: 3px solid #036;
+}
+
+.board tbody th {
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+  background: #f3f6f7;
+}
+
+.board td {
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
+.paginations {
+  float: right;
+  margin-top: 5%;
+}
+
+.pagecontent {
+  color: #1746a2;
+  font-weight: 700;
+}
+
+.pagecontent:hover {
+  background: #ff731d;
+  cursor: pointer;
+}
+
+.pagecontent.active {
+  background: #ff731d;
+}
+
+@media (max-width: 860px) {
+  .board {
+    font-size: 8px;
+    width: 100%;
+  }
+
+  .paginations {
+    padding-bottom: 20px;
+  }
+
+  .pagination {
+    width: 20%;
+  }
+}
