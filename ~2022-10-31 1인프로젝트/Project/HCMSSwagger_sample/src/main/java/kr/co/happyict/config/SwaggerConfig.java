@@ -32,10 +32,10 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
 	}
 
-	// localhost:3000 에 한해서 CORS 해제
+	// localhost:3000, http://10.10.11.20:3000 에 한해서 CORS 해제
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/**").allowedOrigins("http://localhost:3000")
+		registry.addMapping("/**").allowedOrigins("http://10.10.11.20:3000", "http://localhost:3000")
 				.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS").allowedHeaders("*")
 				.allowCredentials(true).maxAge(3600);
 	}

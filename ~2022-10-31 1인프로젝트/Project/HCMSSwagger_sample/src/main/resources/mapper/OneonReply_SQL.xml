@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="OneonReplyMapper">
+
+	<select id="selectAll"
+		resultType="kr.co.happyict.vo.OneonReplyVO">
+		SELECT * FROM Oneon_reply WHERE bno = #{bno}
+	</select>
+
+	<insert id="create">
+		INSERT INTO Oneon_reply (bno, reply_text,
+		reply_writer, reg_date, update_date) VALUES (#{bno}, #{replyText},
+		#{replyWriter},date_format(NOW(),'%Y-%m-%d'),date_format(NOW(),'%Y-%m-%d'))
+	</insert>
+
+	<update id="update">
+		UPDATE Oneon_reply SET reply_text = #{replyText},
+		update_date = date_format(NOW(),'%Y-%m-%d') WHERE rno = #{rno}
+	</update>
+
+	<delete id="delete">
+		DELETE FROM Oneon_reply WHERE rno = #{rno}
+	</delete>
+
+</mapper>
