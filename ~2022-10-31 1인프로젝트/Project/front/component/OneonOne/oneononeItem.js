@@ -11,12 +11,12 @@ const OneonOneItem = (props) => {
           <tr key={i}>
             <td>
               <div style={{ minHeight: "30px", verticalAlign: "middle" }}>
-                {data.tno}
+                {data.bno}
               </div>
             </td>
             <td>
               <div style={{ minHeight: "30px", verticalAlign: "middle" }}>
-                <Link href={`/banner/Notice/${data.boardSeq}`}>
+                <Link href={`/banner/OneonOne/${data.bno}`}>
                   <a>{data.title}</a>
                 </Link>
               </div>
@@ -28,7 +28,7 @@ const OneonOneItem = (props) => {
             </td>
             <td>
               <div style={{ minHeight: "30px", verticalAlign: "middle" }}>
-                {data.regDate.split(" ")[0]}
+                {`${data.regDate[0]}-${data.regDate[1]}-${data.regDate[2]}`}
               </div>
             </td>
           </tr>

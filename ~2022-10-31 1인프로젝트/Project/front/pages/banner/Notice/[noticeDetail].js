@@ -6,6 +6,7 @@ import classes from "../../../styles/noticeDetail.module.css"
 
 const NoticeDetail = (props) => {
   const router = useRouter()
+  console.log(props.data)
 
   // 데이터 불러오는 동안 빈 화면으로 대체하기
   // 이 작업을 안하면 데이터를 받기도 전에 화면에 뿌릴려고 해서 에러가 난다

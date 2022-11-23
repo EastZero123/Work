@@ -12,7 +12,7 @@
 }
 
 .body_content {
-  padding-bottom: 90%;
+  padding-bottom: 70%;
   padding-top: 75px;
 }
 
@@ -48,15 +48,15 @@
 
 .map {
   /* position: absolute; */
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   justify-content: space-between;
-  margin-top: 4%;
+  margin-top: 3%;
   margin-left: 70%;
 }
 
 .map div {
-  margin: 25% 0;
+  margin: 30% 0;
   color: rgb(255, 255, 255);
   font-family: DM Sans;
   font-size: 18px;

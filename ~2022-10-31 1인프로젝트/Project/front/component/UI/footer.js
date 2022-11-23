@@ -19,6 +19,9 @@ const Footer = () => {
         <div>
           <Link href="/banner/SchoolMeal">급식 게시글</Link>
         </div>
+        <div>
+          <Link href="/banner/OneonOne">1:1 문의</Link>
+        </div>
       </div>
       <div className={classes.icon}></div>
     </footer>
