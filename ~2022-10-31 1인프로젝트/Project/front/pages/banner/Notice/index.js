@@ -12,7 +12,7 @@ const Notice = (props) => {
   const [postsPerPage, setPostsPerPage] = useState(10)
   const indexOfLast = currentPage * postsPerPage
   const indexOfFirst = indexOfLast - postsPerPage
-  const currentPosts = (posts) => {
+  const CurrentPosts = (posts) => {
     let currentPosts = 0
     currentPosts = posts.slice(indexOfFirst, indexOfLast)
     return currentPosts
@@ -67,7 +67,7 @@ const Notice = (props) => {
             </thead>
 
             {/* 공지사항 데이터 배치 */}
-            <NoticeItem datas={currentPosts(ReunitData)} />
+            <NoticeItem datas={CurrentPosts(ReunitData)} />
           </table>
           {/* 페이징 컴포넌트 */}
           <Pagination

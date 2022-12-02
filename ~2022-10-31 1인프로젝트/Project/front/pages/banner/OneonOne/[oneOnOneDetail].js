@@ -2,14 +2,13 @@ import axios from "axios"
 import Head from "next/head"
 import { useRouter, withRouter } from "next/router"
 import { useRef } from "react"
-import { useState } from "react"
 import ReplyContent from "../../../component/OneonOne/Reply/ReplyContent"
 import classes from "../../../styles/oneononeDetail.module.css"
 
 const OneonOneDetail = (props) => {
   const replyref = useRef()
   const router = useRouter()
-  console.log(props.reply)
+  console.log(props.data)
 
   const ReplyConfirm = async (ReplyRegisterJSONData) => {
     try {
@@ -23,7 +22,7 @@ const OneonOneDetail = (props) => {
       })
         .then((response) => console.log(response))
         .then((data) => console.log(data))
-    } catch {}
+    } catch (e) {}
   }
 
   const submitHandler = (e) => {
@@ -42,6 +41,21 @@ const OneonOneDetail = (props) => {
     } catch (error) {
       console.log(error.message)
     }
+  }
+
+  const deleteHandler = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await fetch(
+        `http://localhost:8080/oneonone/board/delete/${props.data[0].bno}`,
+        {
+          method: "DELETE",
+        }
+      )
+      const data = await response.json()
+      console.log(data)
+    } catch (e) {}
+    router.replace("/banner/OneonOne")
   }
 
   // 데이터 불러오는 동안 빈 화면으로 대체하기
@@ -115,12 +129,18 @@ const OneonOneDetail = (props) => {
                   <button
                     style={{ margin: "1%" }}
                     className={classes.modifybutton}
+                    onClick={() =>
+                      router.push(
+                        `/banner/OneonOne/modify/${props.data[0].bno}`
+                      )
+                    }
                   >
                     수정
                   </button>
                   <button
                     style={{ margin: "1%" }}
                     className={classes.deletebutton}
+                    onClick={deleteHandler}
                   >
                     삭제
                   </button>

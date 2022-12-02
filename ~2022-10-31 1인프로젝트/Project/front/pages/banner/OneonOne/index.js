@@ -1,8 +1,8 @@
 import axios from "axios"
 import Head from "next/head"
+import { useRouter } from "next/router"
 import { useState } from "react"
 import Filter from "../../../component/Notice/filter"
-import NoticeItem from "../../../component/Notice/noticeItem"
 import Pagination from "../../../component/Notice/pagenation"
 import OneonOneItem from "../../../component/OneonOne/oneononeItem"
 import classes from "../../../styles/oneonone.module.css"
@@ -14,7 +14,7 @@ const OneoneOne = (props) => {
   const [postsPerPage, setPostsPerPage] = useState(10)
   const indexOfLast = currentPage * postsPerPage
   const indexOfFirst = indexOfLast - postsPerPage
-  const currentPosts = (posts) => {
+  const CurrentPosts = (posts) => {
     let currentPosts = 0
     currentPosts = posts.slice(indexOfFirst, indexOfLast)
     return currentPosts
@@ -24,6 +24,8 @@ const OneoneOne = (props) => {
     setPostsPerPage(filter.target.value)
     setCurrentPage(1)
   }
+
+  const router = useRouter()
 
   //최근 날짜순 정렬을 위한 역순 배치
   const ReunitData = props.datas.slice(0).reverse()
@@ -37,7 +39,7 @@ const OneoneOne = (props) => {
   return (
     <div>
       <Head>
-        <title>공지사항</title>
+        <title>1:1 문의</title>
       </Head>
       <div className={classes.notice}>
         <div className={classes.board}>
@@ -66,8 +68,16 @@ const OneoneOne = (props) => {
             </thead>
 
             {/* 공지사항 데이터 배치 */}
-            <OneonOneItem datas={currentPosts(ReunitData)} />
+            <OneonOneItem datas={CurrentPosts(ReunitData)} />
           </table>
+          <button
+            className={classes.registerbutton}
+            onClick={() => {
+              router.push("/banner/OneonOne/register")
+            }}
+          >
+            작성
+          </button>
           {/* 페이징 컴포넌트 */}
           <Pagination
             postsPerPage={postsPerPage}

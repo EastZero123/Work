@@ -74,6 +74,14 @@
   border-bottom: 1px solid #ccc;
 }
 
+.registerbutton {
+  margin-top: 1%;
+  width: 10%;
+  background-color: rgba(120, 161, 201, 0.822);
+  border: rgba(120, 161, 201, 0.822);
+  float: right;
+}
+
 .paginations {
   float: right;
   margin-top: 5%;

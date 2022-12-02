@@ -1,7 +1,6 @@
 import classes from "../../../styles/schoolmealDetail.module.css"
 
 import { useRouter, withRouter } from "next/router"
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import Head from "next/head"
 import axios from "axios"

@@ -1,12 +1,13 @@
 {
-  "name": "front",
+  "name": "nextjs_choi",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sonar": "node sonarqube-scanner.js"
   },
   "dependencies": {
     "axios": "^1.1.2",
@@ -22,10 +23,12 @@
   },
   "devDependencies": {
     "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
+    "eslint-config-next": "12.3.1",
+    "sonarqube-scanner": "^2.8.2"
   },
   "proxy": {
     "http://10.10.10.201:8617/": "http://10.10.10.201:8617/",
     "http://localhost:8080/": "http://localhost:8080/"
-  }
+  },
+  "type": "module"
 }
