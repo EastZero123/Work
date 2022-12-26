@@ -1,0 +1,1632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.7.3" sequence="0" timestamp="1669766002139" analysisTimestamp="1670198499197" release="">
+  <Project>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\HcmsSwaggerApplication.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\ServletInitializer.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\common\Constants.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\config\SwaggerConfig.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\controller\HomeController.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\AccountDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\BoardDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\BoardManagementDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\CodeDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\CommonDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\OneonOneDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\OneonReplyDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\RestDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\dao\SurveyDAO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\rest\BoardRestController.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\rest\OneOnOneController.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\rest\RestController.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\AccountService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\BoardManagementService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\BoardService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\CodeService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\CommonService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\OneonOneService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\OneonReplyService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\RestService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\SurveyService.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\AccountServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\BoardManagementServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\BoardServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\CodeServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\CommonServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\OneonOneServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\OneonReplyServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\RestServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\service\impl\SurveyServiceImpl.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\CommonUtil.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\DataEncryption.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\HappyFile.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\KISA_SEED_CBC.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\KISA_SEED_CBC$Common.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\KISA_SEED_CBC$KISA_ENC_DEC.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\KISA_SEED_CBC$KISA_SEED_INFO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\KISA_SEED_CBC$KISA_SEED_KEY.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\util\PageUtil.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\AccessHistoryVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\AccessRecordMasterVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\AccountAuthVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\AccountVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\BoardAttachVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\BoardManagementRestVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\BoardManagementVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\BoardRestVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\BoardVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\CodeVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\CommonVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\LogVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\LoginControlVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\OneonOneVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\OneonReplyVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\PageVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\RestVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\SearchSurveyVO.class</Jar>
+    <Jar>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes\kr\co\happyict\vo\SurveyVO.class</Jar>
+    <AuxClasspathEntry>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\target\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\.scannerwork\findbugs\annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\.scannerwork\findbugs\jsr305.jar</AuxClasspathEntry>
+    <WrkDir>C:\Users\CHOIDONGYOUNG\Desktop\stsworkspace\HCMSSwagger_sample\.scannerwork</WrkDir>
+  </Project>
+  <BugInstance type="UC_USELESS_OBJECT" priority="2" rank="17" abbrev="UC" category="STYLE" instanceHash="7016ccfcc86f58018c210852e5960875" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Useless object created</ShortMessage>
+    <LongMessage>Useless object stored in variable boardRestVO of method kr.co.happyict.rest.BoardRestController.getPage(long)</LongMessage>
+    <Class classname="kr.co.happyict.rest.BoardRestController" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.BoardRestController" start="25" end="126" sourcefile="BoardRestController.java" sourcepath="kr/co/happyict/rest/BoardRestController.java">
+        <Message>At BoardRestController.java:[lines 25-126]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.rest.BoardRestController</Message>
+    </Class>
+    <Method classname="kr.co.happyict.rest.BoardRestController" name="getPage" signature="(J)Lorg/springframework/http/ResponseEntity;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.BoardRestController" start="97" end="112" startBytecode="0" endBytecode="202" sourcefile="BoardRestController.java" sourcepath="kr/co/happyict/rest/BoardRestController.java"/>
+      <Message>In method kr.co.happyict.rest.BoardRestController.getPage(long)</Message>
+    </Method>
+    <String value="boardRestVO">
+      <Message>Value boardRestVO</Message>
+    </String>
+    <Type descriptor="Lkr/co/happyict/vo/BoardRestVO;">
+      <SourceLine classname="kr.co.happyict.vo.BoardRestVO" start="7" end="7" sourcefile="BoardRestVO.java" sourcepath="kr/co/happyict/vo/BoardRestVO.java">
+        <Message>At BoardRestVO.java:[line 7]</Message>
+      </SourceLine>
+      <Message>Type kr.co.happyict.vo.BoardRestVO</Message>
+    </Type>
+    <SourceLine classname="kr.co.happyict.rest.BoardRestController" primary="true" start="100" end="100" startBytecode="33" endBytecode="33" sourcefile="BoardRestController.java" sourcepath="kr/co/happyict/rest/BoardRestController.java">
+      <Message>At BoardRestController.java:[line 100]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="731d7794386646636fa0646c7c87f285" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.rest.OneOnOneController(OneonReplyService, OneonOneService) may expose internal representation by storing an externally mutable object into OneOnOneController.oneonOneService</LongMessage>
+    <Class classname="kr.co.happyict.rest.OneOnOneController" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.OneOnOneController" start="30" end="168" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java">
+        <Message>At OneOnOneController.java:[lines 30-168]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.rest.OneOnOneController</Message>
+    </Class>
+    <Method classname="kr.co.happyict.rest.OneOnOneController" name="&lt;init&gt;" signature="(Lkr/co/happyict/service/OneonReplyService;Lkr/co/happyict/service/OneonOneService;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.OneOnOneController" start="30" end="33" startBytecode="0" endBytecode="88" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java"/>
+      <Message>In method new kr.co.happyict.rest.OneOnOneController(OneonReplyService, OneonOneService)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.rest.OneOnOneController" name="oneonOneService" signature="Lkr/co/happyict/service/OneonOneService;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.OneOnOneController" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java">
+        <Message>In OneOnOneController.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.rest.OneOnOneController.oneonOneService</Message>
+    </Field>
+    <LocalVariable name="oneonOneService" register="2" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named oneonOneService</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.rest.OneOnOneController" primary="true" start="31" end="31" startBytecode="6" endBytecode="6" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java">
+      <Message>At OneOnOneController.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="d087823d0533e47657f4d9df8a1d790b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.rest.OneOnOneController(OneonReplyService, OneonOneService) may expose internal representation by storing an externally mutable object into OneOnOneController.oneonReplyService</LongMessage>
+    <Class classname="kr.co.happyict.rest.OneOnOneController" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.OneOnOneController" start="30" end="168" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java">
+        <Message>At OneOnOneController.java:[lines 30-168]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.rest.OneOnOneController</Message>
+    </Class>
+    <Method classname="kr.co.happyict.rest.OneOnOneController" name="&lt;init&gt;" signature="(Lkr/co/happyict/service/OneonReplyService;Lkr/co/happyict/service/OneonOneService;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.OneOnOneController" start="30" end="33" startBytecode="0" endBytecode="88" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java"/>
+      <Message>In method new kr.co.happyict.rest.OneOnOneController(OneonReplyService, OneonOneService)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.rest.OneOnOneController" name="oneonReplyService" signature="Lkr/co/happyict/service/OneonReplyService;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.OneOnOneController" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java">
+        <Message>In OneOnOneController.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.rest.OneOnOneController.oneonReplyService</Message>
+    </Field>
+    <LocalVariable name="oneonReplyService" register="1" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named oneonReplyService</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.rest.OneOnOneController" primary="true" start="32" end="32" startBytecode="11" endBytecode="11" sourcefile="OneOnOneController.java" sourcepath="kr/co/happyict/rest/OneOnOneController.java">
+      <Message>At OneOnOneController.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="84c248a71db4277be8ae5b3843f1ca59" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.rest.RestController(BoardService, BoardManagementService, HttpServletRequest) may expose internal representation by storing an externally mutable object into RestController.boardManagementService</LongMessage>
+    <Class classname="kr.co.happyict.rest.RestController" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" start="31" end="263" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+        <Message>At RestController.java:[lines 31-263]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.rest.RestController</Message>
+    </Class>
+    <Method classname="kr.co.happyict.rest.RestController" name="&lt;init&gt;" signature="(Lkr/co/happyict/service/BoardService;Lkr/co/happyict/service/BoardManagementService;Ljavax/servlet/http/HttpServletRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" start="37" end="42" startBytecode="0" endBytecode="107" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java"/>
+      <Message>In method new kr.co.happyict.rest.RestController(BoardService, BoardManagementService, HttpServletRequest)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.rest.RestController" name="boardManagementService" signature="Lkr/co/happyict/service/BoardManagementService;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+        <Message>In RestController.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.rest.RestController.boardManagementService</Message>
+    </Field>
+    <LocalVariable name="boardManagementService" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named boardManagementService</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.rest.RestController" primary="true" start="40" end="40" startBytecode="11" endBytecode="11" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+      <Message>At RestController.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5bc75a261170782b11319fff79ba30f1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.rest.RestController(BoardService, BoardManagementService, HttpServletRequest) may expose internal representation by storing an externally mutable object into RestController.boardService</LongMessage>
+    <Class classname="kr.co.happyict.rest.RestController" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" start="31" end="263" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+        <Message>At RestController.java:[lines 31-263]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.rest.RestController</Message>
+    </Class>
+    <Method classname="kr.co.happyict.rest.RestController" name="&lt;init&gt;" signature="(Lkr/co/happyict/service/BoardService;Lkr/co/happyict/service/BoardManagementService;Ljavax/servlet/http/HttpServletRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" start="37" end="42" startBytecode="0" endBytecode="107" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java"/>
+      <Message>In method new kr.co.happyict.rest.RestController(BoardService, BoardManagementService, HttpServletRequest)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.rest.RestController" name="boardService" signature="Lkr/co/happyict/service/BoardService;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+        <Message>In RestController.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.rest.RestController.boardService</Message>
+    </Field>
+    <LocalVariable name="boardService" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named boardService</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.rest.RestController" primary="true" start="39" end="39" startBytecode="6" endBytecode="6" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+      <Message>At RestController.java:[line 39]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_OBJECT" priority="2" rank="17" abbrev="UC" category="STYLE" instanceHash="393e44e402e5edb77c54df97a14d54ff" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Useless object created</ShortMessage>
+    <LongMessage>Useless object stored in variable restVO of method kr.co.happyict.rest.RestController.getPost(String, long)</LongMessage>
+    <Class classname="kr.co.happyict.rest.RestController" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" start="31" end="263" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+        <Message>At RestController.java:[lines 31-263]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.rest.RestController</Message>
+    </Class>
+    <Method classname="kr.co.happyict.rest.RestController" name="getPost" signature="(Ljava/lang/String;J)Lorg/springframework/http/ResponseEntity;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.rest.RestController" start="79" end="88" startBytecode="0" endBytecode="188" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java"/>
+      <Message>In method kr.co.happyict.rest.RestController.getPost(String, long)</Message>
+    </Method>
+    <String value="restVO">
+      <Message>Value restVO</Message>
+    </String>
+    <Type descriptor="Lkr/co/happyict/vo/RestVO;">
+      <SourceLine classname="kr.co.happyict.vo.RestVO" start="7" end="10" sourcefile="RestVO.java" sourcepath="kr/co/happyict/vo/RestVO.java">
+        <Message>At RestVO.java:[lines 7-10]</Message>
+      </SourceLine>
+      <Message>Type kr.co.happyict.vo.RestVO</Message>
+    </Type>
+    <SourceLine classname="kr.co.happyict.rest.RestController" primary="true" start="85" end="85" startBytecode="57" endBytecode="57" sourcefile="RestController.java" sourcepath="kr/co/happyict/rest/RestController.java">
+      <Message>At RestController.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ce5d7c4f0186ed074ff66594804ee88b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.AccountServiceImpl(AccountDAO, HttpServletRequest) may expose internal representation by storing an externally mutable object into AccountServiceImpl.accountDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.AccountServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.AccountServiceImpl" start="21" end="143" sourcefile="AccountServiceImpl.java" sourcepath="kr/co/happyict/service/impl/AccountServiceImpl.java">
+        <Message>At AccountServiceImpl.java:[lines 21-143]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.AccountServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.AccountServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/AccountDAO;Ljavax/servlet/http/HttpServletRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.AccountServiceImpl" start="23" end="27" startBytecode="0" endBytecode="98" sourcefile="AccountServiceImpl.java" sourcepath="kr/co/happyict/service/impl/AccountServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.AccountServiceImpl(AccountDAO, HttpServletRequest)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.AccountServiceImpl" name="accountDAO" signature="Lkr/co/happyict/dao/AccountDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.AccountServiceImpl" sourcefile="AccountServiceImpl.java" sourcepath="kr/co/happyict/service/impl/AccountServiceImpl.java">
+        <Message>In AccountServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.AccountServiceImpl.accountDAO</Message>
+    </Field>
+    <LocalVariable name="accountDAO" register="1" pc="12" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named accountDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.AccountServiceImpl" primary="true" start="25" end="25" startBytecode="12" endBytecode="12" sourcefile="AccountServiceImpl.java" sourcepath="kr/co/happyict/service/impl/AccountServiceImpl.java">
+      <Message>At AccountServiceImpl.java:[line 25]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="25aa26c1707d282157bea4d88b4454cf" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.BoardManagementServiceImpl(BoardManagementDAO, HttpServletRequest) may expose internal representation by storing an externally mutable object into BoardManagementServiceImpl.boardManagementDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" start="20" end="69" sourcefile="BoardManagementServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardManagementServiceImpl.java">
+        <Message>At BoardManagementServiceImpl.java:[lines 20-69]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.BoardManagementServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/BoardManagementDAO;Ljavax/servlet/http/HttpServletRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" start="22" end="26" startBytecode="0" endBytecode="98" sourcefile="BoardManagementServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardManagementServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.BoardManagementServiceImpl(BoardManagementDAO, HttpServletRequest)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" name="boardManagementDAO" signature="Lkr/co/happyict/dao/BoardManagementDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" sourcefile="BoardManagementServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardManagementServiceImpl.java">
+        <Message>In BoardManagementServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.BoardManagementServiceImpl.boardManagementDAO</Message>
+    </Field>
+    <LocalVariable name="boardManagementDAO" register="1" pc="12" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named boardManagementDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" primary="true" start="24" end="24" startBytecode="12" endBytecode="12" sourcefile="BoardManagementServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardManagementServiceImpl.java">
+      <Message>At BoardManagementServiceImpl.java:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" instanceHash="2b696fdc4a2d3fe7c467bf274b40fcfb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field: should this field be static?</ShortMessage>
+    <LongMessage>Unread field: kr.co.happyict.service.impl.BoardManagementServiceImpl.ajaxReturn; should this field be static?</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" start="20" end="69" sourcefile="BoardManagementServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardManagementServiceImpl.java">
+        <Message>At BoardManagementServiceImpl.java:[lines 20-69]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.BoardManagementServiceImpl</Message>
+    </Class>
+    <Field classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" name="ajaxReturn" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" sourcefile="BoardManagementServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardManagementServiceImpl.java">
+        <Message>In BoardManagementServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.BoardManagementServiceImpl.ajaxReturn</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.service.impl.BoardManagementServiceImpl" primary="true" start="20" end="20" startBytecode="7" endBytecode="7" sourcefile="BoardManagementServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardManagementServiceImpl.java">
+      <Message>At BoardManagementServiceImpl.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="364d76268684b2dafb89864f1fb88e09" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.BoardServiceImpl(BoardDAO, BoardManagementDAO, HappyFile, HttpServletRequest) may expose internal representation by storing an externally mutable object into BoardServiceImpl.boardDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" start="24" end="413" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>At BoardServiceImpl.java:[lines 24-413]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.BoardServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.BoardServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/BoardDAO;Lkr/co/happyict/dao/BoardManagementDAO;Lkr/co/happyict/util/HappyFile;Ljavax/servlet/http/HttpServletRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" start="37" end="43" startBytecode="0" endBytecode="157" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.BoardServiceImpl(BoardDAO, BoardManagementDAO, HappyFile, HttpServletRequest)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.BoardServiceImpl" name="boardDAO" signature="Lkr/co/happyict/dao/BoardDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>In BoardServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.BoardServiceImpl.boardDAO</Message>
+    </Field>
+    <LocalVariable name="boardDAO" register="1" pc="24" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named boardDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true" start="39" end="39" startBytecode="24" endBytecode="24" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+      <Message>At BoardServiceImpl.java:[line 39]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ae12f7a20475b657f1b94f7cefc61158" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.BoardServiceImpl(BoardDAO, BoardManagementDAO, HappyFile, HttpServletRequest) may expose internal representation by storing an externally mutable object into BoardServiceImpl.boardManagementDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" start="24" end="413" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>At BoardServiceImpl.java:[lines 24-413]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.BoardServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.BoardServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/BoardDAO;Lkr/co/happyict/dao/BoardManagementDAO;Lkr/co/happyict/util/HappyFile;Ljavax/servlet/http/HttpServletRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" start="37" end="43" startBytecode="0" endBytecode="157" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.BoardServiceImpl(BoardDAO, BoardManagementDAO, HappyFile, HttpServletRequest)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.BoardServiceImpl" name="boardManagementDAO" signature="Lkr/co/happyict/dao/BoardManagementDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>In BoardServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.BoardServiceImpl.boardManagementDAO</Message>
+    </Field>
+    <LocalVariable name="boardManagementDAO" register="2" pc="29" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named boardManagementDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true" start="40" end="40" startBytecode="29" endBytecode="29" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+      <Message>At BoardServiceImpl.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" instanceHash="c06e21b9e18afcd29741bb33c9f6f05a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field: should this field be static?</ShortMessage>
+    <LongMessage>Unread field: kr.co.happyict.service.impl.BoardServiceImpl.uploadLivePath; should this field be static?</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" start="24" end="413" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>At BoardServiceImpl.java:[lines 24-413]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.BoardServiceImpl</Message>
+    </Class>
+    <Field classname="kr.co.happyict.service.impl.BoardServiceImpl" name="uploadLivePath" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>In BoardServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.BoardServiceImpl.uploadLivePath</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true" start="24" end="24" startBytecode="7" endBytecode="7" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+      <Message>At BoardServiceImpl.java:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" instanceHash="1c63645e326bc79c68b2a46e30310f5a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field: should this field be static?</ShortMessage>
+    <LongMessage>Unread field: kr.co.happyict.service.impl.BoardServiceImpl.uploadTempPath; should this field be static?</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" start="24" end="413" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>At BoardServiceImpl.java:[lines 24-413]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.BoardServiceImpl</Message>
+    </Class>
+    <Field classname="kr.co.happyict.service.impl.BoardServiceImpl" name="uploadTempPath" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+        <Message>In BoardServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.BoardServiceImpl.uploadTempPath</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.service.impl.BoardServiceImpl" primary="true" start="25" end="25" startBytecode="13" endBytecode="13" sourcefile="BoardServiceImpl.java" sourcepath="kr/co/happyict/service/impl/BoardServiceImpl.java">
+      <Message>At BoardServiceImpl.java:[line 25]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f89f0497e3eff0e6400da32642c23b34" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.CodeServiceImpl(CodeDAO, HttpServletRequest) may expose internal representation by storing an externally mutable object into CodeServiceImpl.codeDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.CodeServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.CodeServiceImpl" start="20" end="109" sourcefile="CodeServiceImpl.java" sourcepath="kr/co/happyict/service/impl/CodeServiceImpl.java">
+        <Message>At CodeServiceImpl.java:[lines 20-109]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.CodeServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.CodeServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/CodeDAO;Ljavax/servlet/http/HttpServletRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.CodeServiceImpl" start="28" end="32" startBytecode="0" endBytecode="98" sourcefile="CodeServiceImpl.java" sourcepath="kr/co/happyict/service/impl/CodeServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.CodeServiceImpl(CodeDAO, HttpServletRequest)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.CodeServiceImpl" name="codeDAO" signature="Lkr/co/happyict/dao/CodeDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.CodeServiceImpl" sourcefile="CodeServiceImpl.java" sourcepath="kr/co/happyict/service/impl/CodeServiceImpl.java">
+        <Message>In CodeServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.CodeServiceImpl.codeDAO</Message>
+    </Field>
+    <LocalVariable name="codeDAO" register="1" pc="12" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named codeDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.CodeServiceImpl" primary="true" start="30" end="30" startBytecode="12" endBytecode="12" sourcefile="CodeServiceImpl.java" sourcepath="kr/co/happyict/service/impl/CodeServiceImpl.java">
+      <Message>At CodeServiceImpl.java:[line 30]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5a31b4a9855e736eec5efae28da5fb85" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.OneonOneServiceImpl(OneonOneDAO, SqlSession) may expose internal representation by storing an externally mutable object into OneonOneServiceImpl.oneonOneDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.OneonOneServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.OneonOneServiceImpl" start="20" end="53" sourcefile="OneonOneServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonOneServiceImpl.java">
+        <Message>At OneonOneServiceImpl.java:[lines 20-53]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.OneonOneServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.OneonOneServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/OneonOneDAO;Lorg/apache/ibatis/session/SqlSession;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.OneonOneServiceImpl" start="20" end="23" startBytecode="0" endBytecode="88" sourcefile="OneonOneServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonOneServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.OneonOneServiceImpl(OneonOneDAO, SqlSession)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.OneonOneServiceImpl" name="oneonOneDAO" signature="Lkr/co/happyict/dao/OneonOneDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.OneonOneServiceImpl" sourcefile="OneonOneServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonOneServiceImpl.java">
+        <Message>In OneonOneServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.OneonOneServiceImpl.oneonOneDAO</Message>
+    </Field>
+    <LocalVariable name="oneonOneDAO" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named oneonOneDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.OneonOneServiceImpl" primary="true" start="21" end="21" startBytecode="6" endBytecode="6" sourcefile="OneonOneServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonOneServiceImpl.java">
+      <Message>At OneonOneServiceImpl.java:[line 21]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="2e4bb7eb0d9a70b46554aa126c4ba185" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.OneonReplyServiceImpl(OneonReplyDAO) may expose internal representation by storing an externally mutable object into OneonReplyServiceImpl.oneonReplyDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.OneonReplyServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.OneonReplyServiceImpl" start="16" end="42" sourcefile="OneonReplyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonReplyServiceImpl.java">
+        <Message>At OneonReplyServiceImpl.java:[lines 16-42]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.OneonReplyServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.OneonReplyServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/OneonReplyDAO;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.OneonReplyServiceImpl" start="16" end="18" startBytecode="0" endBytecode="69" sourcefile="OneonReplyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonReplyServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.OneonReplyServiceImpl(OneonReplyDAO)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.OneonReplyServiceImpl" name="oneonReplyDAO" signature="Lkr/co/happyict/dao/OneonReplyDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.OneonReplyServiceImpl" sourcefile="OneonReplyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonReplyServiceImpl.java">
+        <Message>In OneonReplyServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.OneonReplyServiceImpl.oneonReplyDAO</Message>
+    </Field>
+    <LocalVariable name="oneonReplyDAO" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named oneonReplyDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.OneonReplyServiceImpl" primary="true" start="17" end="17" startBytecode="6" endBytecode="6" sourcefile="OneonReplyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/OneonReplyServiceImpl.java">
+      <Message>At OneonReplyServiceImpl.java:[line 17]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f517aefd1fb2cdf258b5997f8aabf442" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new kr.co.happyict.service.impl.SurveyServiceImpl(SurveyDAO) may expose internal representation by storing an externally mutable object into SurveyServiceImpl.surveyDAO</LongMessage>
+    <Class classname="kr.co.happyict.service.impl.SurveyServiceImpl" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.SurveyServiceImpl" start="22" end="290" sourcefile="SurveyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/SurveyServiceImpl.java">
+        <Message>At SurveyServiceImpl.java:[lines 22-290]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.service.impl.SurveyServiceImpl</Message>
+    </Class>
+    <Method classname="kr.co.happyict.service.impl.SurveyServiceImpl" name="&lt;init&gt;" signature="(Lkr/co/happyict/dao/SurveyDAO;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.SurveyServiceImpl" start="26" end="28" startBytecode="0" endBytecode="69" sourcefile="SurveyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/SurveyServiceImpl.java"/>
+      <Message>In method new kr.co.happyict.service.impl.SurveyServiceImpl(SurveyDAO)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.service.impl.SurveyServiceImpl" name="surveyDAO" signature="Lkr/co/happyict/dao/SurveyDAO;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.service.impl.SurveyServiceImpl" sourcefile="SurveyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/SurveyServiceImpl.java">
+        <Message>In SurveyServiceImpl.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.service.impl.SurveyServiceImpl.surveyDAO</Message>
+    </Field>
+    <LocalVariable name="surveyDAO" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named surveyDAO</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.service.impl.SurveyServiceImpl" primary="true" start="27" end="27" startBytecode="6" endBytecode="6" sourcefile="SurveyServiceImpl.java" sourcepath="kr/co/happyict/service/impl/SurveyServiceImpl.java">
+      <Message>At SurveyServiceImpl.java:[line 27]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="71a29ebebe5c7c198a385da06713b40f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to stringtokenizer in kr.co.happyict.util.CommonUtil.enterToBrTag(String)</LongMessage>
+    <Class classname="kr.co.happyict.util.CommonUtil" primary="true">
+      <SourceLine classname="kr.co.happyict.util.CommonUtil" start="33" end="1282" sourcefile="CommonUtil.java" sourcepath="kr/co/happyict/util/CommonUtil.java">
+        <Message>At CommonUtil.java:[lines 33-1282]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.CommonUtil</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.CommonUtil" name="enterToBrTag" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="kr.co.happyict.util.CommonUtil" start="382" end="396" startBytecode="0" endBytecode="33" sourcefile="CommonUtil.java" sourcepath="kr/co/happyict/util/CommonUtil.java"/>
+      <Message>In method kr.co.happyict.util.CommonUtil.enterToBrTag(String)</Message>
+    </Method>
+    <LocalVariable name="stringtokenizer" register="1" pc="36" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named stringtokenizer</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.util.CommonUtil" primary="true" start="387" end="387" startBytecode="35" endBytecode="35" sourcefile="CommonUtil.java" sourcepath="kr/co/happyict/util/CommonUtil.java">
+      <Message>At CommonUtil.java:[line 387]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="stringtokenizer"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="b1ce5c41b65c6126cfc6a20be0b695dd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in kr.co.happyict.util.DataEncryption.getDataEncryption(String): String.getBytes()</LongMessage>
+    <Class classname="kr.co.happyict.util.DataEncryption" primary="true">
+      <SourceLine classname="kr.co.happyict.util.DataEncryption" start="12" end="38" sourcefile="DataEncryption.java" sourcepath="kr/co/happyict/util/DataEncryption.java">
+        <Message>At DataEncryption.java:[lines 12-38]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.DataEncryption</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.DataEncryption" name="getDataEncryption" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="kr.co.happyict.util.DataEncryption" start="23" end="38" startBytecode="0" endBytecode="319" sourcefile="DataEncryption.java" sourcepath="kr/co/happyict/util/DataEncryption.java"/>
+      <Message>In method kr.co.happyict.util.DataEncryption.getDataEncryption(String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.DataEncryption" primary="true" start="23" end="23" startBytecode="19" endBytecode="19" sourcefile="DataEncryption.java" sourcepath="kr/co/happyict/util/DataEncryption.java">
+      <Message>At DataEncryption.java:[line 23]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ICAST_INT_CAST_TO_FLOAT_PASSED_TO_ROUND" priority="2" rank="9" abbrev="ICAST" category="CORRECTNESS" instanceHash="6f24b25a391a5bc37fce2e076c9282d0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="192">
+    <ShortMessage>int value cast to float and then passed to Math.round</ShortMessage>
+    <LongMessage>int value cast to float and then passed to Math.round in kr.co.happyict.util.HappyFile.getFileSizeText(String)</LongMessage>
+    <Class classname="kr.co.happyict.util.HappyFile" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="46" end="578" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+        <Message>At HappyFile.java:[lines 46-578]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.HappyFile</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.HappyFile" name="getFileSizeText" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="285" end="312" startBytecode="0" endBytecode="350" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java"/>
+      <Message>In method kr.co.happyict.util.HappyFile.getFileSizeText(String)</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" primary="true" start="295" end="295" startBytecode="60" endBytecode="60" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+      <Message>At HappyFile.java:[line 295]</Message>
+    </SourceLine>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" start="301" end="301" startBytecode="104" endBytecode="104" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HappyFile.java:[line 301]</Message>
+    </SourceLine>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" start="307" end="307" startBytecode="148" endBytecode="148" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HappyFile.java:[line 307]</Message>
+    </SourceLine>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" start="312" end="312" startBytecode="185" endBytecode="185" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HappyFile.java:[line 312]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="6f0f69e6924a691afe0cdc481f617113" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in kr.co.happyict.util.HappyFile.createFile(File, ZipInputStream)</LongMessage>
+    <Class classname="kr.co.happyict.util.HappyFile" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="46" end="578" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+        <Message>At HappyFile.java:[lines 46-578]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.HappyFile</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.HappyFile" name="createFile" signature="(Ljava/io/File;Ljava/util/zip/ZipInputStream;)V" isStatic="true" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="563" end="578" startBytecode="0" endBytecode="363" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java"/>
+      <Message>In method kr.co.happyict.util.HappyFile.createFile(File, ZipInputStream)</Message>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+      <Message>Called method java.io.File.mkdirs()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" primary="true" start="566" end="566" startBytecode="20" endBytecode="20" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+      <Message>At HappyFile.java:[line 566]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="a993333ba5a55bbcc411ee5f65067af2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in kr.co.happyict.util.HappyFile.decompress(String, String)</LongMessage>
+    <Class classname="kr.co.happyict.util.HappyFile" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="46" end="578" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+        <Message>At HappyFile.java:[lines 46-578]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.HappyFile</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.HappyFile" name="decompress" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="533" end="553" startBytecode="0" endBytecode="596" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java"/>
+      <Message>In method kr.co.happyict.util.HappyFile.decompress(String, String)</Message>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+      <Message>Called method java.io.File.mkdirs()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" primary="true" start="546" end="546" startBytecode="66" endBytecode="66" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+      <Message>At HappyFile.java:[line 546]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="f23b53605d84132e170c543e1de4b757" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in kr.co.happyict.util.HappyFile.editFileUpload(BoardAttachVO, BoardManagementVO)</LongMessage>
+    <Class classname="kr.co.happyict.util.HappyFile" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="46" end="578" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+        <Message>At HappyFile.java:[lines 46-578]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.HappyFile</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.HappyFile" name="editFileUpload" signature="(Lkr/co/happyict/vo/BoardAttachVO;Lkr/co/happyict/vo/BoardManagementVO;)Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="225" end="278" startBytecode="0" endBytecode="951" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java"/>
+      <Message>In method kr.co.happyict.util.HappyFile.editFileUpload(BoardAttachVO, BoardManagementVO)</Message>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+      <Message>Called method java.io.File.mkdirs()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" primary="true" start="259" end="259" startBytecode="332" endBytecode="332" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+      <Message>At HappyFile.java:[line 259]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="c38668af686f21c1eb0cbcae9aef7093" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in kr.co.happyict.util.HappyFile.happyFileCopy(String, String)</LongMessage>
+    <Class classname="kr.co.happyict.util.HappyFile" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="46" end="578" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+        <Message>At HappyFile.java:[lines 46-578]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.HappyFile</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.HappyFile" name="happyFileCopy" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="358" end="390" startBytecode="0" endBytecode="652" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java"/>
+      <Message>In method kr.co.happyict.util.HappyFile.happyFileCopy(String, String)</Message>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+      <Message>Called method java.io.File.mkdirs()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" primary="true" start="369" end="369" startBytecode="185" endBytecode="185" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+      <Message>At HappyFile.java:[line 369]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="8fe2d87f9f2f5beaba91501bc914722" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in kr.co.happyict.util.HappyFile.happyFileDelete(String, String)</LongMessage>
+    <Class classname="kr.co.happyict.util.HappyFile" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="46" end="578" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+        <Message>At HappyFile.java:[lines 46-578]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.HappyFile</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.HappyFile" name="happyFileDelete" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="393" end="419" startBytecode="0" endBytecode="502" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java"/>
+      <Message>In method kr.co.happyict.util.HappyFile.happyFileDelete(String, String)</Message>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+      <Message>Called method java.io.File.mkdirs()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" primary="true" start="402" end="402" startBytecode="131" endBytecode="131" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+      <Message>At HappyFile.java:[line 402]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="55c1dbf3641656e890694bcdebb0a808" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in kr.co.happyict.util.HappyFile.happyUploadAjax(Model, MultipartFile, BoardManagementVO, String)</LongMessage>
+    <Class classname="kr.co.happyict.util.HappyFile" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="46" end="578" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+        <Message>At HappyFile.java:[lines 46-578]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.HappyFile</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.HappyFile" name="happyUploadAjax" signature="(Lorg/springframework/ui/Model;Lorg/springframework/web/multipart/MultipartFile;Lkr/co/happyict/vo/BoardManagementVO;Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.util.HappyFile" start="126" end="218" startBytecode="0" endBytecode="1591" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java"/>
+      <Message>In method kr.co.happyict.util.HappyFile.happyUploadAjax(Model, MultipartFile, BoardManagementVO, String)</Message>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+      <Message>Called method java.io.File.mkdirs()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.HappyFile" primary="true" start="186" end="186" startBytecode="535" endBytecode="535" sourcefile="HappyFile.java" sourcepath="kr/co/happyict/util/HappyFile.java">
+      <Message>At HappyFile.java:[line 186]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="8bdef7d227e5f22c89947538ebc2ff88" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in kr.co.happyict.util.KISA_SEED_CBC.&lt;static initializer for KISA_SEED_CBC&gt;(): String.getBytes()</LongMessage>
+    <Class classname="kr.co.happyict.util.KISA_SEED_CBC" primary="true">
+      <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC" start="9" end="971" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java">
+        <Message>At KISA_SEED_CBC.java:[lines 9-971]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.KISA_SEED_CBC</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.KISA_SEED_CBC" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC" start="12" end="399" startBytecode="0" endBytecode="8685" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java"/>
+      <Message>In method kr.co.happyict.util.KISA_SEED_CBC.&lt;static initializer for KISA_SEED_CBC&gt;()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC" primary="true" start="12" end="12" startBytecode="2" endBytecode="2" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java">
+      <Message>At KISA_SEED_CBC.java:[line 12]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="80f4e9d4e41888bc46d719ee909afb59" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name kr.co.happyict.util.KISA_SEED_CBC$Common.Padding(byte[], byte[], int) doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="kr.co.happyict.util.KISA_SEED_CBC$Common" primary="true">
+      <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC$Common" start="735" end="900" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java">
+        <Message>At KISA_SEED_CBC.java:[lines 735-900]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.KISA_SEED_CBC$Common</Message>
+    </Class>
+    <Method classname="kr.co.happyict.util.KISA_SEED_CBC$Common" name="Padding" signature="([B[BI)I" isStatic="true" primary="true">
+      <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC$Common" start="874" end="883" startBytecode="0" endBytecode="153" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java"/>
+      <Message>In method kr.co.happyict.util.KISA_SEED_CBC$Common.Padding(byte[], byte[], int)</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC$Common" start="874" end="883" startBytecode="0" endBytecode="153" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java" synthetic="true">
+      <Message>At KISA_SEED_CBC.java:[lines 874-883]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE" instanceHash="8a49a20b47032bbaa8b84422999976b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread public/protected field</ShortMessage>
+    <LongMessage>Unread public/protected field: kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO.last_block_flag</LongMessage>
+    <Class classname="kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO" primary="true">
+      <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO" start="717" end="732" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java">
+        <Message>At KISA_SEED_CBC.java:[lines 717-732]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO</Message>
+    </Class>
+    <Field classname="kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO" name="last_block_flag" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java">
+        <Message>In KISA_SEED_CBC.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO.last_block_flag</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO" primary="true" start="731" end="731" startBytecode="139" endBytecode="139" sourcefile="KISA_SEED_CBC.java" sourcepath="kr/co/happyict/util/KISA_SEED_CBC.java">
+      <Message>At KISA_SEED_CBC.java:[line 731]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="42db617ad684bdab479d2f933223bbc3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.AccountVO.getAccountAuthList() may expose internal representation by returning AccountVO.accountAuthList</LongMessage>
+    <Class classname="kr.co.happyict.vo.AccountVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.AccountVO" start="8" end="22" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java">
+        <Message>At AccountVO.java:[lines 8-22]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.AccountVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.AccountVO" name="getAccountAuthList" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.AccountVO" start="8" end="8" startBytecode="0" endBytecode="46" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java"/>
+      <Message>In method kr.co.happyict.vo.AccountVO.getAccountAuthList()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.AccountVO" name="accountAuthList" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.AccountVO" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java">
+        <Message>In AccountVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.AccountVO.accountAuthList</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.AccountVO" primary="true" start="8" end="8" startBytecode="4" endBytecode="4" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java">
+      <Message>At AccountVO.java:[line 8]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="b98c07abb39f204d96d0b1265c6e781e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.AccountVO.setAccountAuthList(List) may expose internal representation by storing an externally mutable object into AccountVO.accountAuthList</LongMessage>
+    <Class classname="kr.co.happyict.vo.AccountVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.AccountVO" start="8" end="22" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java">
+        <Message>At AccountVO.java:[lines 8-22]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.AccountVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.AccountVO" name="setAccountAuthList" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.AccountVO" start="9" end="9" startBytecode="0" endBytecode="75" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java"/>
+      <Message>In method kr.co.happyict.vo.AccountVO.setAccountAuthList(List)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.AccountVO" name="accountAuthList" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.AccountVO" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java">
+        <Message>In AccountVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.AccountVO.accountAuthList</Message>
+    </Field>
+    <LocalVariable name="accountAuthList" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named accountAuthList</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.AccountVO" primary="true" start="9" end="9" startBytecode="2" endBytecode="2" sourcefile="AccountVO.java" sourcepath="kr/co/happyict/vo/AccountVO.java">
+      <Message>At AccountVO.java:[line 9]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC" priority="2" rank="8" abbrev="Eq" category="CORRECTNESS" instanceHash="dfff47181b46e1b9c8550a35f2755824" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>equals method overrides equals in superclass and may not be symmetric</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardRestVO overrides equals in BoardManagementRestVO and may not be symmetric</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardRestVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardRestVO" start="7" end="7" sourcefile="BoardRestVO.java" sourcepath="kr/co/happyict/vo/BoardRestVO.java">
+        <Message>At BoardRestVO.java:[line 7]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardRestVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardRestVO" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardRestVO" start="7" end="7" startBytecode="0" endBytecode="477" sourcefile="BoardRestVO.java" sourcepath="kr/co/happyict/vo/BoardRestVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardRestVO.equals(Object)</Message>
+    </Method>
+    <Method classname="kr.co.happyict.vo.BoardManagementRestVO" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_OVERRIDDEN">
+      <SourceLine classname="kr.co.happyict.vo.BoardManagementRestVO" start="7" end="7" startBytecode="0" endBytecode="598" sourcefile="BoardManagementRestVO.java" sourcepath="kr/co/happyict/vo/BoardManagementRestVO.java"/>
+      <Message>Overrides kr.co.happyict.vo.BoardManagementRestVO.equals(Object)</Message>
+    </Method>
+    <SourceLine classname="kr.co.happyict.vo.BoardRestVO" start="7" end="7" startBytecode="0" endBytecode="477" sourcefile="BoardRestVO.java" sourcepath="kr/co/happyict/vo/BoardRestVO.java" synthetic="true">
+      <Message>At BoardRestVO.java:[line 7]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="86ca9dc2813da7e713cbd3a109d560b6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.getBoardAttachList() may expose internal representation by returning BoardVO.boardAttachList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="getBoardAttachList" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="10" startBytecode="0" endBytecode="46" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.getBoardAttachList()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="boardAttachList" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.boardAttachList</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="10" end="10" startBytecode="4" endBytecode="4" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="288e89dbd1be937468e1e8d595ca3464" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.getBoardSeqList() may expose internal representation by returning BoardVO.boardSeqList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="getBoardSeqList" signature="()[J" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="10" startBytecode="0" endBytecode="46" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.getBoardSeqList()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="boardSeqList" signature="[J" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.boardSeqList</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="10" end="10" startBytecode="4" endBytecode="4" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d9dbe376016f0627d08fe95d855ddc5e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.getNewImgFileList() may expose internal representation by returning BoardVO.newImgFileList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="getNewImgFileList" signature="()[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="10" startBytecode="0" endBytecode="46" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.getNewImgFileList()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="newImgFileList" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.newImgFileList</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="10" end="10" startBytecode="4" endBytecode="4" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="7d0334e60b6ac237ee59e534314e67cd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.getOrderNumList() may expose internal representation by returning BoardVO.orderNumList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="getOrderNumList" signature="()[I" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="10" startBytecode="0" endBytecode="46" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.getOrderNumList()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="orderNumList" signature="[I" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.orderNumList</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="10" end="10" startBytecode="4" endBytecode="4" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="7e1236bc718aa7b23f43b260529b23ba" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.getOrgImgFileList() may expose internal representation by returning BoardVO.orgImgFileList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="getOrgImgFileList" signature="()[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="10" startBytecode="0" endBytecode="46" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.getOrgImgFileList()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="orgImgFileList" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.orgImgFileList</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="10" end="10" startBytecode="4" endBytecode="4" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="bdb119590b49e95f9b36add4447e737b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.setBoardAttachList(List) may expose internal representation by storing an externally mutable object into BoardVO.boardAttachList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="setBoardAttachList" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="11" end="11" startBytecode="0" endBytecode="75" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.setBoardAttachList(List)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="boardAttachList" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.boardAttachList</Message>
+    </Field>
+    <LocalVariable name="boardAttachList" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named boardAttachList</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="11" end="11" startBytecode="2" endBytecode="2" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="675f2b6caebc46021ddebaa4cbdf1615" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.setBoardSeqList(long[]) may expose internal representation by storing an externally mutable object into BoardVO.boardSeqList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="setBoardSeqList" signature="([J)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="11" end="11" startBytecode="0" endBytecode="57" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.setBoardSeqList(long[])</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="boardSeqList" signature="[J" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.boardSeqList</Message>
+    </Field>
+    <LocalVariable name="boardSeqList" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named boardSeqList</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="11" end="11" startBytecode="2" endBytecode="2" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="56a8e3aef6ac03b9efcbf5eff4227123" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.setNewImgFileList(String[]) may expose internal representation by storing an externally mutable object into BoardVO.newImgFileList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="setNewImgFileList" signature="([Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="11" end="11" startBytecode="0" endBytecode="57" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.setNewImgFileList(String[])</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="newImgFileList" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.newImgFileList</Message>
+    </Field>
+    <LocalVariable name="newImgFileList" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named newImgFileList</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="11" end="11" startBytecode="2" endBytecode="2" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f1372be8163f2203b1d8f290db209b4a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.setOrderNumList(int[]) may expose internal representation by storing an externally mutable object into BoardVO.orderNumList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="setOrderNumList" signature="([I)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="11" end="11" startBytecode="0" endBytecode="57" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.setOrderNumList(int[])</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="orderNumList" signature="[I" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.orderNumList</Message>
+    </Field>
+    <LocalVariable name="orderNumList" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named orderNumList</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="11" end="11" startBytecode="2" endBytecode="2" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="fb557771be3130d1322bca15bc603943" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.BoardVO.setOrgImgFileList(String[]) may expose internal representation by storing an externally mutable object into BoardVO.orgImgFileList</LongMessage>
+    <Class classname="kr.co.happyict.vo.BoardVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="10" end="47" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>At BoardVO.java:[lines 10-47]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.BoardVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.BoardVO" name="setOrgImgFileList" signature="([Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" start="11" end="11" startBytecode="0" endBytecode="57" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java"/>
+      <Message>In method kr.co.happyict.vo.BoardVO.setOrgImgFileList(String[])</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.BoardVO" name="orgImgFileList" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.BoardVO" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+        <Message>In BoardVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.BoardVO.orgImgFileList</Message>
+    </Field>
+    <LocalVariable name="orgImgFileList" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named orgImgFileList</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.BoardVO" primary="true" start="11" end="11" startBytecode="2" endBytecode="2" sourcefile="BoardVO.java" sourcepath="kr/co/happyict/vo/BoardVO.java">
+      <Message>At BoardVO.java:[line 11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="563ad49e4562f9f320956a5d8ecb1cae" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.LogVO.getLOG_REG() may expose internal representation by returning LogVO.LOG_REG</LongMessage>
+    <Class classname="kr.co.happyict.vo.LogVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LogVO" start="12" end="72" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java">
+        <Message>At LogVO.java:[lines 12-72]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.LogVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.LogVO" name="getLOG_REG" signature="()Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LogVO" start="59" end="59" startBytecode="0" endBytecode="46" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java"/>
+      <Message>In method kr.co.happyict.vo.LogVO.getLOG_REG()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.LogVO" name="LOG_REG" signature="Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LogVO" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java">
+        <Message>In LogVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.LogVO.LOG_REG</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.LogVO" primary="true" start="59" end="59" startBytecode="4" endBytecode="4" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java">
+      <Message>At LogVO.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="8b1d6714ad2ded36cc80f49f10935151" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.LogVO.setLOG_REG(Timestamp) may expose internal representation by storing an externally mutable object into LogVO.LOG_REG</LongMessage>
+    <Class classname="kr.co.happyict.vo.LogVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LogVO" start="12" end="72" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java">
+        <Message>At LogVO.java:[lines 12-72]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.LogVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.LogVO" name="setLOG_REG" signature="(Ljava/sql/Timestamp;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LogVO" start="63" end="64" startBytecode="0" endBytecode="61" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java"/>
+      <Message>In method kr.co.happyict.vo.LogVO.setLOG_REG(Timestamp)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.LogVO" name="LOG_REG" signature="Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LogVO" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java">
+        <Message>In LogVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.LogVO.LOG_REG</Message>
+    </Field>
+    <LocalVariable name="LOG_REG" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named LOG_REG</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.LogVO" primary="true" start="63" end="63" startBytecode="2" endBytecode="2" sourcefile="LogVO.java" sourcepath="kr/co/happyict/vo/LogVO.java">
+      <Message>At LogVO.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="fe21af161b56461673108b2f483c033e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.LoginControlVO.getLoginTime() may expose internal representation by returning LoginControlVO.loginTime</LongMessage>
+    <Class classname="kr.co.happyict.vo.LoginControlVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="12" end="99" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>At LoginControlVO.java:[lines 12-99]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.LoginControlVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.LoginControlVO" name="getLoginTime" signature="()Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="86" end="86" startBytecode="0" endBytecode="46" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java"/>
+      <Message>In method kr.co.happyict.vo.LoginControlVO.getLoginTime()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.LoginControlVO" name="loginTime" signature="Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>In LoginControlVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.LoginControlVO.loginTime</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.LoginControlVO" primary="true" start="86" end="86" startBytecode="4" endBytecode="4" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+      <Message>At LoginControlVO.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="23e4621b62205f15d06dfaf7cf9087c1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.LoginControlVO.getLogoutTime() may expose internal representation by returning LoginControlVO.logoutTime</LongMessage>
+    <Class classname="kr.co.happyict.vo.LoginControlVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="12" end="99" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>At LoginControlVO.java:[lines 12-99]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.LoginControlVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.LoginControlVO" name="getLogoutTime" signature="()Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="94" end="94" startBytecode="0" endBytecode="46" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java"/>
+      <Message>In method kr.co.happyict.vo.LoginControlVO.getLogoutTime()</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.LoginControlVO" name="logoutTime" signature="Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>In LoginControlVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.LoginControlVO.logoutTime</Message>
+    </Field>
+    <SourceLine classname="kr.co.happyict.vo.LoginControlVO" primary="true" start="94" end="94" startBytecode="4" endBytecode="4" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+      <Message>At LoginControlVO.java:[line 94]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="32045aeaca21402b6084b58329e65cd0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.LoginControlVO.setLoginTime(Timestamp) may expose internal representation by storing an externally mutable object into LoginControlVO.loginTime</LongMessage>
+    <Class classname="kr.co.happyict.vo.LoginControlVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="12" end="99" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>At LoginControlVO.java:[lines 12-99]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.LoginControlVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.LoginControlVO" name="setLoginTime" signature="(Ljava/sql/Timestamp;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="90" end="91" startBytecode="0" endBytecode="61" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java"/>
+      <Message>In method kr.co.happyict.vo.LoginControlVO.setLoginTime(Timestamp)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.LoginControlVO" name="loginTime" signature="Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>In LoginControlVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.LoginControlVO.loginTime</Message>
+    </Field>
+    <LocalVariable name="loginTime" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named loginTime</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.LoginControlVO" primary="true" start="90" end="90" startBytecode="2" endBytecode="2" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+      <Message>At LoginControlVO.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="55a8c2c69e7b5095ee6732426243571d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>kr.co.happyict.vo.LoginControlVO.setLogoutTime(Timestamp) may expose internal representation by storing an externally mutable object into LoginControlVO.logoutTime</LongMessage>
+    <Class classname="kr.co.happyict.vo.LoginControlVO" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="12" end="99" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>At LoginControlVO.java:[lines 12-99]</Message>
+      </SourceLine>
+      <Message>In class kr.co.happyict.vo.LoginControlVO</Message>
+    </Class>
+    <Method classname="kr.co.happyict.vo.LoginControlVO" name="setLogoutTime" signature="(Ljava/sql/Timestamp;)V" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" start="98" end="99" startBytecode="0" endBytecode="61" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java"/>
+      <Message>In method kr.co.happyict.vo.LoginControlVO.setLogoutTime(Timestamp)</Message>
+    </Method>
+    <Field classname="kr.co.happyict.vo.LoginControlVO" name="logoutTime" signature="Ljava/sql/Timestamp;" isStatic="false" primary="true">
+      <SourceLine classname="kr.co.happyict.vo.LoginControlVO" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+        <Message>In LoginControlVO.java</Message>
+      </SourceLine>
+      <Message>Field kr.co.happyict.vo.LoginControlVO.logoutTime</Message>
+    </Field>
+    <LocalVariable name="logoutTime" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named logoutTime</Message>
+    </LocalVariable>
+    <SourceLine classname="kr.co.happyict.vo.LoginControlVO" primary="true" start="98" end="98" startBytecode="2" endBytecode="2" sourcefile="LoginControlVO.java" sourcepath="kr/co/happyict/vo/LoginControlVO.java">
+      <Message>At LoginControlVO.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC" abbrev="Eq" category="CORRECTNESS">
+    <ShortDescription>equals method overrides equals in superclass and may not be symmetric</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class defines an equals method that overrides an equals method in a superclass. Both equals methods
+use <code>instanceof</code> in the determination of whether two objects are equal. This is fraught with peril,
+since it is important that the equals method is symmetrical (in other words, <code>a.equals(b) == b.equals(a)</code>).
+If B is a subtype of A, and A's equals method checks that the argument is an instanceof A, and B's equals method
+checks that the argument is an instanceof B, it is quite likely that the equivalence relation defined by these
+methods is not symmetric.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" abbrev="UrF" category="STYLE">
+    <ShortDescription>Unread public/protected field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp;
+The field is public or protected, so perhaps
+    it is intended to be used with classes not seen as part of the analysis. If not,
+consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ICAST_INT_CAST_TO_FLOAT_PASSED_TO_ROUND" abbrev="ICAST" category="CORRECTNESS">
+    <ShortDescription>int value cast to float and then passed to Math.round</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This code converts an int value to a float precision
+floating point number and then
+passing the result to the Math.round() function, which returns the int/long closest
+to the argument. This operation should always be a no-op,
+since converting an integer to a float should give a number with no fractional part.
+It is likely that the operation that generated the value to be passed
+to Math.round was intended to be performed using
+floating point arithmetic.
+</p>
+
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SS_SHOULD_BE_STATIC" abbrev="SS" category="PERFORMANCE">
+    <ShortDescription>Unread field: should this field be static?</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class contains an instance final field that
+   is initialized to a compile-time static value.
+   Consider making the field static.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UC_USELESS_OBJECT" abbrev="UC" category="STYLE">
+    <ShortDescription>Useless object created</ShortDescription>
+    <Details><![CDATA[
+
+<p>Our analysis shows that this object is useless.
+It's created and modified, but its value never go outside of the method or produce any side-effect.
+Either there is a mistake and object was intended to be used or it can be removed.</p>
+<p>This analysis rarely produces false-positives. Common false-positive cases include:</p>
+<p>- This object used to implicitly throw some obscure exception.</p>
+<p>- This object used as a stub to generalize the code.</p>
+<p>- This object used to hold strong references to weak/soft-referenced objects.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_METHOD_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Method names should start with a lower case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" abbrev="RV" category="BAD_PRACTICE" cweid="253">
+    <ShortDescription>Method ignores exceptional return value</ShortDescription>
+    <Details><![CDATA[
+
+   <p> This method returns a value that is not checked. The return value should be checked
+since it can indicate an unusual or unexpected function execution. For
+example, the <code>File.delete()</code> method returns false
+if the file could not be successfully deleted (rather than
+throwing an Exception).
+If you don't check the result, you won't notice if the method invocation
+signals unexpected behavior by returning an atypical return value.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SS">
+    <Description>Unread field should be static</Description>
+  </BugCode>
+  <BugCode abbrev="RV" cweid="440">
+    <Description>Bad use of return value from method</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="ICAST" cweid="192">
+    <Description>Casting from integer values</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="UC">
+    <Description>Useless code</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="36">
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>net.coobird.thumbnailator.Thumbnails</MissingClass>
+    <MissingClass>net.coobird.thumbnailator.Thumbnails$Builder</MissingClass>
+    <MissingClass>org.apache.commons.lang3.RandomStringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSession</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.beans.BeanWrapper</MissingClass>
+    <MissingClass>org.springframework.beans.BeanWrapperImpl</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.web.servlet.support.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.ui.ModelMap</MissingClass>
+    <MissingClass>org.springframework.web.multipart.MultipartFile</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.CorsRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport</MissingClass>
+    <MissingClass>springfox.documentation.builders.ApiInfoBuilder</MissingClass>
+    <MissingClass>springfox.documentation.builders.PathSelectors</MissingClass>
+    <MissingClass>springfox.documentation.builders.RequestHandlerSelectors</MissingClass>
+    <MissingClass>springfox.documentation.spi.DocumentationType</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.ApiSelectorBuilder</MissingClass>
+    <MissingClass>springfox.documentation.spring.web.plugins.Docket</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 30 Nov 2022 08:53:22 +0900" total_classes="63" referenced_classes="133" total_bugs="48" total_size="4323" num_packages="10" java_version="11.0.14.1" vm_version="11.0.14.1+1" cpu_seconds="27.95" clock_seconds="3.42" peak_mbytes="410.56" alloc_mbytes="4056.00" gc_seconds="0.06" priority_2="45" priority_1="3">
+    <FileStats path="kr/co/happyict/HcmsSwaggerApplication.java" bugCount="0" size="6"/>
+    <FileStats path="kr/co/happyict/ServletInitializer.java" bugCount="0" size="5"/>
+    <FileStats path="kr/co/happyict/common/Constants.java" bugCount="0" size="33"/>
+    <FileStats path="kr/co/happyict/config/SwaggerConfig.java" bugCount="0" size="33"/>
+    <FileStats path="kr/co/happyict/controller/HomeController.java" bugCount="0" size="6"/>
+    <FileStats path="kr/co/happyict/dao/AccountDAO.java" bugCount="0" size="54"/>
+    <FileStats path="kr/co/happyict/dao/BoardDAO.java" bugCount="0" size="57"/>
+    <FileStats path="kr/co/happyict/dao/BoardManagementDAO.java" bugCount="0" size="22"/>
+    <FileStats path="kr/co/happyict/dao/CodeDAO.java" bugCount="0" size="33"/>
+    <FileStats path="kr/co/happyict/dao/CommonDAO.java" bugCount="0" size="16"/>
+    <FileStats path="kr/co/happyict/dao/OneonOneDAO.java" bugCount="0" size="19"/>
+    <FileStats path="kr/co/happyict/dao/OneonReplyDAO.java" bugCount="0" size="17"/>
+    <FileStats path="kr/co/happyict/dao/RestDAO.java" bugCount="0" size="12"/>
+    <FileStats path="kr/co/happyict/dao/SurveyDAO.java" bugCount="0" size="102"/>
+    <FileStats path="kr/co/happyict/rest/BoardRestController.java" bugCount="1" size="29" bugHash="0e8b322a66ca54e022bb35ba48b0ba67"/>
+    <FileStats path="kr/co/happyict/rest/OneOnOneController.java" bugCount="2" size="77" bugHash="d8015011c48d709fc9c47f77af10fb07"/>
+    <FileStats path="kr/co/happyict/rest/RestController.java" bugCount="3" size="68" bugHash="3df9db73494dc7594edb6b19c4a02c24"/>
+    <FileStats path="kr/co/happyict/service/AccountService.java" bugCount="0" size="13"/>
+    <FileStats path="kr/co/happyict/service/BoardManagementService.java" bugCount="0" size="6"/>
+    <FileStats path="kr/co/happyict/service/BoardService.java" bugCount="0" size="15"/>
+    <FileStats path="kr/co/happyict/service/CodeService.java" bugCount="0" size="9"/>
+    <FileStats path="kr/co/happyict/service/CommonService.java" bugCount="0" size="4"/>
+    <FileStats path="kr/co/happyict/service/OneonOneService.java" bugCount="0" size="6"/>
+    <FileStats path="kr/co/happyict/service/OneonReplyService.java" bugCount="0" size="5"/>
+    <FileStats path="kr/co/happyict/service/RestService.java" bugCount="0" size="4"/>
+    <FileStats path="kr/co/happyict/service/SurveyService.java" bugCount="0" size="27"/>
+    <FileStats path="kr/co/happyict/service/impl/AccountServiceImpl.java" bugCount="1" size="71" bugHash="0e70e014cffd62cc13895768ae4a51ce"/>
+    <FileStats path="kr/co/happyict/service/impl/BoardManagementServiceImpl.java" bugCount="2" size="31" bugHash="6b8aaf2425f6de322c5552d73b8cb6c8"/>
+    <FileStats path="kr/co/happyict/service/impl/BoardServiceImpl.java" bugCount="4" size="214" bugHash="1773b9baa759a50a9e9c15edb4514465"/>
+    <FileStats path="kr/co/happyict/service/impl/CodeServiceImpl.java" bugCount="1" size="53" bugHash="1563b7253df6de1ceb3a10490b84de1b"/>
+    <FileStats path="kr/co/happyict/service/impl/CommonServiceImpl.java" bugCount="0" size="13"/>
+    <FileStats path="kr/co/happyict/service/impl/OneonOneServiceImpl.java" bugCount="1" size="21" bugHash="7796bac50f1c28855705ab10159f9164"/>
+    <FileStats path="kr/co/happyict/service/impl/OneonReplyServiceImpl.java" bugCount="1" size="17" bugHash="f9b0f6a7698f5b6ff96ff5e3c8048201"/>
+    <FileStats path="kr/co/happyict/service/impl/RestServiceImpl.java" bugCount="0" size="15"/>
+    <FileStats path="kr/co/happyict/service/impl/SurveyServiceImpl.java" bugCount="1" size="169" bugHash="bb2b33a39f03659c9a897422476bd279"/>
+    <FileStats path="kr/co/happyict/util/CommonUtil.java" bugCount="1" size="573" bugHash="41844d8e7c1813f6e75a01e2232fb6ad"/>
+    <FileStats path="kr/co/happyict/util/DataEncryption.java" bugCount="1" size="18" bugHash="538a316faa0afd3419956c64047edd9e"/>
+    <FileStats path="kr/co/happyict/util/HappyFile.java" bugCount="7" size="307" bugHash="ed0098ee9d1ec931bb8d025f1bc8be4d"/>
+    <FileStats path="kr/co/happyict/util/KISA_SEED_CBC.java" bugCount="3" size="762" bugHash="f43146ec4a8b51c33520959f12b2b9b2"/>
+    <FileStats path="kr/co/happyict/util/PageUtil.java" bugCount="0" size="135"/>
+    <FileStats path="kr/co/happyict/vo/AccessHistoryVO.java" bugCount="0" size="40"/>
+    <FileStats path="kr/co/happyict/vo/AccessRecordMasterVO.java" bugCount="0" size="70"/>
+    <FileStats path="kr/co/happyict/vo/AccountAuthVO.java" bugCount="0" size="42"/>
+    <FileStats path="kr/co/happyict/vo/AccountVO.java" bugCount="2" size="45" bugHash="6dc3ec86f5860a1906f0d607c012989b"/>
+    <FileStats path="kr/co/happyict/vo/BoardAttachVO.java" bugCount="0" size="57"/>
+    <FileStats path="kr/co/happyict/vo/BoardManagementRestVO.java" bugCount="0" size="32"/>
+    <FileStats path="kr/co/happyict/vo/BoardManagementVO.java" bugCount="0" size="151"/>
+    <FileStats path="kr/co/happyict/vo/BoardRestVO.java" bugCount="1" size="28" bugHash="aae655b676fc8716d2d6de73b9ea770d"/>
+    <FileStats path="kr/co/happyict/vo/BoardVO.java" bugCount="10" size="128" bugHash="b6c4986c75466b394a886056c972ae21"/>
+    <FileStats path="kr/co/happyict/vo/CodeVO.java" bugCount="0" size="51"/>
+    <FileStats path="kr/co/happyict/vo/CommonVO.java" bugCount="0" size="40"/>
+    <FileStats path="kr/co/happyict/vo/LogVO.java" bugCount="2" size="40" bugHash="fb49ce3d5b38aed94e41a21807926859"/>
+    <FileStats path="kr/co/happyict/vo/LoginControlVO.java" bugCount="4" size="58" bugHash="48926d377a0d6b3fbe36155af201a917"/>
+    <FileStats path="kr/co/happyict/vo/OneonOneVO.java" bugCount="0" size="33"/>
+    <FileStats path="kr/co/happyict/vo/OneonReplyVO.java" bugCount="0" size="27"/>
+    <FileStats path="kr/co/happyict/vo/PageVO.java" bugCount="0" size="77"/>
+    <FileStats path="kr/co/happyict/vo/RestVO.java" bugCount="0" size="73"/>
+    <FileStats path="kr/co/happyict/vo/SearchSurveyVO.java" bugCount="0" size="45"/>
+    <FileStats path="kr/co/happyict/vo/SurveyVO.java" bugCount="0" size="209"/>
+    <PackageStats package="kr.co.happyict" total_bugs="0" total_types="2" total_size="11">
+      <ClassStats class="kr.co.happyict.HcmsSwaggerApplication" sourceFile="HcmsSwaggerApplication.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="kr.co.happyict.ServletInitializer" sourceFile="ServletInitializer.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.common" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="kr.co.happyict.common.Constants" sourceFile="Constants.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.config" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="kr.co.happyict.config.SwaggerConfig" sourceFile="SwaggerConfig.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.controller" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="kr.co.happyict.controller.HomeController" sourceFile="HomeController.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.dao" total_bugs="0" total_types="9" total_size="332">
+      <ClassStats class="kr.co.happyict.dao.AccountDAO" sourceFile="AccountDAO.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.BoardDAO" sourceFile="BoardDAO.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.BoardManagementDAO" sourceFile="BoardManagementDAO.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.CodeDAO" sourceFile="CodeDAO.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.CommonDAO" sourceFile="CommonDAO.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.OneonOneDAO" sourceFile="OneonOneDAO.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.OneonReplyDAO" sourceFile="OneonReplyDAO.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.RestDAO" sourceFile="RestDAO.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="kr.co.happyict.dao.SurveyDAO" sourceFile="SurveyDAO.java" interface="false" size="102" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.rest" total_bugs="6" total_types="3" total_size="174" priority_2="6">
+      <ClassStats class="kr.co.happyict.rest.BoardRestController" sourceFile="BoardRestController.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.rest.OneOnOneController" sourceFile="OneOnOneController.java" interface="false" size="77" bugs="2" priority_2="2"/>
+      <ClassStats class="kr.co.happyict.rest.RestController" sourceFile="RestController.java" interface="false" size="68" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.service" total_bugs="0" total_types="9" total_size="89">
+      <ClassStats class="kr.co.happyict.service.AccountService" sourceFile="AccountService.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.BoardManagementService" sourceFile="BoardManagementService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.BoardService" sourceFile="BoardService.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.CodeService" sourceFile="CodeService.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.CommonService" sourceFile="CommonService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.OneonOneService" sourceFile="OneonOneService.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.OneonReplyService" sourceFile="OneonReplyService.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.RestService" sourceFile="RestService.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.SurveyService" sourceFile="SurveyService.java" interface="true" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.service.impl" total_bugs="11" total_types="9" total_size="604" priority_2="11">
+      <ClassStats class="kr.co.happyict.service.impl.AccountServiceImpl" sourceFile="AccountServiceImpl.java" interface="false" size="71" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.service.impl.BoardManagementServiceImpl" sourceFile="BoardManagementServiceImpl.java" interface="false" size="31" bugs="2" priority_2="2"/>
+      <ClassStats class="kr.co.happyict.service.impl.BoardServiceImpl" sourceFile="BoardServiceImpl.java" interface="false" size="214" bugs="4" priority_2="4"/>
+      <ClassStats class="kr.co.happyict.service.impl.CodeServiceImpl" sourceFile="CodeServiceImpl.java" interface="false" size="53" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.service.impl.CommonServiceImpl" sourceFile="CommonServiceImpl.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.impl.OneonOneServiceImpl" sourceFile="OneonOneServiceImpl.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.service.impl.OneonReplyServiceImpl" sourceFile="OneonReplyServiceImpl.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.service.impl.RestServiceImpl" sourceFile="RestServiceImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="kr.co.happyict.service.impl.SurveyServiceImpl" sourceFile="SurveyServiceImpl.java" interface="false" size="169" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.util" total_bugs="12" total_types="9" total_size="1795" priority_2="9" priority_1="3">
+      <ClassStats class="kr.co.happyict.util.CommonUtil" sourceFile="CommonUtil.java" interface="false" size="573" bugs="1" priority_1="1"/>
+      <ClassStats class="kr.co.happyict.util.DataEncryption" sourceFile="DataEncryption.java" interface="false" size="18" bugs="1" priority_1="1"/>
+      <ClassStats class="kr.co.happyict.util.HappyFile" sourceFile="HappyFile.java" interface="false" size="307" bugs="7" priority_2="7"/>
+      <ClassStats class="kr.co.happyict.util.KISA_SEED_CBC" sourceFile="KISA_SEED_CBC.java" interface="false" size="599" bugs="1" priority_1="1"/>
+      <ClassStats class="kr.co.happyict.util.KISA_SEED_CBC$Common" sourceFile="KISA_SEED_CBC.java" interface="false" size="120" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.util.KISA_SEED_CBC$KISA_ENC_DEC" sourceFile="KISA_SEED_CBC.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_INFO" sourceFile="KISA_SEED_CBC.java" interface="false" size="22" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.util.KISA_SEED_CBC$KISA_SEED_KEY" sourceFile="KISA_SEED_CBC.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="kr.co.happyict.util.PageUtil" sourceFile="PageUtil.java" interface="false" size="135" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="kr.co.happyict.vo" total_bugs="19" total_types="19" total_size="1246" priority_2="19">
+      <ClassStats class="kr.co.happyict.vo.AccessHistoryVO" sourceFile="AccessHistoryVO.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.AccessRecordMasterVO" sourceFile="AccessRecordMasterVO.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.AccountAuthVO" sourceFile="AccountAuthVO.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.AccountVO" sourceFile="AccountVO.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="kr.co.happyict.vo.BoardAttachVO" sourceFile="BoardAttachVO.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.BoardManagementRestVO" sourceFile="BoardManagementRestVO.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.BoardManagementVO" sourceFile="BoardManagementVO.java" interface="false" size="151" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.BoardRestVO" sourceFile="BoardRestVO.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="kr.co.happyict.vo.BoardVO" sourceFile="BoardVO.java" interface="false" size="128" bugs="10" priority_2="10"/>
+      <ClassStats class="kr.co.happyict.vo.CodeVO" sourceFile="CodeVO.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.CommonVO" sourceFile="CommonVO.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.LogVO" sourceFile="LogVO.java" interface="false" size="40" bugs="2" priority_2="2"/>
+      <ClassStats class="kr.co.happyict.vo.LoginControlVO" sourceFile="LoginControlVO.java" interface="false" size="58" bugs="4" priority_2="4"/>
+      <ClassStats class="kr.co.happyict.vo.OneonOneVO" sourceFile="OneonOneVO.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.OneonReplyVO" sourceFile="OneonReplyVO.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.PageVO" sourceFile="PageVO.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.RestVO" sourceFile="RestVO.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.SearchSurveyVO" sourceFile="SearchSurveyVO.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="kr.co.happyict.vo.SurveyVO" sourceFile="SurveyVO.java" interface="false" size="209" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="270" invocations="885" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="18306" standardDeviationMicrosecondsPerInvocation="822"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="138" invocations="893" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="4737" standardDeviationMicrosecondsPerInvocation="194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="128" invocations="1059" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="12934" standardDeviationMicrosecondsPerInvocation="607"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="117" invocations="133" avgMicrosecondsPerInvocation="885" maxMicrosecondsPerInvocation="7316" standardDeviationMicrosecondsPerInvocation="1455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="111" invocations="1069" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="9203" standardDeviationMicrosecondsPerInvocation="441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="109" invocations="1059" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="5092" standardDeviationMicrosecondsPerInvocation="335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="99" invocations="1069" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="7562" standardDeviationMicrosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="97" invocations="1059" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="5664" standardDeviationMicrosecondsPerInvocation="340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="96" invocations="133" avgMicrosecondsPerInvocation="723" maxMicrosecondsPerInvocation="5638" standardDeviationMicrosecondsPerInvocation="1155"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="92" invocations="1384" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="3187" standardDeviationMicrosecondsPerInvocation="191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="79" invocations="1060" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="13812" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="62" invocations="444" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="8331" standardDeviationMicrosecondsPerInvocation="488"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="55" invocations="1137" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="27889" standardDeviationMicrosecondsPerInvocation="827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="38" invocations="133" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="1843" standardDeviationMicrosecondsPerInvocation="407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="37" invocations="133" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="11990" standardDeviationMicrosecondsPerInvocation="1103"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="221" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="9964" standardDeviationMicrosecondsPerInvocation="698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="31" invocations="1059" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="1648" standardDeviationMicrosecondsPerInvocation="93"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="29" invocations="133" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="2239" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="29" invocations="63" avgMicrosecondsPerInvocation="461" maxMicrosecondsPerInvocation="13397" standardDeviationMicrosecondsPerInvocation="1685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="28" invocations="63" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="3714" standardDeviationMicrosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="133" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="5076" standardDeviationMicrosecondsPerInvocation="535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="27" invocations="13055" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="2451" standardDeviationMicrosecondsPerInvocation="30"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="26" invocations="63" avgMicrosecondsPerInvocation="419" maxMicrosecondsPerInvocation="5549" standardDeviationMicrosecondsPerInvocation="827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="25" invocations="63" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="3843" standardDeviationMicrosecondsPerInvocation="744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="133" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="5595" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="23" invocations="63" avgMicrosecondsPerInvocation="369" maxMicrosecondsPerInvocation="2391" standardDeviationMicrosecondsPerInvocation="496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="783" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="904" standardDeviationMicrosecondsPerInvocation="58"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="23" invocations="133" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="1506" standardDeviationMicrosecondsPerInvocation="238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="21" invocations="1059" avgMicrosecondsPerInvocation="19" maxMicrosecondsPerInvocation="1909" standardDeviationMicrosecondsPerInvocation="83"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="20" invocations="63" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="2338" standardDeviationMicrosecondsPerInvocation="525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="19" invocations="63" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="4943" standardDeviationMicrosecondsPerInvocation="721"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="18" invocations="63" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="14473" standardDeviationMicrosecondsPerInvocation="1817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="18" invocations="1132" avgMicrosecondsPerInvocation="16" maxMicrosecondsPerInvocation="4224" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="18" invocations="63" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="3093" standardDeviationMicrosecondsPerInvocation="672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="18" invocations="63" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="2564" standardDeviationMicrosecondsPerInvocation="529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="17" invocations="133" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="1197" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="16" invocations="63" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="2696" standardDeviationMicrosecondsPerInvocation="474"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

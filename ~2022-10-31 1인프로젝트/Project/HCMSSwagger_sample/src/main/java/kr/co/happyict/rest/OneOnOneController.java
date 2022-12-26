@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -31,7 +30,7 @@ public class OneOnOneController {
 		this.oneonOneService = oneonOneService;
 		this.oneonReplyService = oneonReplyService;
 	}
-
+	
 	@ApiOperation(value = "1:1 ReadALL", notes = "GET방식으로 1대1 문의조회")
 	@GetMapping("/board/list")
 	public ResponseEntity<List<OneonOneVO>> selectAll() throws Exception {

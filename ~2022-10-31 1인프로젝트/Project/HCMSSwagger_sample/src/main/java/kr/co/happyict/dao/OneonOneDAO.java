@@ -1,6 +1,7 @@
 package kr.co.happyict.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
@@ -16,7 +17,7 @@ public class OneonOneDAO {
 		this.sqlSession = sqlSession;
 	}
 
-	public List<Object> selectAll() {
+	public List<OneonOneVO> selectAll() {
 		return sqlSession.selectList("OneonOneDAO.selectAll");
 	}
 

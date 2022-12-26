@@ -3,7 +3,6 @@ package kr.co.happyict.service.impl;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import kr.co.happyict.dao.OneonOneDAO;
@@ -24,7 +23,7 @@ public class OneonOneServiceImpl implements OneonOneService {
 
 	@Override
 	public List<OneonOneVO> selectAll() throws Exception {
-		return sqlSession.selectList("OneonOneDAO.selectAll");
+		return oneonOneDAO.selectAll();
 	}
 
 	@Override

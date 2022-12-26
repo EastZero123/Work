@@ -5,7 +5,7 @@
 
 	<select id="selectAll" resultType="kr.co.happyict.vo.OneonOneVO">
 		SELECT *
-		FROM oneon_onevo
+		FROM oneon_onevo;
 	</select>
 
 	<insert id="register">
@@ -26,7 +26,9 @@
 	</update>
 
 	<delete id="delete">
-		delete from oneon_onevo WHERE bno=#{bno}
+		delete from oneon_onevo WHERE bno=#{bno};
+		set @cnt = 0;
+		UPDATE oneon_onevo SET oneon_onevo.bno = @cnt:=@cnt+1;
 	</delete>
 
 </mapper>

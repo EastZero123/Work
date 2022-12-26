@@ -16,4 +16,5 @@ public interface OneonOneService {
 	
 	public void delete(int bno) throws Exception;
 
+
 }
